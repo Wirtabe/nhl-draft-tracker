@@ -4,29 +4,33 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>NHL Draft – Pistetilanne</title>
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./style.css?v=3">
 </head>
 <body>
   <main class="container">
     <header>
       <p class="eyebrow">NHL DRAFT</p>
       <h1>Pistetilanne</h1>
-      <p id="meta" class="muted">Ladataan...</p>
+      <p id="updated" class="muted">Ladataan...</p>
     </header>
 
-    <section id="summary" class="cards"></section>
+    <section class="toolbar" aria-label="Raportin suodatus">
+      <label for="team-select">Joukkue</label>
+      <select id="team-select">
+        <option value="all">Kaikki joukkueet</option>
+      </select>
+    </section>
 
     <section>
       <h2>Joukkueet</h2>
-      <div id="teams"></div>
+      <div id="team-list" class="team-list"></div>
     </section>
 
     <footer>
-      <p>Tilastot päivitetään automaattisesti GitHub Actionsilla.</p>
-      <p id="status"></p>
+      <span>Pisteet = maalit + syötöt</span>
     </footer>
   </main>
 
-  <script src="./app.js"></script>
+  <script src="./app.js?v=3"></script>
 </body>
 </html>
