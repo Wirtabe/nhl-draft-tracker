@@ -7,23 +7,13 @@
   "teams": [
     {
       "name": "Ismo",
-      "owner": "",
+      "coach": "",
       "points": 0,
       "players": [
         {
           "name": "Nathan MacKinnon",
           "nhl_id": 8477492,
-          "position": "C",
-          "goals": 0,
-          "assists": 0,
-          "points": 0,
-          "status": "not-found",
-          "warning": "Pelaajalle ei löytynyt vielä tilastoriviä tästä kaudesta."
-        },
-        {
-          "name": "Quinn Hughes",
-          "nhl_id": 8480800,
-          "position": "D",
+          "position": "H",
           "goals": 0,
           "assists": 0,
           "points": 0,
@@ -33,7 +23,17 @@
         {
           "name": "David Pastrnak",
           "nhl_id": 8477956,
-          "position": "R",
+          "position": "H",
+          "goals": 0,
+          "assists": 0,
+          "points": 0,
+          "status": "not-found",
+          "warning": "Pelaajalle ei löytynyt vielä tilastoriviä tästä kaudesta."
+        },
+        {
+          "name": "Quinn Hughes",
+          "nhl_id": 8480800,
+          "position": "P",
           "goals": 0,
           "assists": 0,
           "points": 0,
@@ -45,23 +45,13 @@
     },
     {
       "name": "Seppo",
-      "owner": "",
+      "coach": "",
       "points": 0,
       "players": [
         {
           "name": "Connor McDavid",
           "nhl_id": 8478402,
-          "position": "C",
-          "goals": 0,
-          "assists": 0,
-          "points": 0,
-          "status": "not-found",
-          "warning": "Pelaajalle ei löytynyt vielä tilastoriviä tästä kaudesta."
-        },
-        {
-          "name": "Cale Makar",
-          "nhl_id": 8480069,
-          "position": "D",
+          "position": "H",
           "goals": 0,
           "assists": 0,
           "points": 0,
@@ -71,7 +61,17 @@
         {
           "name": "Mikko Rantanen",
           "nhl_id": 8478420,
-          "position": "R",
+          "position": "H",
+          "goals": 0,
+          "assists": 0,
+          "points": 0,
+          "status": "not-found",
+          "warning": "Pelaajalle ei löytynyt vielä tilastoriviä tästä kaudesta."
+        },
+        {
+          "name": "Cale Makar",
+          "nhl_id": 8480069,
+          "position": "P",
           "goals": 0,
           "assists": 0,
           "points": 0,

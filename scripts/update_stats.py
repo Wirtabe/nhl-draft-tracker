@@ -16,13 +16,25 @@ STATS_URL = "https://api.nhle.com/stats/rest/en/skater/summary"
 PLAYER_URL = "https://api-web.nhle.com/v1/player/{player_id}/landing"
 TIMEOUT = 30
 
-POSITION_ORDER = {"C": 1, "LW": 2, "RW": 3, "D": 4, "G": 5, "F": 6, "": 99}
+
+def normalize_position(position: str) -> str:
+    """Map NHL positions to report positions H/P/M."""
+    value = (position or "").upper()
+
+    if value in {"C", "LW", "RW", "L", "R", "F", "H"}:
+        return "H"
+    if value in {"D", "LD", "RD", "P"}:
+        return "P"
+    if value in {"G", "M"}:
+        return "M"
+
+    return "?"
 
 
 def get_position(player: dict) -> str:
-    """Use manually supplied position first; otherwise ask NHL player API."""
+    """Use draft.json position first; otherwise fetch the NHL position."""
     if player.get("position"):
-        return str(player["position"]).upper()
+        return normalize_position(str(player["position"]))
 
     try:
         response = requests.get(
@@ -32,11 +44,8 @@ def get_position(player: dict) -> str:
         )
         response.raise_for_status()
         data = response.json()
-        return (
-            data.get("positionCode")
-            or data.get("position")
-            or "?"
-        ).upper()
+        raw_position = data.get("positionCode") or data.get("position") or ""
+        return normalize_position(str(raw_position))
     except Exception:
         return "?"
 
@@ -63,7 +72,10 @@ def fetch_player_stats(player_id: int, season: str, game_type: int) -> dict:
     goals = sum(int(row.get("goals") or 0) for row in rows)
     assists = sum(int(row.get("assists") or 0) for row in rows)
     points = sum(
-        int(row.get("points") or ((row.get("goals") or 0) + (row.get("assists") or 0)))
+        int(
+            row.get("points")
+            or ((row.get("goals") or 0) + (row.get("assists") or 0))
+        )
         for row in rows
     )
 
@@ -73,14 +85,14 @@ def fetch_player_stats(player_id: int, season: str, game_type: int) -> dict:
             "assists": 0,
             "points": 0,
             "status": "not-found",
-            "warning": "Pelaajalle ei löytynyt vielä tilastoriviä tästä kaudesta."
+            "warning": "Pelaajalle ei löytynyt vielä tilastoriviä tästä kaudesta.",
         }
 
     return {
         "goals": goals,
         "assists": assists,
         "points": points,
-        "status": "ok"
+        "status": "ok",
     }
 
 
@@ -97,13 +109,12 @@ def main() -> None:
     for team in draft.get("teams", []):
         players = []
 
+        # Preserve the exact player order from draft.json.
         for player in team.get("players", []):
-            position = get_position(player)
-
             record = {
                 "name": player["name"],
                 "nhl_id": int(player["nhl_id"]),
-                "position": position,
+                "position": get_position(player),
             }
 
             try:
@@ -130,22 +141,16 @@ def main() -> None:
 
         output_teams.append({
             "name": team["name"],
-            "owner": team.get("owner", ""),
+            "coach": team.get("coach", team.get("owner", "")),
             "points": total,
             "players": players,
         })
 
+    # Rank teams by total points, highest first.
     output_teams.sort(key=lambda team: (-team["points"], team["name"].lower()))
 
     for rank, team in enumerate(output_teams, start=1):
         team["rank"] = rank
-        team["players"].sort(
-            key=lambda p: (
-                POSITION_ORDER.get(p.get("position", ""), 99),
-                -p.get("points", 0),
-                p.get("name", "").lower(),
-            )
-        )
 
     output = {
         "generated_at": datetime.now(timezone.utc).isoformat(),
