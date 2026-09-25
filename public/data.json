@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-25T18:35:14.909593+00:00",
+  "generated_at": "2026-09-25T20:15:25.837386+00:00",
   "season": "20262027",
   "game_type": 2,
   "points_formula": "points",
@@ -7,7 +7,7 @@
   "teams": [
     {
       "name": "Seppo",
-      "owner": "Ismo",
+      "owner": "",
       "points": 0,
       "players": [
         {
@@ -36,7 +36,7 @@
     },
     {
       "name": "Ismo",
-      "owner": "Ismo",
+      "owner": "",
       "points": 0,
       "players": [
         {
