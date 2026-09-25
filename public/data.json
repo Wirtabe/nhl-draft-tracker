@@ -1,8 +1,79 @@
 {
-  "generated_at": "1970-01-01T00:00:00Z",
+  "generated_at": "2026-09-25T18:28:27.990779+00:00",
   "season": "20262027",
   "game_type": 2,
   "points_formula": "goals + assists",
-  "api_status": "not-yet-updated",
-  "teams": []
+  "api_status": "ok",
+  "teams": [
+    {
+      "name": "Seppo",
+      "owner": "Ismo",
+      "points": 0,
+      "players": [
+        {
+          "name": "Connor McDavid",
+          "nhl_id": 8478402,
+          "goals": 0,
+          "assists": 0,
+          "points": 0,
+          "status": "not-found",
+          "warning": "Pelaajalle ei löytynyt vielä tilastoriviä tästä kaudesta."
+        },
+        {
+          "name": "Mikko Rantanen",
+          "nhl_id": 8478420,
+          "goals": 0,
+          "assists": 0,
+          "points": 0,
+          "status": "not-found",
+          "warning": "Pelaajalle ei löytynyt vielä tilastoriviä tästä kaudesta."
+        },
+        {
+          "name": "Cale Makar",
+          "nhl_id": 8480069,
+          "goals": 0,
+          "assists": 0,
+          "points": 0,
+          "status": "not-found",
+          "warning": "Pelaajalle ei löytynyt vielä tilastoriviä tästä kaudesta."
+        }
+      ],
+      "rank": 1
+    },
+    {
+      "name": "Ismo",
+      "owner": "Ismo",
+      "points": 0,
+      "players": [
+        {
+          "name": "Nathan MacKinnon",
+          "nhl_id": 8477492,
+          "goals": 0,
+          "assists": 0,
+          "points": 0,
+          "status": "not-found",
+          "warning": "Pelaajalle ei löytynyt vielä tilastoriviä tästä kaudesta."
+        },
+        {
+          "name": "David Pastrnak",
+          "nhl_id": 8477956,
+          "goals": 0,
+          "assists": 0,
+          "points": 0,
+          "status": "not-found",
+          "warning": "Pelaajalle ei löytynyt vielä tilastoriviä tästä kaudesta."
+        },
+        {
+          "name": "Quinn Hughes",
+          "nhl_id": 8480800,
+          "goals": 0,
+          "assists": 0,
+          "points": 0,
+          "status": "not-found",
+          "warning": "Pelaajalle ei löytynyt vielä tilastoriviä tästä kaudesta."
+        }
+      ],
+      "rank": 2
+    }
+  ]
 }
