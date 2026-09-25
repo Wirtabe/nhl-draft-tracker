@@ -17,8 +17,8 @@ async function load() {
 
     const updated = new Date(data.generated_at);
     meta.textContent =
-      `${data.season.slice(0, 4)}–${data.season.slice(4)} · ` +
-      `Pisteet = maalit + syötöt · Päivitetty ${updated.toLocaleString("fi-FI")}`;
+      `Draft-kausi ${data.season.slice(0, 4)}–${data.season.slice(4)} -- ` +
+      `Pistelasku: kenttäpelaajilla tehopisteet, maalivahdeilla voitot x2 + nollapelit x2 + tehopisteet -- Päivitetty ${updated.toLocaleString("fi-FI")}`;
 
     summary.innerHTML = data.teams.slice(0, 3).map(team => `
       <article class="card">
@@ -58,8 +58,6 @@ async function load() {
                       ? `<div class="warning">${escapeHtml(player.warning)}</div>`
                       : ""}
                 </td>
-                <td>${player.goals ?? 0}</td>
-                <td>${player.assists ?? 0}</td>
                 <td><strong>${player.points ?? 0}</strong></td>
               </tr>
             `).join("")}

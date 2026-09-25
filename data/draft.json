@@ -3,12 +3,11 @@
     "league": "NHL",
     "season": "20262027",
     "game_type": 2,
-    "points_formula": "goals + assists"
+    "points_formula": "points"
   },
   "teams": [
     {
       "name": "Seppo",
-      "owner": "Ismo",
       "players": [
         {
           "name": "Connor McDavid",
@@ -26,7 +25,6 @@
     },
     {
       "name": "Ismo",
-      "owner": "Ismo",
       "players": [
         {
           "name": "Nathan MacKinnon",

@@ -3,7 +3,7 @@
 Fetch exact season/player totals from the NHL Stats REST API and create
 public/data.json.
 
-The stats endpoint returns rows containing playerId, goals, assists and
+The stats endpoint returns rows containing playerId and
 points. We query one season + game type and filter by playerId.
 """
 
@@ -46,22 +46,16 @@ def fetch_player_stats(player_id: int, season: str, game_type: int) -> dict:
     # A player can have multiple rows if the API returns team splits.
     # Summing is correct when the rows represent separate teams; if the API
     # returns one combined row, this is simply that row.
-    goals = sum(int(row.get("goals") or 0) for row in rows)
-    assists = sum(int(row.get("assists") or 0) for row in rows)
-    points = sum(int(row.get("points") or (row.get("goals") or 0) + (row.get("assists") or 0)) for row in rows)
+    points = sum(int(row.get("points") or 0) for row in rows)
 
     if not rows:
         return {
-            "goals": 0,
-            "assists": 0,
             "points": 0,
             "status": "not-found",
             "warning": "Pelaajalle ei löytynyt vielä tilastoriviä tästä kaudesta.",
         }
 
     return {
-        "goals": goals,
-        "assists": assists,
         "points": points,
         "status": "ok",
     }
@@ -96,8 +90,6 @@ def main() -> None:
             except Exception as exc:
                 had_error = True
                 record.update({
-                    "goals": 0,
-                    "assists": 0,
                     "points": 0,
                     "status": "error",
                     "error": str(exc),
@@ -123,7 +115,7 @@ def main() -> None:
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "season": season,
         "game_type": game_type,
-        "points_formula": "goals + assists",
+        "points_formula": "points",
         "api_status": "partial" if had_error else "ok",
         "teams": output_teams,
     }
