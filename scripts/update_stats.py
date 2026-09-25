@@ -1,11 +1,4 @@
 #!/usr/bin/env python3
-"""
-Fetch exact season/player totals from the NHL Stats REST API and create
-public/data.json.
-
-The stats endpoint returns rows containing playerId and
-points. We query one season + game type and filter by playerId.
-"""
 
 from __future__ import annotations
 
@@ -19,8 +12,33 @@ ROOT = Path(__file__).resolve().parents[1]
 DRAFT_FILE = ROOT / "data" / "draft.json"
 OUTPUT_FILE = ROOT / "public" / "data.json"
 
-API_URL = "https://api.nhle.com/stats/rest/en/skater/summary"
+STATS_URL = "https://api.nhle.com/stats/rest/en/skater/summary"
+PLAYER_URL = "https://api-web.nhle.com/v1/player/{player_id}/landing"
 TIMEOUT = 30
+
+POSITION_ORDER = {"C": 1, "LW": 2, "RW": 3, "D": 4, "G": 5, "F": 6, "": 99}
+
+
+def get_position(player: dict) -> str:
+    """Use manually supplied position first; otherwise ask NHL player API."""
+    if player.get("position"):
+        return str(player["position"]).upper()
+
+    try:
+        response = requests.get(
+            PLAYER_URL.format(player_id=player["nhl_id"]),
+            timeout=TIMEOUT,
+            headers={"User-Agent": "NHL-Draft-Tracker/1.0"},
+        )
+        response.raise_for_status()
+        data = response.json()
+        return (
+            data.get("positionCode")
+            or data.get("position")
+            or "?"
+        ).upper()
+    except Exception:
+        return "?"
 
 
 def fetch_player_stats(player_id: int, season: str, game_type: int) -> dict:
@@ -29,35 +47,40 @@ def fetch_player_stats(player_id: int, season: str, game_type: int) -> dict:
             f"playerId={player_id} and "
             f"seasonId={season} and gameTypeId={game_type}"
         ),
-        "limit": 10,
+        "limit": 100,
     }
 
     response = requests.get(
-        API_URL,
+        STATS_URL,
         params=params,
         timeout=TIMEOUT,
         headers={"User-Agent": "NHL-Draft-Tracker/1.0"},
     )
     response.raise_for_status()
 
-    payload = response.json()
-    rows = payload.get("data", [])
+    rows = response.json().get("data", [])
 
-    # A player can have multiple rows if the API returns team splits.
-    # Summing is correct when the rows represent separate teams; if the API
-    # returns one combined row, this is simply that row.
-    points = sum(int(row.get("points") or 0) for row in rows)
+    goals = sum(int(row.get("goals") or 0) for row in rows)
+    assists = sum(int(row.get("assists") or 0) for row in rows)
+    points = sum(
+        int(row.get("points") or ((row.get("goals") or 0) + (row.get("assists") or 0)))
+        for row in rows
+    )
 
     if not rows:
         return {
+            "goals": 0,
+            "assists": 0,
             "points": 0,
             "status": "not-found",
-            "warning": "Pelaajalle ei löytynyt vielä tilastoriviä tästä kaudesta.",
+            "warning": "Pelaajalle ei löytynyt vielä tilastoriviä tästä kaudesta."
         }
 
     return {
+        "goals": goals,
+        "assists": assists,
         "points": points,
-        "status": "ok",
+        "status": "ok"
     }
 
 
@@ -75,21 +98,27 @@ def main() -> None:
         players = []
 
         for player in team.get("players", []):
+            position = get_position(player)
+
             record = {
                 "name": player["name"],
                 "nhl_id": int(player["nhl_id"]),
+                "position": position,
             }
 
             try:
-                stats = fetch_player_stats(
-                    record["nhl_id"],
-                    season,
-                    game_type,
+                record.update(
+                    fetch_player_stats(
+                        record["nhl_id"],
+                        season,
+                        game_type,
+                    )
                 )
-                record.update(stats)
             except Exception as exc:
                 had_error = True
                 record.update({
+                    "goals": 0,
+                    "assists": 0,
                     "points": 0,
                     "status": "error",
                     "error": str(exc),
@@ -106,16 +135,23 @@ def main() -> None:
             "players": players,
         })
 
-    output_teams.sort(key=lambda team: team["points"], reverse=True)
+    output_teams.sort(key=lambda team: (-team["points"], team["name"].lower()))
 
     for rank, team in enumerate(output_teams, start=1):
         team["rank"] = rank
+        team["players"].sort(
+            key=lambda p: (
+                POSITION_ORDER.get(p.get("position", ""), 99),
+                -p.get("points", 0),
+                p.get("name", "").lower(),
+            )
+        )
 
     output = {
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "season": season,
         "game_type": game_type,
-        "points_formula": "points",
+        "points_formula": "goals + assists",
         "api_status": "partial" if had_error else "ok",
         "teams": output_teams,
     }
