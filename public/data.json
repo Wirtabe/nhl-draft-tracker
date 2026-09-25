@@ -2,7 +2,7 @@
   "generated_at": "2026-09-25T18:35:14.909593+00:00",
   "season": "20262027",
   "game_type": 2,
-  "points_formula": "goals + assists",
+  "points_formula": "points",
   "api_status": "ok",
   "teams": [
     {
@@ -13,8 +13,6 @@
         {
           "name": "Connor McDavid",
           "nhl_id": 8478402,
-          "goals": 0,
-          "assists": 0,
           "points": 0,
           "status": "not-found",
           "warning": "Pelaajalle ei löytynyt vielä tilastoriviä tästä kaudesta."
@@ -22,8 +20,6 @@
         {
           "name": "Mikko Rantanen",
           "nhl_id": 8478420,
-          "goals": 0,
-          "assists": 0,
           "points": 0,
           "status": "not-found",
           "warning": "Pelaajalle ei löytynyt vielä tilastoriviä tästä kaudesta."
@@ -31,8 +27,6 @@
         {
           "name": "Cale Makar",
           "nhl_id": 8480069,
-          "goals": 0,
-          "assists": 0,
           "points": 0,
           "status": "not-found",
           "warning": "Pelaajalle ei löytynyt vielä tilastoriviä tästä kaudesta."
@@ -48,8 +42,6 @@
         {
           "name": "Nathan MacKinnon",
           "nhl_id": 8477492,
-          "goals": 0,
-          "assists": 0,
           "points": 0,
           "status": "not-found",
           "warning": "Pelaajalle ei löytynyt vielä tilastoriviä tästä kaudesta."
@@ -57,8 +49,6 @@
         {
           "name": "David Pastrnak",
           "nhl_id": 8477956,
-          "goals": 0,
-          "assists": 0,
           "points": 0,
           "status": "not-found",
           "warning": "Pelaajalle ei löytynyt vielä tilastoriviä tästä kaudesta."
@@ -66,8 +56,6 @@
         {
           "name": "Quinn Hughes",
           "nhl_id": 8480800,
-          "goals": 0,
-          "assists": 0,
           "points": 0,
           "status": "not-found",
           "warning": "Pelaajalle ei löytynyt vielä tilastoriviä tästä kaudesta."
