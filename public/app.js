@@ -42,8 +42,6 @@ async function load() {
           <thead>
             <tr>
               <th>Pelaaja</th>
-              <th>M</th>
-              <th>S</th>
               <th>P</th>
             </tr>
           </thead>
