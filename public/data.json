@@ -1,39 +1,10 @@
 {
-  "generated_at": "2026-09-25T20:15:25.837386+00:00",
+  "generated_at": "2026-09-25T20:19:48.131802+00:00",
   "season": "20262027",
   "game_type": 2,
-  "points_formula": "points",
+  "points_formula": "goals + assists",
   "api_status": "ok",
   "teams": [
-    {
-      "name": "Seppo",
-      "owner": "",
-      "points": 0,
-      "players": [
-        {
-          "name": "Connor McDavid",
-          "nhl_id": 8478402,
-          "points": 0,
-          "status": "not-found",
-          "warning": "Pelaajalle ei löytynyt vielä tilastoriviä tästä kaudesta."
-        },
-        {
-          "name": "Mikko Rantanen",
-          "nhl_id": 8478420,
-          "points": 0,
-          "status": "not-found",
-          "warning": "Pelaajalle ei löytynyt vielä tilastoriviä tästä kaudesta."
-        },
-        {
-          "name": "Cale Makar",
-          "nhl_id": 8480069,
-          "points": 0,
-          "status": "not-found",
-          "warning": "Pelaajalle ei löytynyt vielä tilastoriviä tästä kaudesta."
-        }
-      ],
-      "rank": 1
-    },
     {
       "name": "Ismo",
       "owner": "",
@@ -42,13 +13,9 @@
         {
           "name": "Nathan MacKinnon",
           "nhl_id": 8477492,
-          "points": 0,
-          "status": "not-found",
-          "warning": "Pelaajalle ei löytynyt vielä tilastoriviä tästä kaudesta."
-        },
-        {
-          "name": "David Pastrnak",
-          "nhl_id": 8477956,
+          "position": "C",
+          "goals": 0,
+          "assists": 0,
           "points": 0,
           "status": "not-found",
           "warning": "Pelaajalle ei löytynyt vielä tilastoriviä tästä kaudesta."
@@ -56,6 +23,57 @@
         {
           "name": "Quinn Hughes",
           "nhl_id": 8480800,
+          "position": "D",
+          "goals": 0,
+          "assists": 0,
+          "points": 0,
+          "status": "not-found",
+          "warning": "Pelaajalle ei löytynyt vielä tilastoriviä tästä kaudesta."
+        },
+        {
+          "name": "David Pastrnak",
+          "nhl_id": 8477956,
+          "position": "R",
+          "goals": 0,
+          "assists": 0,
+          "points": 0,
+          "status": "not-found",
+          "warning": "Pelaajalle ei löytynyt vielä tilastoriviä tästä kaudesta."
+        }
+      ],
+      "rank": 1
+    },
+    {
+      "name": "Seppo",
+      "owner": "",
+      "points": 0,
+      "players": [
+        {
+          "name": "Connor McDavid",
+          "nhl_id": 8478402,
+          "position": "C",
+          "goals": 0,
+          "assists": 0,
+          "points": 0,
+          "status": "not-found",
+          "warning": "Pelaajalle ei löytynyt vielä tilastoriviä tästä kaudesta."
+        },
+        {
+          "name": "Cale Makar",
+          "nhl_id": 8480069,
+          "position": "D",
+          "goals": 0,
+          "assists": 0,
+          "points": 0,
+          "status": "not-found",
+          "warning": "Pelaajalle ei löytynyt vielä tilastoriviä tästä kaudesta."
+        },
+        {
+          "name": "Mikko Rantanen",
+          "nhl_id": 8478420,
+          "position": "R",
+          "goals": 0,
+          "assists": 0,
           "points": 0,
           "status": "not-found",
           "warning": "Pelaajalle ei löytynyt vielä tilastoriviä tästä kaudesta."
