@@ -1,0 +1,46 @@
+{
+  "settings": {
+    "league": "NHL",
+    "season": "20262027",
+    "game_type": 2,
+    "points_formula": "goals + assists"
+  },
+  "teams": [
+    {
+      "name": "Seppo",
+      "owner": "Ismo",
+      "players": [
+        {
+          "name": "Connor McDavid",
+          "nhl_id": 8478402
+        },
+        {
+          "name": "Mikko Rantanen",
+          "nhl_id": 8478420
+        },
+        {
+          "name": "Cale Makar",
+          "nhl_id": 8480069
+        }
+      ]
+    },
+    {
+      "name": "Ismo",
+      "owner": "Ismo",
+      "players": [
+        {
+          "name": "Nathan MacKinnon",
+          "nhl_id": 8477492
+        },
+        {
+          "name": "David Pastrnak",
+          "nhl_id": 8477956
+        },
+        {
+          "name": "Quinn Hughes",
+          "nhl_id": 8480800
+        }
+      ]
+    }
+  ]
+}
