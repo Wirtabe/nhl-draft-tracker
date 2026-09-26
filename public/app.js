@@ -58,7 +58,7 @@ function renderTeams(teams) {
             <div class="player-name-wrap">
               <div class="player-name">${escapeHtml(player.name)}</div>
               ${player.status === "not-found"
-                ? `<div class="player-status">Ei vielä tilastoriviä</div>`
+                ? `<div class="player-status">Pelaajalle ei löytynyt tilastoja tälle kaudelle</div>`
                 : player.status === "error"
                   ? `<div class="player-status error">Tilastojen haku epäonnistui</div>`
                   : ""}
@@ -84,7 +84,7 @@ async function loadData() {
     const data = await response.json();
 
     updated.textContent =
-      `Päivitetty ${formatDate(data.generated_at)} · kausi ${data.season}`;
+      `Päivitetty ${formatDate(data.generated_at)} -- kausi 2026-27`;
 
     teamSelect.innerHTML = `
       <option value="all">Kaikki joukkueet</option>
