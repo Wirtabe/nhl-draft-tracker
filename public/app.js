@@ -27,48 +27,67 @@ function renderTeams(teams) {
     return;
   }
 
-  teamList.innerHTML = teams.map((team) => `
-    <details class="team">
-      <summary class="team-summary">
-        <div class="team-main">
-          <div class="team-rank">#${team.rank}</div>
-          <div>
-            <div class="team-name">${escapeHtml(team.name)}</div>
-            ${team.coach
-              ? `<div class="team-coach">Valmentaja: ${escapeHtml(team.coach)}</div>`
-              : ""}
-          </div>
-        </div>
+  teamList.innerHTML = teams.map((team, index) => {
+    // If rank is missing from data.json, keep the current team order
+    // and use it as the default ranking: 1, 2, 3, ...
+    const rank = Number.isFinite(Number(team.rank))
+      ? Number(team.rank)
+      : index + 1;
 
-        <div class="team-points">
-          ${team.points} <span>p</span>
-        </div>
-      </summary>
+    // If team points are missing, null, undefined or invalid, show 0.
+    const teamPoints = Number.isFinite(Number(team.points))
+      ? Number(team.points)
+      : 0;
 
-      <div class="players">
-        <div class="player-header">
-          <span></span>
-          <span></span>
-          <span>Pisteet</span>
-        </div>
-
-        ${(team.players || []).map((player) => `
-          <div class="player-row">
-            <div class="player-position">${escapeHtml(player.position || "?")}</div>
-            <div class="player-name-wrap">
-              <div class="player-name">${escapeHtml(player.name)}</div>
-              ${player.status === "not-found"
-                ? `<div class="player-status">Pelaajalle ei löytynyt tilastoja tälle kaudelle</div>`
-                : player.status === "error"
-                  ? `<div class="player-status error">Tilastojen haku epäonnistui</div>`
-                  : ""}
+    return `
+      <details class="team">
+        <summary class="team-summary">
+          <div class="team-main">
+            <div class="team-rank">#${rank}</div>
+            <div>
+              <div class="team-name">${escapeHtml(team.name)}</div>
+              ${team.coach
+                ? `<div class="team-coach">Valmentaja: ${escapeHtml(team.coach)}</div>`
+                : ""}
             </div>
-            <div class="player-points">${player.points ?? 0}</div>
           </div>
-        `).join("")}
-      </div>
-    </details>
-  `).join("");
+
+          <div class="team-points">
+            ${teamPoints} <span>p</span>
+          </div>
+        </summary>
+
+        <div class="players">
+          <div class="player-header">
+            <span></span>
+            <span></span>
+            <span>Pisteet</span>
+          </div>
+
+          ${(team.players || []).map((player) => {
+            const playerPoints = Number.isFinite(Number(player.points))
+              ? Number(player.points)
+              : 0;
+
+            return `
+              <div class="player-row">
+                <div class="player-position">${escapeHtml(player.position || "?")}</div>
+                <div class="player-name-wrap">
+                  <div class="player-name">${escapeHtml(player.name)}</div>
+                  ${player.status === "not-found"
+                    ? `<div class="player-status">Ei vielä tilastoriviä</div>`
+                    : player.status === "error"
+                      ? `<div class="player-status error">Tilastojen haku epäonnistui</div>`
+                      : ""}
+                </div>
+                <div class="player-points">${playerPoints}</div>
+              </div>
+            `;
+          }).join("")}
+        </div>
+      </details>
+    `;
+  }).join("");
 }
 
 async function loadData() {
@@ -84,7 +103,7 @@ async function loadData() {
     const data = await response.json();
 
     updated.textContent =
-      `Päivitetty ${formatDate(data.generated_at)} -- kausi 2026-27`;
+      `Päivitetty ${formatDate(data.generated_at)} · kausi ${data.season}`;
 
     teamSelect.innerHTML = `
       <option value="all">Kaikki joukkueet</option>
