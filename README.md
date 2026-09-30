@@ -1,91 +1,119 @@
 # NHL Draft Tracker
 
-Valmis pohja kaveriporukan NHL-draftin pisteiden seurantaan.
+Tämä versio hakee NHL-pelaajien tehopisteet automaattisesti, vaikka
+`data/draft.json` sisältäisi aluksi vain pelaajan nimen, varausnumeron ja
+pelipaikan.
 
-## Arkkitehtuuri
+## Datarakenne
 
-- `data/draft.json` = varatut pelaajat
-- `scripts/update_stats.py` = hakee NHL:n Stats REST API:sta kauden G+A-pisteet
-- `public/data.json` = julkaistava laskettu data
-- `public/index.html` + CSS + JS = raportti
-- `.github/workflows/update.yml` = päivittää pisteet noin 30 min välein
-- `.github/workflows/deploy.yml` = julkaisee `public/`-kansion GitHub Pagesiin
+`data/draft.json` on nyt lähdedata, jota muokataan käsin.
 
-Pisteet ovat **maalit + syötöt**.
-
-## 1. Luo repository
-
-Luo GitHubiin repository esimerkiksi nimellä `nhl-draft-tracker`.
-
-GitHub Free -tilillä GitHub Pagesia varten repositoryn pitää olla public. Älä lisää repositoryyn mitään salaista.
-
-## 2. Kopioi tiedostot
-
-Kopioi kaikki tämän projektin tiedostot repositoryn juureen ja pushaa `main`-branchiin.
-
-## 3. Muokkaa draftia
-
-Avaa `data/draft.json`.
-
-Lisää omat joukkueet ja pelaajat:
+Esimerkki:
 
 ```json
 {
-  "name": "Connor McDavid",
-  "nhl_id": 8478402
+  "season": "2026-2027",
+  "game_type": 2,
+  "teams": [
+    {
+      "coach": "Riku",
+      "name": "Söhlöt",
+      "players": [
+        {
+          "draft_number": 1,
+          "name": "Nathan MacKinnon",
+          "position": "H"
+        }
+      ]
+    }
+  ]
 }
 ```
 
-Käytä mieluiten NHL:n omaa numeric player ID:tä.
+Pelipaikat:
 
-## 4. Ota Pages käyttöön
+- `H` = hyökkääjä
+- `P` = puolustaja
+- `M` = maalivahti
 
-GitHubissa:
+## Miten automaattinen päivitys toimii?
 
-**Repository → Settings → Pages → Build and deployment → Source → GitHub Actions**
+`scripts/update_stats.py` tekee neljä asiaa:
 
-Tämän jälkeen `deploy.yml` julkaisee `public/`-kansion Pages-sivuksi.
+1. hakee pelaajan nimellä NHL:n player search -palvelusta NHL player ID:n
+2. tallentaa löydetyn ID:n välimuistiin `data/player_ids.json`
+3. hakee kauden skater- ja goalie-yhteenvedot NHL Stats REST API:sta
+4. laskee `pisteet = maalit + syötöt` ja kirjoittaa tuloksen `public/data.json`
 
-GitHubin Pages-dokumentaatio:
-https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site
+Ensimmäinen ajo tekee enemmän nimihakuja. Seuraavilla ajoilla pelaajien NHL-ID:t
+ovat jo `data/player_ids.json`-tiedostossa, joten tilastopäivitys tarvitsee
+normaalisti vain kauden tilastopyynnöt.
 
-## 5. Käynnistä ensimmäinen päivitys
+Maalivahtien tehopisteet lasketaan samalla tavalla heidän goalie summary
+-rivinsä `goals + assists` -kentistä.
 
-Avaa:
+## GitHub Actions
 
-**Actions → Update NHL stats → Run workflow**
+`.github/workflows/update.yml`:
 
-Workflow:
+- ajetaan noin 30 minuutin välein
+- voidaan ajaa käsin Actions-välilehdeltä
+- käynnistyy myös, jos draftia, overrideja tai päivitysskriptiä muokataan
+- committaa takaisin:
+  - `public/data.json`
+  - `data/player_ids.json`
 
-1. hakee pelaajien kauden tilastot
-2. laskee joukkueiden pisteet
-3. kirjoittaa `public/data.json`
-4. committaa muuttuneen datan takaisin repositoryyn
+`public/data.json`-muutos käynnistää Pages-deployn nykyisen `deploy.yml`:n kautta.
 
-`public/data.json`-muutos käynnistää tämän jälkeen Pages-deployn.
+## Jos pelaajan nimi ei tunnistu
 
-## 6. Raportin osoite
+Raportissa pelaajan kohdalla näkyy:
 
-GitHub Pagesin URL on yleensä:
+`NHL-pelaajaa ei tunnistettu`
 
-`https://KÄYTTÄJÄNIMI.github.io/nhl-draft-tracker/`
+Voit korjata haun `data/player_overrides.json`-tiedostossa.
 
-Anna kavereille tämä osoite.
+Esimerkki oikeinkirjoituksen korjauksesta:
 
-## Päivitystiheys
+```json
+{
+  "Excelissä oleva nimi": {
+    "search_name": "NHL:n käyttämä nimi"
+  }
+}
+```
 
-`update.yml` ajaa noin 30 minuutin välein sekä aina, kun `data/draft.json` muuttuu.
+Tai jos tiedät NHL player ID:n:
 
-GitHubin scheduled workflow -ajoissa voi olla viivettä, joten "30 min välein" ei tarkoita tarkkaa kellonaikaa.
+```json
+{
+  "Excelissä oleva nimi": {
+    "nhl_id": 8478402
+  }
+}
+```
 
-## NHL API
+Tämän jälkeen commitoi muutos. Update-workflow käynnistyy automaattisesti.
 
-Pisteiden lähteenä käytetään NHL Stats REST API:n skater summary -endpointia ja suodatetaan `playerId`, `seasonId` ja `gameTypeId` -kentillä.
+## Tärkeää
 
-Nykyinen ratkaisu on tarkoitettu tavallisille NHL:n kenttäpelaajille. Jos haluatte myöhemmin maalivahteja tai oman pisteytyksen, laskentaan voidaan lisätä erillinen sääntö.
+Älä enää käytä `public/data.json`-tiedostoa draftin käsin muokkaamiseen.
+Se on generoitu raporttitiedosto ja GitHub Actions korvaa sen.
 
-## Jos haluat yksityisen repositoryn
+Muokkaa jatkossa:
 
-Tämä ratkaisu olettaa GitHub Free + public repository -mallin. GitHub Pages -sivusto itsessään on julkinen.
+`data/draft.json`
 
-Jos draftin sisältö ei saa näkyä repositoryssa, älä käytä tätä public-repository-ratkaisua sellaisenaan. Silloin kannattaa erottaa private data/laskenta ja julkinen raporttisivu.
+## Ensimmäinen käyttöönotto
+
+Kun olet puskenut tämän version repositoryyn:
+
+1. Avaa GitHub → Actions
+2. Avaa `Update NHL stats`
+3. Valitse `Run workflow`
+4. Odota ajon valmistumista
+5. Tarkista mahdolliset `Warnings` ajon lokista
+6. `Deploy NHL report to GitHub Pages` julkaisee syntyneen `public/data.json`:n
+
+Jos kaikki pelaajat tunnistuvat, `public/data.json`:ssa näkyy
+`"api_status": "ok"`.
