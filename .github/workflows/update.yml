@@ -2,13 +2,13 @@ name: Update NHL stats
 
 on:
   schedule:
-    # GitHub scheduled workflows use UTC.
-    # This means roughly every 30 minutes, but GitHub may delay scheduled runs.
+    # Roughly every 30 minutes. GitHub may delay scheduled workflows.
     - cron: "7,37 * * * *"
   workflow_dispatch:
   push:
     paths:
       - "data/draft.json"
+      - "data/player_overrides.json"
       - "scripts/update_stats.py"
       - ".github/workflows/update.yml"
 
@@ -31,13 +31,13 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Fetch NHL stats and calculate points
+      - name: Resolve NHL players and update points
         run: python scripts/update_stats.py
 
-      - name: Commit updated report data
+      - name: Commit generated NHL data and player ID cache
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add public/data.json
+          git add public/data.json data/player_ids.json
           git diff --cached --quiet || git commit -m "Update NHL stats"
           git push

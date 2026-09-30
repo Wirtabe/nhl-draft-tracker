@@ -74,11 +74,13 @@ function renderTeams(teams) {
                 <div class="player-position">${escapeHtml(player.position || "?")}</div>
                 <div class="player-name-wrap">
                   <div class="player-name">${escapeHtml(player.name)}</div>
-                  ${player.status === "not-found"
-                    ? `<div class="player-status">Ei vielä tilastoriviä</div>`
-                    : player.status === "error"
-                      ? `<div class="player-status error">Tilastojen haku epäonnistui</div>`
-                      : ""}
+                  ${player.status === "unresolved"
+                    ? `<div class="player-status error">NHL-pelaajaa ei tunnistettu</div>`
+                    : player.status === "stale"
+                      ? `<div class="player-status">Näytetään viimeisin onnistunut pistetieto</div>`
+                      : player.status === "no-stats"
+                        ? `<div class="player-status">Ei vielä tilastopisteitä tällä kaudella</div>`
+                        : ""}
                 </div>
                 <div class="player-points">${playerPoints}</div>
               </div>
