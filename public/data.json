@@ -1,10 +1,47 @@
 {
-  "generated_at": "2026-09-30T02:19:43.255814+00:00",
+  "generated_at": "2026-09-30T08:57:38.878737+00:00",
   "season": "20262027",
   "game_type": 2,
   "points_formula": "goals + assists",
   "api_status": "ok",
   "teams": [
+    {
+      "name": "Seppo",
+      "coach": "",
+      "points": 2,
+      "players": [
+        {
+          "name": "Connor McDavid",
+          "nhl_id": 8478402,
+          "position": "H",
+          "goals": 0,
+          "assists": 2,
+          "points": 2,
+          "status": "ok"
+        },
+        {
+          "name": "Mikko Rantanen",
+          "nhl_id": 8478420,
+          "position": "H",
+          "goals": 0,
+          "assists": 0,
+          "points": 0,
+          "status": "not-found",
+          "warning": "Pelaajalle ei löytynyt vielä tilastoriviä tästä kaudesta."
+        },
+        {
+          "name": "Cale Makar",
+          "nhl_id": 8480069,
+          "position": "P",
+          "goals": 0,
+          "assists": 0,
+          "points": 0,
+          "status": "not-found",
+          "warning": "Pelaajalle ei löytynyt vielä tilastoriviä tästä kaudesta."
+        }
+      ],
+      "rank": 1
+    },
     {
       "name": "Ismo",
       "coach": "",
@@ -27,50 +64,11 @@
           "goals": 0,
           "assists": 0,
           "points": 0,
-          "status": "not-found",
-          "warning": "Pelaajalle ei löytynyt vielä tilastoriviä tästä kaudesta."
+          "status": "ok"
         },
         {
           "name": "Quinn Hughes",
           "nhl_id": 8480800,
-          "position": "P",
-          "goals": 0,
-          "assists": 0,
-          "points": 0,
-          "status": "not-found",
-          "warning": "Pelaajalle ei löytynyt vielä tilastoriviä tästä kaudesta."
-        }
-      ],
-      "rank": 1
-    },
-    {
-      "name": "Seppo",
-      "coach": "",
-      "points": 0,
-      "players": [
-        {
-          "name": "Connor McDavid",
-          "nhl_id": 8478402,
-          "position": "H",
-          "goals": 0,
-          "assists": 0,
-          "points": 0,
-          "status": "not-found",
-          "warning": "Pelaajalle ei löytynyt vielä tilastoriviä tästä kaudesta."
-        },
-        {
-          "name": "Mikko Rantanen",
-          "nhl_id": 8478420,
-          "position": "H",
-          "goals": 0,
-          "assists": 0,
-          "points": 0,
-          "status": "not-found",
-          "warning": "Pelaajalle ei löytynyt vielä tilastoriviä tästä kaudesta."
-        },
-        {
-          "name": "Cale Makar",
-          "nhl_id": 8480069,
           "position": "P",
           "goals": 0,
           "assists": 0,
