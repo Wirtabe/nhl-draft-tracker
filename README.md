@@ -117,3 +117,47 @@ Kun olet puskenut tämän version repositoryyn:
 
 Jos kaikki pelaajat tunnistuvat, `public/data.json`:ssa näkyy
 `"api_status": "ok"`.
+
+
+## v6: maalivahtien pisteytys
+
+Pisteytys on nyt:
+
+- Hyökkääjä (`H`): maalit + syötöt
+- Puolustaja (`P`): maalit + syötöt
+- Maalivahti (`M`): `voitot × 2 + nollapelit × 2 + maalit + syötöt`
+
+Esimerkki maalivahdille:
+
+- 12 voittoa
+- 3 nollapeliä
+- 0 maalia
+- 2 syöttöä
+
+Pisteet = `12×2 + 3×2 + 0 + 2 = 32`.
+
+`public/data.json` sisältää maalivahdeille myös kentät `wins` ja `shutouts`.
+
+
+## v7: pisteet NHL Web API:n game logista
+
+Kenttäpelaajien pisteet haetaan nyt pelaajakohtaisesta endpointista:
+
+`/v1/player/{playerId}/game-log/{season}/{gameType}`
+
+Kauden maalit ja syötöt summataan ottelulokista, joten juuri päättyneen ottelun
+tilasto ei ole riippuvainen hitaammin päivittyvästä season summary -taulusta.
+
+Maalivahdeille:
+- voitot lasketaan game login `decision == "W"` -riveistä
+- nollapelit otetaan game login mahdollisesta shutout-kentästä; jos sitä ei ole,
+  nollapeli johdetaan konservatiivisesti 0 päästetystä maalista ja vähintään
+  58 minuutin peliajasta
+- maalivahdin harvinaiset maalit ja syötöt täydennetään goalie summary -datasta
+
+Maalivahtien fantasypisteet ovat edelleen:
+
+`voitot × 2 + nollapelit × 2 + maalit + syötöt`
+
+GitHub Actionsin `Show update summary` tulostaa lisäksi Jack Hughesin
+diagnostiikkarivin, jotta game-log-päivityksen toiminta on helppo varmistaa.
