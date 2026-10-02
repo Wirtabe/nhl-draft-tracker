@@ -104,8 +104,13 @@ async function loadData() {
 
     const data = await response.json();
 
+    const statsInfo =
+      Number.isFinite(Number(data.players_with_stats))
+        ? ` · tilastot ${data.players_with_stats}/${data.player_count ?? "?"} pelaajalle`
+        : "";
+
     updated.textContent =
-      `Päivitetty ${formatDate(data.generated_at)} · kausi ${data.season}`;
+      `Päivitetty ${formatDate(data.generated_at)} · kausi ${data.season}${statsInfo}`;
 
     teamSelect.innerHTML = `
       <option value="all">Kaikki joukkueet</option>
