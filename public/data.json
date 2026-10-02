@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-01T23:23:38.432407+00:00",
+  "generated_at": "2026-10-02T02:31:59.438820+00:00",
   "season": "2026-2027",
   "season_id": "20262027",
   "game_type": 2,
@@ -14,7 +14,7 @@
     {
       "coach": "Jarno",
       "name": "Old Stars",
-      "points": 13,
+      "points": 17,
       "players": [
         {
           "draft_number": 6,
@@ -78,9 +78,9 @@
           "nhl_id": 8478010,
           "matched_name": "Brayden Point",
           "goals": 0,
-          "assists": 0,
-          "points": 0,
-          "status": "no-stats"
+          "assists": 1,
+          "points": 1,
+          "status": "ok"
         },
         {
           "draft_number": 64,
@@ -88,9 +88,9 @@
           "position": "H",
           "nhl_id": 8476459,
           "matched_name": "Mika Zibanejad",
-          "goals": 0,
-          "assists": 0,
-          "points": 0,
+          "goals": 1,
+          "assists": 1,
+          "points": 2,
           "status": "ok"
         },
         {
@@ -176,10 +176,10 @@
           "position": "P",
           "nhl_id": 8480807,
           "matched_name": "Mattias Samuelsson",
-          "goals": 0,
+          "goals": 1,
           "assists": 0,
-          "points": 0,
-          "status": "no-stats"
+          "points": 1,
+          "status": "ok"
         },
         {
           "draft_number": 120,
@@ -242,7 +242,7 @@
     {
       "coach": "Riku",
       "name": "Söhlöt",
-      "points": 5,
+      "points": 9,
       "players": [
         {
           "draft_number": 1,
@@ -286,7 +286,7 @@
           "goals": 0,
           "assists": 0,
           "points": 0,
-          "status": "no-stats"
+          "status": "ok"
         },
         {
           "draft_number": 29,
@@ -349,9 +349,9 @@
           "position": "H",
           "nhl_id": 8481604,
           "matched_name": "Pavel Dorofeyev",
-          "goals": 0,
-          "assists": 0,
-          "points": 0,
+          "goals": 1,
+          "assists": 1,
+          "points": 2,
           "status": "ok"
         },
         {
@@ -415,10 +415,10 @@
           "position": "P",
           "nhl_id": 8476462,
           "matched_name": "Dougie Hamilton",
-          "goals": 0,
+          "goals": 1,
           "assists": 0,
-          "points": 0,
-          "status": "no-stats"
+          "points": 1,
+          "status": "ok"
         },
         {
           "draft_number": 112,
@@ -459,246 +459,18 @@
           "position": "M",
           "nhl_id": 8478048,
           "matched_name": "Igor Shesterkin",
-          "goals": 0,
+          "goals": 1,
           "assists": 0,
-          "points": 0,
+          "points": 1,
           "status": "ok"
         }
       ],
       "rank": 2
     },
     {
-      "coach": "Janne",
-      "name": "Häpykarvan Lämäri",
-      "points": 5,
-      "players": [
-        {
-          "draft_number": 7,
-          "name": "Leon Draisaitl",
-          "position": "H",
-          "nhl_id": 8477934,
-          "matched_name": "Leon Draisaitl",
-          "goals": 0,
-          "assists": 1,
-          "points": 1,
-          "status": "ok"
-        },
-        {
-          "draft_number": 21,
-          "name": "Matthew Tkachuk",
-          "position": "H",
-          "nhl_id": 8479314,
-          "matched_name": "Matthew Tkachuk",
-          "goals": 0,
-          "assists": 0,
-          "points": 0,
-          "status": "ok"
-        },
-        {
-          "draft_number": 22,
-          "name": "Brady Tkachuck",
-          "position": "H",
-          "nhl_id": 8480801,
-          "matched_name": "Brady Tkachuk",
-          "goals": 0,
-          "assists": 0,
-          "points": 0,
-          "status": "ok"
-        },
-        {
-          "draft_number": 35,
-          "name": "Auston Matthews",
-          "position": "H",
-          "nhl_id": 8479318,
-          "matched_name": "Auston Matthews",
-          "goals": 0,
-          "assists": 0,
-          "points": 0,
-          "status": "ok"
-        },
-        {
-          "draft_number": 48,
-          "name": "Sam Reinhart",
-          "position": "H",
-          "nhl_id": 8477933,
-          "matched_name": "Sam Reinhart",
-          "goals": 0,
-          "assists": 0,
-          "points": 0,
-          "status": "ok"
-        },
-        {
-          "draft_number": 49,
-          "name": "Cutter Gauthier",
-          "position": "H",
-          "nhl_id": 8483445,
-          "matched_name": "Cutter Gauthier",
-          "goals": 0,
-          "assists": 0,
-          "points": 0,
-          "status": "no-stats"
-        },
-        {
-          "draft_number": 76,
-          "name": "Mikael Granlund",
-          "position": "H",
-          "nhl_id": 8475798,
-          "matched_name": "Mikael Granlund",
-          "goals": 0,
-          "assists": 0,
-          "points": 0,
-          "status": "no-stats"
-        },
-        {
-          "draft_number": 90,
-          "name": "Dylan Holloway",
-          "position": "H",
-          "nhl_id": 8482077,
-          "matched_name": "Dylan Holloway",
-          "goals": 0,
-          "assists": 0,
-          "points": 0,
-          "status": "no-stats"
-        },
-        {
-          "draft_number": 91,
-          "name": "Patrick Kane",
-          "position": "H",
-          "nhl_id": 8474141,
-          "matched_name": "Patrick Kane",
-          "goals": 1,
-          "assists": 0,
-          "points": 1,
-          "status": "ok"
-        },
-        {
-          "draft_number": 104,
-          "name": "J.T. Miller",
-          "position": "H",
-          "nhl_id": 8476468,
-          "matched_name": "J.T. Miller",
-          "goals": 0,
-          "assists": 0,
-          "points": 0,
-          "status": "ok"
-        },
-        {
-          "draft_number": 105,
-          "name": "Timo Meier",
-          "position": "H",
-          "nhl_id": 8478414,
-          "matched_name": "Timo Meier",
-          "goals": 0,
-          "assists": 0,
-          "points": 0,
-          "status": "no-stats"
-        },
-        {
-          "draft_number": 118,
-          "name": "Rickard Rakell",
-          "position": "H",
-          "nhl_id": 8476483,
-          "matched_name": "Rickard Rakell",
-          "goals": 0,
-          "assists": 1,
-          "points": 1,
-          "status": "ok"
-        },
-        {
-          "draft_number": 8,
-          "name": "Cale Makar",
-          "position": "P",
-          "nhl_id": 8480069,
-          "matched_name": "Cale Makar",
-          "goals": 0,
-          "assists": 2,
-          "points": 2,
-          "status": "ok"
-        },
-        {
-          "draft_number": 62,
-          "name": "Moritz Seider",
-          "position": "P",
-          "nhl_id": 8481542,
-          "matched_name": "Moritz Seider",
-          "goals": 0,
-          "assists": 0,
-          "points": 0,
-          "status": "no-stats"
-        },
-        {
-          "draft_number": 77,
-          "name": "Roman Josi",
-          "position": "P",
-          "nhl_id": 8474600,
-          "matched_name": "Roman Josi",
-          "goals": 0,
-          "assists": 0,
-          "points": 0,
-          "status": "no-stats"
-        },
-        {
-          "draft_number": 119,
-          "name": "McKenzie Weegar",
-          "position": "P",
-          "nhl_id": 8477346,
-          "matched_name": "MacKenzie Weegar",
-          "goals": 0,
-          "assists": 0,
-          "points": 0,
-          "status": "no-stats"
-        },
-        {
-          "draft_number": 132,
-          "name": "Seth Jones",
-          "position": "P",
-          "nhl_id": 8477495,
-          "matched_name": "Seth Jones",
-          "goals": 0,
-          "assists": 0,
-          "points": 0,
-          "status": "ok"
-        },
-        {
-          "draft_number": 133,
-          "name": "Luka Ganyoni",
-          "position": "P",
-          "nhl_id": null,
-          "matched_name": null,
-          "goals": 0,
-          "assists": 0,
-          "points": 0,
-          "status": "unresolved"
-        },
-        {
-          "draft_number": 36,
-          "name": "Jake Oettinger",
-          "position": "M",
-          "nhl_id": 8479979,
-          "matched_name": "Jake Oettinger",
-          "goals": 0,
-          "assists": 0,
-          "points": 0,
-          "status": "no-stats"
-        },
-        {
-          "draft_number": 63,
-          "name": "Scott Wedgewood",
-          "position": "M",
-          "nhl_id": 8475809,
-          "matched_name": "Scott Wedgewood",
-          "goals": 0,
-          "assists": 0,
-          "points": 0,
-          "status": "no-stats"
-        }
-      ],
-      "rank": 3
-    },
-    {
       "coach": "Juho",
       "name": "Hockey Pucks",
-      "points": 4,
+      "points": 9,
       "players": [
         {
           "draft_number": 4,
@@ -784,9 +556,9 @@
           "nhl_id": 8479407,
           "matched_name": "Jesper Bratt",
           "goals": 0,
-          "assists": 0,
-          "points": 0,
-          "status": "no-stats"
+          "assists": 1,
+          "points": 1,
+          "status": "ok"
         },
         {
           "draft_number": 94,
@@ -805,10 +577,10 @@
           "position": "H",
           "nhl_id": 8482720,
           "matched_name": "Matthew Knies",
-          "goals": 0,
-          "assists": 0,
-          "points": 0,
-          "status": "no-stats"
+          "goals": 2,
+          "assists": 1,
+          "points": 3,
+          "status": "ok"
         },
         {
           "draft_number": 115,
@@ -816,10 +588,10 @@
           "position": "H",
           "nhl_id": 8484166,
           "matched_name": "Adam Fantilli",
-          "goals": 0,
+          "goals": 1,
           "assists": 0,
-          "points": 0,
-          "status": "no-stats"
+          "points": 1,
+          "status": "ok"
         },
         {
           "draft_number": 136,
@@ -921,240 +693,12 @@
           "status": "no-stats"
         }
       ],
-      "rank": 4
-    },
-    {
-      "coach": "Aleksi",
-      "name": "Titta på ylähylly",
-      "points": 3,
-      "players": [
-        {
-          "draft_number": 3,
-          "name": "Nikita Kucherov",
-          "position": "H",
-          "nhl_id": 8476453,
-          "matched_name": "Nikita Kucherov",
-          "goals": 0,
-          "assists": 0,
-          "points": 0,
-          "status": "no-stats"
-        },
-        {
-          "draft_number": 17,
-          "name": "Jason Robertson",
-          "position": "H",
-          "nhl_id": 8480027,
-          "matched_name": "Jason Robertson",
-          "goals": 0,
-          "assists": 0,
-          "points": 0,
-          "status": "no-stats"
-        },
-        {
-          "draft_number": 26,
-          "name": "Kyle Connor",
-          "position": "H",
-          "nhl_id": 8478398,
-          "matched_name": "Kyle Connor",
-          "goals": 0,
-          "assists": 0,
-          "points": 0,
-          "status": "no-stats"
-        },
-        {
-          "draft_number": 31,
-          "name": "Jake Guentzel",
-          "position": "H",
-          "nhl_id": 8477404,
-          "matched_name": "Jake Guentzel",
-          "goals": 0,
-          "assists": 0,
-          "points": 0,
-          "status": "no-stats"
-        },
-        {
-          "draft_number": 58,
-          "name": "Lucas Raymond",
-          "position": "H",
-          "nhl_id": 8482078,
-          "matched_name": "Lucas Raymond",
-          "goals": 0,
-          "assists": 0,
-          "points": 0,
-          "status": "no-stats"
-        },
-        {
-          "draft_number": 72,
-          "name": "Adrian Kempe",
-          "position": "H",
-          "nhl_id": 8477960,
-          "matched_name": "Adrian Kempe",
-          "goals": 0,
-          "assists": 0,
-          "points": 0,
-          "status": "ok"
-        },
-        {
-          "draft_number": 95,
-          "name": "Nick Schmaltz",
-          "position": "H",
-          "nhl_id": 8477951,
-          "matched_name": "Nick Schmaltz",
-          "goals": 0,
-          "assists": 0,
-          "points": 0,
-          "status": "no-stats"
-        },
-        {
-          "draft_number": 109,
-          "name": "Travis Konecny",
-          "position": "H",
-          "nhl_id": 8478439,
-          "matched_name": "Travis Konecny",
-          "goals": 0,
-          "assists": 0,
-          "points": 0,
-          "status": "ok"
-        },
-        {
-          "draft_number": 114,
-          "name": "Nico Hischier",
-          "position": "H",
-          "nhl_id": 8480002,
-          "matched_name": "Nico Hischier",
-          "goals": 0,
-          "assists": 0,
-          "points": 0,
-          "status": "no-stats"
-        },
-        {
-          "draft_number": 123,
-          "name": "Dylan Cozens",
-          "position": "H",
-          "nhl_id": 8481528,
-          "matched_name": "Dylan Cozens",
-          "goals": 0,
-          "assists": 0,
-          "points": 0,
-          "status": "no-stats"
-        },
-        {
-          "draft_number": 128,
-          "name": "Bryan Rust",
-          "position": "H",
-          "nhl_id": 8475810,
-          "matched_name": "Bryan Rust",
-          "goals": 0,
-          "assists": 0,
-          "points": 0,
-          "status": "no-stats"
-        },
-        {
-          "draft_number": 137,
-          "name": "Brock Nelson",
-          "position": "H",
-          "nhl_id": 8475754,
-          "matched_name": "Brock Nelson",
-          "goals": 1,
-          "assists": 2,
-          "points": 3,
-          "status": "ok"
-        },
-        {
-          "draft_number": 12,
-          "name": "Lane Hutson",
-          "position": "P",
-          "nhl_id": 8483457,
-          "matched_name": "Lane Hutson",
-          "goals": 0,
-          "assists": 0,
-          "points": 0,
-          "status": "ok"
-        },
-        {
-          "draft_number": 44,
-          "name": "Jacob Chychrun",
-          "position": "P",
-          "nhl_id": 8481189,
-          "matched_name": "Jacob Herauf",
-          "goals": 0,
-          "assists": 0,
-          "points": 0,
-          "status": "no-stats"
-        },
-        {
-          "draft_number": 67,
-          "name": "John Carlson",
-          "position": "P",
-          "nhl_id": 8474590,
-          "matched_name": "John Carlson",
-          "goals": 0,
-          "assists": 0,
-          "points": 0,
-          "status": "no-stats"
-        },
-        {
-          "draft_number": 81,
-          "name": "Mikhail Sergachev",
-          "position": "P",
-          "nhl_id": 8479410,
-          "matched_name": "Mikhail Sergachev",
-          "goals": 0,
-          "assists": 0,
-          "points": 0,
-          "status": "no-stats"
-        },
-        {
-          "draft_number": 86,
-          "name": "Jake Sanderson",
-          "position": "P",
-          "nhl_id": 8482105,
-          "matched_name": "Jake Sanderson",
-          "goals": 0,
-          "assists": 0,
-          "points": 0,
-          "status": "no-stats"
-        },
-        {
-          "draft_number": 100,
-          "name": "Bowen Byram",
-          "position": "P",
-          "nhl_id": 8481524,
-          "matched_name": "Bowen Byram",
-          "goals": 0,
-          "assists": 0,
-          "points": 0,
-          "status": "ok"
-        },
-        {
-          "draft_number": 53,
-          "name": "Logan Thompson",
-          "position": "M",
-          "nhl_id": 8480313,
-          "matched_name": "Logan Thompson",
-          "goals": 0,
-          "assists": 0,
-          "points": 0,
-          "status": "no-stats"
-        },
-        {
-          "draft_number": 140,
-          "name": "Joel Hofer",
-          "position": "M",
-          "nhl_id": 8480981,
-          "matched_name": "Joel Hofer",
-          "goals": 0,
-          "assists": 0,
-          "points": 0,
-          "status": "no-stats"
-        }
-      ],
-      "rank": 5
+      "rank": 3
     },
     {
       "coach": "Akseli",
       "name": "Kiven Kovat",
-      "points": 2,
+      "points": 7,
       "players": [
         {
           "draft_number": 2,
@@ -1295,9 +839,9 @@
           "nhl_id": 8478460,
           "matched_name": "Zach Werenski",
           "goals": 0,
-          "assists": 0,
-          "points": 0,
-          "status": "no-stats"
+          "assists": 2,
+          "points": 2,
+          "status": "ok"
         },
         {
           "draft_number": 40,
@@ -1317,8 +861,8 @@
           "nhl_id": 8479323,
           "matched_name": "Adam Fox",
           "goals": 0,
-          "assists": 0,
-          "points": 0,
+          "assists": 2,
+          "points": 2,
           "status": "ok"
         },
         {
@@ -1349,10 +893,10 @@
           "position": "P",
           "nhl_id": 8482684,
           "matched_name": "Luke Hughes",
-          "goals": 0,
+          "goals": 1,
           "assists": 0,
-          "points": 0,
-          "status": "no-stats"
+          "points": 1,
+          "status": "ok"
         },
         {
           "draft_number": 27,
@@ -1363,7 +907,7 @@
           "goals": 0,
           "assists": 0,
           "points": 0,
-          "status": "no-stats"
+          "status": "ok"
         },
         {
           "draft_number": 43,
@@ -1371,6 +915,462 @@
           "position": "M",
           "nhl_id": 8478872,
           "matched_name": "Karel Vejmelka",
+          "goals": 0,
+          "assists": 0,
+          "points": 0,
+          "status": "no-stats"
+        }
+      ],
+      "rank": 4
+    },
+    {
+      "coach": "Aleksi",
+      "name": "Titta på ylähylly",
+      "points": 5,
+      "players": [
+        {
+          "draft_number": 3,
+          "name": "Nikita Kucherov",
+          "position": "H",
+          "nhl_id": 8476453,
+          "matched_name": "Nikita Kucherov",
+          "goals": 1,
+          "assists": 0,
+          "points": 1,
+          "status": "ok"
+        },
+        {
+          "draft_number": 17,
+          "name": "Jason Robertson",
+          "position": "H",
+          "nhl_id": 8480027,
+          "matched_name": "Jason Robertson",
+          "goals": 0,
+          "assists": 0,
+          "points": 0,
+          "status": "no-stats"
+        },
+        {
+          "draft_number": 26,
+          "name": "Kyle Connor",
+          "position": "H",
+          "nhl_id": 8478398,
+          "matched_name": "Kyle Connor",
+          "goals": 0,
+          "assists": 0,
+          "points": 0,
+          "status": "no-stats"
+        },
+        {
+          "draft_number": 31,
+          "name": "Jake Guentzel",
+          "position": "H",
+          "nhl_id": 8477404,
+          "matched_name": "Jake Guentzel",
+          "goals": 0,
+          "assists": 0,
+          "points": 0,
+          "status": "ok"
+        },
+        {
+          "draft_number": 58,
+          "name": "Lucas Raymond",
+          "position": "H",
+          "nhl_id": 8482078,
+          "matched_name": "Lucas Raymond",
+          "goals": 0,
+          "assists": 0,
+          "points": 0,
+          "status": "no-stats"
+        },
+        {
+          "draft_number": 72,
+          "name": "Adrian Kempe",
+          "position": "H",
+          "nhl_id": 8477960,
+          "matched_name": "Adrian Kempe",
+          "goals": 0,
+          "assists": 0,
+          "points": 0,
+          "status": "ok"
+        },
+        {
+          "draft_number": 95,
+          "name": "Nick Schmaltz",
+          "position": "H",
+          "nhl_id": 8477951,
+          "matched_name": "Nick Schmaltz",
+          "goals": 0,
+          "assists": 0,
+          "points": 0,
+          "status": "no-stats"
+        },
+        {
+          "draft_number": 109,
+          "name": "Travis Konecny",
+          "position": "H",
+          "nhl_id": 8478439,
+          "matched_name": "Travis Konecny",
+          "goals": 0,
+          "assists": 1,
+          "points": 1,
+          "status": "ok"
+        },
+        {
+          "draft_number": 114,
+          "name": "Nico Hischier",
+          "position": "H",
+          "nhl_id": 8480002,
+          "matched_name": "Nico Hischier",
+          "goals": 0,
+          "assists": 0,
+          "points": 0,
+          "status": "ok"
+        },
+        {
+          "draft_number": 123,
+          "name": "Dylan Cozens",
+          "position": "H",
+          "nhl_id": 8481528,
+          "matched_name": "Dylan Cozens",
+          "goals": 0,
+          "assists": 0,
+          "points": 0,
+          "status": "no-stats"
+        },
+        {
+          "draft_number": 128,
+          "name": "Bryan Rust",
+          "position": "H",
+          "nhl_id": 8475810,
+          "matched_name": "Bryan Rust",
+          "goals": 0,
+          "assists": 0,
+          "points": 0,
+          "status": "no-stats"
+        },
+        {
+          "draft_number": 137,
+          "name": "Brock Nelson",
+          "position": "H",
+          "nhl_id": 8475754,
+          "matched_name": "Brock Nelson",
+          "goals": 1,
+          "assists": 2,
+          "points": 3,
+          "status": "ok"
+        },
+        {
+          "draft_number": 12,
+          "name": "Lane Hutson",
+          "position": "P",
+          "nhl_id": 8483457,
+          "matched_name": "Lane Hutson",
+          "goals": 0,
+          "assists": 0,
+          "points": 0,
+          "status": "ok"
+        },
+        {
+          "draft_number": 44,
+          "name": "Jacob Chychrun",
+          "position": "P",
+          "nhl_id": 8481189,
+          "matched_name": "Jacob Herauf",
+          "goals": 0,
+          "assists": 0,
+          "points": 0,
+          "status": "no-stats"
+        },
+        {
+          "draft_number": 67,
+          "name": "John Carlson",
+          "position": "P",
+          "nhl_id": 8474590,
+          "matched_name": "John Carlson",
+          "goals": 0,
+          "assists": 0,
+          "points": 0,
+          "status": "ok"
+        },
+        {
+          "draft_number": 81,
+          "name": "Mikhail Sergachev",
+          "position": "P",
+          "nhl_id": 8479410,
+          "matched_name": "Mikhail Sergachev",
+          "goals": 0,
+          "assists": 0,
+          "points": 0,
+          "status": "no-stats"
+        },
+        {
+          "draft_number": 86,
+          "name": "Jake Sanderson",
+          "position": "P",
+          "nhl_id": 8482105,
+          "matched_name": "Jake Sanderson",
+          "goals": 0,
+          "assists": 0,
+          "points": 0,
+          "status": "no-stats"
+        },
+        {
+          "draft_number": 100,
+          "name": "Bowen Byram",
+          "position": "P",
+          "nhl_id": 8481524,
+          "matched_name": "Bowen Byram",
+          "goals": 0,
+          "assists": 0,
+          "points": 0,
+          "status": "ok"
+        },
+        {
+          "draft_number": 53,
+          "name": "Logan Thompson",
+          "position": "M",
+          "nhl_id": 8480313,
+          "matched_name": "Logan Thompson",
+          "goals": 0,
+          "assists": 0,
+          "points": 0,
+          "status": "no-stats"
+        },
+        {
+          "draft_number": 140,
+          "name": "Joel Hofer",
+          "position": "M",
+          "nhl_id": 8480981,
+          "matched_name": "Joel Hofer",
+          "goals": 0,
+          "assists": 0,
+          "points": 0,
+          "status": "no-stats"
+        }
+      ],
+      "rank": 5
+    },
+    {
+      "coach": "Janne",
+      "name": "Häpykarvan Lämäri",
+      "points": 5,
+      "players": [
+        {
+          "draft_number": 7,
+          "name": "Leon Draisaitl",
+          "position": "H",
+          "nhl_id": 8477934,
+          "matched_name": "Leon Draisaitl",
+          "goals": 0,
+          "assists": 1,
+          "points": 1,
+          "status": "ok"
+        },
+        {
+          "draft_number": 21,
+          "name": "Matthew Tkachuk",
+          "position": "H",
+          "nhl_id": 8479314,
+          "matched_name": "Matthew Tkachuk",
+          "goals": 0,
+          "assists": 0,
+          "points": 0,
+          "status": "ok"
+        },
+        {
+          "draft_number": 22,
+          "name": "Brady Tkachuck",
+          "position": "H",
+          "nhl_id": 8480801,
+          "matched_name": "Brady Tkachuk",
+          "goals": 0,
+          "assists": 0,
+          "points": 0,
+          "status": "ok"
+        },
+        {
+          "draft_number": 35,
+          "name": "Auston Matthews",
+          "position": "H",
+          "nhl_id": 8479318,
+          "matched_name": "Auston Matthews",
+          "goals": 0,
+          "assists": 0,
+          "points": 0,
+          "status": "ok"
+        },
+        {
+          "draft_number": 48,
+          "name": "Sam Reinhart",
+          "position": "H",
+          "nhl_id": 8477933,
+          "matched_name": "Sam Reinhart",
+          "goals": 0,
+          "assists": 0,
+          "points": 0,
+          "status": "ok"
+        },
+        {
+          "draft_number": 49,
+          "name": "Cutter Gauthier",
+          "position": "H",
+          "nhl_id": 8483445,
+          "matched_name": "Cutter Gauthier",
+          "goals": 0,
+          "assists": 0,
+          "points": 0,
+          "status": "no-stats"
+        },
+        {
+          "draft_number": 76,
+          "name": "Mikael Granlund",
+          "position": "H",
+          "nhl_id": 8475798,
+          "matched_name": "Mikael Granlund",
+          "goals": 0,
+          "assists": 0,
+          "points": 0,
+          "status": "no-stats"
+        },
+        {
+          "draft_number": 90,
+          "name": "Dylan Holloway",
+          "position": "H",
+          "nhl_id": 8482077,
+          "matched_name": "Dylan Holloway",
+          "goals": 0,
+          "assists": 0,
+          "points": 0,
+          "status": "no-stats"
+        },
+        {
+          "draft_number": 91,
+          "name": "Patrick Kane",
+          "position": "H",
+          "nhl_id": 8474141,
+          "matched_name": "Patrick Kane",
+          "goals": 1,
+          "assists": 0,
+          "points": 1,
+          "status": "ok"
+        },
+        {
+          "draft_number": 104,
+          "name": "J.T. Miller",
+          "position": "H",
+          "nhl_id": 8476468,
+          "matched_name": "J.T. Miller",
+          "goals": 0,
+          "assists": 0,
+          "points": 0,
+          "status": "ok"
+        },
+        {
+          "draft_number": 105,
+          "name": "Timo Meier",
+          "position": "H",
+          "nhl_id": 8478414,
+          "matched_name": "Timo Meier",
+          "goals": 0,
+          "assists": 0,
+          "points": 0,
+          "status": "ok"
+        },
+        {
+          "draft_number": 118,
+          "name": "Rickard Rakell",
+          "position": "H",
+          "nhl_id": 8476483,
+          "matched_name": "Rickard Rakell",
+          "goals": 0,
+          "assists": 1,
+          "points": 1,
+          "status": "ok"
+        },
+        {
+          "draft_number": 8,
+          "name": "Cale Makar",
+          "position": "P",
+          "nhl_id": 8480069,
+          "matched_name": "Cale Makar",
+          "goals": 0,
+          "assists": 2,
+          "points": 2,
+          "status": "ok"
+        },
+        {
+          "draft_number": 62,
+          "name": "Moritz Seider",
+          "position": "P",
+          "nhl_id": 8481542,
+          "matched_name": "Moritz Seider",
+          "goals": 0,
+          "assists": 0,
+          "points": 0,
+          "status": "no-stats"
+        },
+        {
+          "draft_number": 77,
+          "name": "Roman Josi",
+          "position": "P",
+          "nhl_id": 8474600,
+          "matched_name": "Roman Josi",
+          "goals": 0,
+          "assists": 0,
+          "points": 0,
+          "status": "no-stats"
+        },
+        {
+          "draft_number": 119,
+          "name": "McKenzie Weegar",
+          "position": "P",
+          "nhl_id": 8477346,
+          "matched_name": "MacKenzie Weegar",
+          "goals": 0,
+          "assists": 0,
+          "points": 0,
+          "status": "no-stats"
+        },
+        {
+          "draft_number": 132,
+          "name": "Seth Jones",
+          "position": "P",
+          "nhl_id": 8477495,
+          "matched_name": "Seth Jones",
+          "goals": 0,
+          "assists": 0,
+          "points": 0,
+          "status": "ok"
+        },
+        {
+          "draft_number": 133,
+          "name": "Luka Ganyoni",
+          "position": "P",
+          "nhl_id": null,
+          "matched_name": null,
+          "goals": 0,
+          "assists": 0,
+          "points": 0,
+          "status": "unresolved"
+        },
+        {
+          "draft_number": 36,
+          "name": "Jake Oettinger",
+          "position": "M",
+          "nhl_id": 8479979,
+          "matched_name": "Jake Oettinger",
+          "goals": 0,
+          "assists": 0,
+          "points": 0,
+          "status": "no-stats"
+        },
+        {
+          "draft_number": 63,
+          "name": "Scott Wedgewood",
+          "position": "M",
+          "nhl_id": 8475809,
+          "matched_name": "Scott Wedgewood",
           "goals": 0,
           "assists": 0,
           "points": 0,
@@ -1459,7 +1459,7 @@
           "goals": 0,
           "assists": 0,
           "points": 0,
-          "status": "no-stats"
+          "status": "ok"
         },
         {
           "draft_number": 88,
@@ -1492,7 +1492,7 @@
           "goals": 0,
           "assists": 0,
           "points": 0,
-          "status": "no-stats"
+          "status": "ok"
         },
         {
           "draft_number": 116,
@@ -1525,7 +1525,7 @@
           "goals": 0,
           "assists": 0,
           "points": 0,
-          "status": "no-stats"
+          "status": "ok"
         },
         {
           "draft_number": 51,
