@@ -158,7 +158,15 @@ def resolve_player(player: dict, cache: dict, overrides: dict) -> tuple[dict | N
 
 
 def fetch_player_stats(player_id: int, position: str, season: str, game_type: int) -> dict:
+    """
+    Fetch one player's exact season totals.
+
+    Scoring:
+      H/P: goals + assists
+      M:   wins * 2 + shutouts * 2 + goals + assists
+    """
     entity = "goalie" if position == "M" else "skater"
+
     response = session.get(
         f"{STATS_BASE}/{entity}/summary",
         params={
@@ -174,18 +182,47 @@ def fetch_player_stats(player_id: int, position: str, season: str, game_type: in
     rows = response.json().get("data", [])
 
     if not rows:
-        return {"goals": 0, "assists": 0, "points": 0, "games_played": 0, "status": "no-stats"}
+        return {
+            "goals": 0,
+            "assists": 0,
+            "wins": 0,
+            "shutouts": 0,
+            "points": 0,
+            "games_played": 0,
+            "status": "no-stats",
+        }
 
     row = max(rows, key=lambda r: int(r.get("gamesPlayed") or 0))
+
     goals = int(row.get("goals") or 0)
     assists = int(row.get("assists") or 0)
-    points = int(row.get("points")) if row.get("points") is not None else goals + assists
+    games_played = int(row.get("gamesPlayed") or 0)
+
+    if position == "M":
+        wins = int(row.get("wins") or 0)
+        shutouts = int(row.get("shutouts") or 0)
+        points = wins * 2 + shutouts * 2 + goals + assists
+
+        return {
+            "goals": goals,
+            "assists": assists,
+            "wins": wins,
+            "shutouts": shutouts,
+            "points": points,
+            "games_played": games_played,
+            "status": "ok",
+        }
+
+    api_points = row.get("points")
+    points = int(api_points) if api_points is not None else goals + assists
 
     return {
         "goals": goals,
         "assists": assists,
+        "wins": 0,
+        "shutouts": 0,
         "points": points,
-        "games_played": int(row.get("gamesPlayed") or 0),
+        "games_played": games_played,
         "status": "ok",
     }
 
@@ -199,6 +236,8 @@ def previous_stats_map(previous: dict) -> dict[str, dict]:
                 "goals": int(player.get("goals") or 0),
                 "assists": int(player.get("assists") or 0),
                 "points": int(player.get("points") or 0),
+                "wins": int(player.get("wins") or 0),
+                "shutouts": int(player.get("shutouts") or 0),
                 "games_played": int(player.get("games_played") or 0),
             }
     return result
@@ -247,6 +286,8 @@ def main() -> None:
                 "matched_name": None,
                 "goals": 0,
                 "assists": 0,
+                "wins": 0,
+                "shutouts": 0,
                 "points": 0,
                 "games_played": 0,
                 "status": "unresolved",
@@ -304,7 +345,7 @@ def main() -> None:
         "season": season_label,
         "season_id": season,
         "game_type": game_type,
-        "points_formula": "goals + assists",
+        "points_formula": "H/P: goals + assists; M: wins*2 + shutouts*2 + goals + assists",
         "api_status": api_status,
         "player_count": total_players,
         "resolved_players": resolved_count,
