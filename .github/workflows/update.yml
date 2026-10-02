@@ -2,7 +2,7 @@ name: Update NHL stats
 
 on:
   schedule:
-    - cron: "7,37 * * * *"
+    - cron: "0 8 * * *" # every day at 8:00 UTC
   workflow_dispatch:
   push:
     paths:
