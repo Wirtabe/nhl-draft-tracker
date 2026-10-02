@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-10-02T19:22:26.314886+00:00",
+  "generated_at": "2026-10-02T19:23:10.288061+00:00",
   "season": "2026-2027",
   "season_id": "20262027",
   "game_type": 2,
-  "points_formula": "goals + assists",
+  "points_formula": "H/P: goals + assists; M: wins*2 + shutouts*2 + goals + assists",
   "api_status": "partial",
   "player_count": 140,
   "resolved_players": 138,
@@ -18,7 +18,7 @@
     {
       "coach": "Jarno",
       "name": "Old Stars",
-      "points": 25,
+      "points": 27,
       "players": [
         {
           "draft_number": 6,
@@ -28,6 +28,8 @@
           "matched_name": "Martin Necas",
           "goals": 0,
           "assists": 1,
+          "wins": 0,
+          "shutouts": 0,
           "points": 1,
           "games_played": 1,
           "status": "ok"
@@ -40,6 +42,8 @@
           "matched_name": "Jack Eichel",
           "goals": 1,
           "assists": 2,
+          "wins": 0,
+          "shutouts": 0,
           "points": 3,
           "games_played": 1,
           "status": "ok"
@@ -52,6 +56,8 @@
           "matched_name": "Matt Boldy",
           "goals": 0,
           "assists": 0,
+          "wins": 0,
+          "shutouts": 0,
           "points": 0,
           "games_played": 1,
           "status": "ok"
@@ -64,6 +70,8 @@
           "matched_name": "Artemi Panarin",
           "goals": 1,
           "assists": 0,
+          "wins": 0,
+          "shutouts": 0,
           "points": 1,
           "games_played": 1,
           "status": "ok"
@@ -76,6 +84,8 @@
           "matched_name": "Leo Carlsson",
           "goals": 0,
           "assists": 0,
+          "wins": 0,
+          "shutouts": 0,
           "points": 0,
           "games_played": 0,
           "status": "no-stats"
@@ -88,6 +98,8 @@
           "matched_name": "Brayden Point",
           "goals": 0,
           "assists": 1,
+          "wins": 0,
+          "shutouts": 0,
           "points": 1,
           "games_played": 1,
           "status": "ok"
@@ -100,6 +112,8 @@
           "matched_name": "Mika Zibanejad",
           "goals": 1,
           "assists": 1,
+          "wins": 0,
+          "shutouts": 0,
           "points": 2,
           "games_played": 2,
           "status": "ok"
@@ -112,6 +126,8 @@
           "matched_name": "Ivar Stenberg",
           "goals": 0,
           "assists": 0,
+          "wins": 0,
+          "shutouts": 0,
           "points": 0,
           "games_played": 1,
           "status": "ok"
@@ -124,6 +140,8 @@
           "matched_name": "Michael Misa",
           "goals": 0,
           "assists": 0,
+          "wins": 0,
+          "shutouts": 0,
           "points": 0,
           "games_played": 1,
           "status": "ok"
@@ -136,6 +154,8 @@
           "matched_name": "Drake Batherson",
           "goals": 0,
           "assists": 0,
+          "wins": 0,
+          "shutouts": 0,
           "points": 0,
           "games_played": 0,
           "status": "no-stats"
@@ -148,6 +168,8 @@
           "matched_name": "Nikolaj Ehlers",
           "goals": 0,
           "assists": 0,
+          "wins": 0,
+          "shutouts": 0,
           "points": 0,
           "games_played": 1,
           "status": "ok"
@@ -160,6 +182,8 @@
           "matched_name": "Mark Stone",
           "goals": 1,
           "assists": 0,
+          "wins": 0,
+          "shutouts": 0,
           "points": 1,
           "games_played": 1,
           "status": "ok"
@@ -172,6 +196,8 @@
           "matched_name": "Evan Bouchard",
           "goals": 4,
           "assists": 4,
+          "wins": 0,
+          "shutouts": 0,
           "points": 8,
           "games_played": 2,
           "status": "ok"
@@ -184,6 +210,8 @@
           "matched_name": "Filip Hronek",
           "goals": 0,
           "assists": 4,
+          "wins": 0,
+          "shutouts": 0,
           "points": 4,
           "games_played": 2,
           "status": "ok"
@@ -196,6 +224,8 @@
           "matched_name": "Mattias Samuelsson",
           "goals": 1,
           "assists": 0,
+          "wins": 0,
+          "shutouts": 0,
           "points": 1,
           "games_played": 1,
           "status": "ok"
@@ -208,6 +238,8 @@
           "matched_name": "Vince Dunn",
           "goals": 1,
           "assists": 2,
+          "wins": 0,
+          "shutouts": 0,
           "points": 3,
           "games_played": 1,
           "status": "ok"
@@ -220,6 +252,8 @@
           "matched_name": "Rasmus Andersson",
           "goals": 0,
           "assists": 0,
+          "wins": 0,
+          "shutouts": 0,
           "points": 0,
           "games_played": 1,
           "status": "ok"
@@ -232,6 +266,8 @@
           "matched_name": "Sean Molina",
           "goals": 0,
           "assists": 0,
+          "wins": 0,
+          "shutouts": 0,
           "points": 0,
           "games_played": 0,
           "status": "no-stats"
@@ -244,6 +280,8 @@
           "matched_name": null,
           "goals": 0,
           "assists": 0,
+          "wins": 0,
+          "shutouts": 0,
           "points": 0,
           "games_played": 0,
           "status": "unresolved"
@@ -256,7 +294,9 @@
           "matched_name": "Jakub Dobes",
           "goals": 0,
           "assists": 0,
-          "points": 0,
+          "wins": 1,
+          "shutouts": 0,
+          "points": 2,
           "games_played": 1,
           "status": "ok"
         }
@@ -266,7 +306,7 @@
     {
       "coach": "Akseli",
       "name": "Kiven Kovat",
-      "points": 17,
+      "points": 21,
       "players": [
         {
           "draft_number": 2,
@@ -276,6 +316,8 @@
           "matched_name": "Connor McDavid",
           "goals": 1,
           "assists": 6,
+          "wins": 0,
+          "shutouts": 0,
           "points": 7,
           "games_played": 2,
           "status": "ok"
@@ -288,6 +330,8 @@
           "matched_name": "Mark Scheifele",
           "goals": 0,
           "assists": 0,
+          "wins": 0,
+          "shutouts": 0,
           "points": 0,
           "games_played": 0,
           "status": "no-stats"
@@ -300,6 +344,8 @@
           "matched_name": "Clayton Keller",
           "goals": 0,
           "assists": 2,
+          "wins": 0,
+          "shutouts": 0,
           "points": 2,
           "games_played": 1,
           "status": "ok"
@@ -312,6 +358,8 @@
           "matched_name": "Connor Bedard",
           "goals": 0,
           "assists": 0,
+          "wins": 0,
+          "shutouts": 0,
           "points": 0,
           "games_played": 0,
           "status": "no-stats"
@@ -324,6 +372,8 @@
           "matched_name": "Dylan Guenther",
           "goals": 2,
           "assists": 0,
+          "wins": 0,
+          "shutouts": 0,
           "points": 2,
           "games_played": 1,
           "status": "ok"
@@ -336,6 +386,8 @@
           "matched_name": "Juraj Slafkovský",
           "goals": 0,
           "assists": 0,
+          "wins": 0,
+          "shutouts": 0,
           "points": 0,
           "games_played": 1,
           "status": "ok"
@@ -348,6 +400,8 @@
           "matched_name": "Logan Cooley",
           "goals": 0,
           "assists": 1,
+          "wins": 0,
+          "shutouts": 0,
           "points": 1,
           "games_played": 1,
           "status": "ok"
@@ -360,6 +414,8 @@
           "matched_name": "Matthew Brown",
           "goals": 0,
           "assists": 0,
+          "wins": 0,
+          "shutouts": 0,
           "points": 0,
           "games_played": 0,
           "status": "no-stats"
@@ -372,6 +428,8 @@
           "matched_name": "Alex Tuch",
           "goals": 0,
           "assists": 0,
+          "wins": 0,
+          "shutouts": 0,
           "points": 0,
           "games_played": 0,
           "status": "no-stats"
@@ -384,6 +442,8 @@
           "matched_name": "Seth Jarvis",
           "goals": 0,
           "assists": 0,
+          "wins": 0,
+          "shutouts": 0,
           "points": 0,
           "games_played": 0,
           "status": "no-stats"
@@ -396,6 +456,8 @@
           "matched_name": "Quinton Byfield",
           "goals": 0,
           "assists": 0,
+          "wins": 0,
+          "shutouts": 0,
           "points": 0,
           "games_played": 1,
           "status": "ok"
@@ -408,6 +470,8 @@
           "matched_name": "Alex Ovechkin",
           "goals": 0,
           "assists": 0,
+          "wins": 0,
+          "shutouts": 0,
           "points": 0,
           "games_played": 0,
           "status": "no-stats"
@@ -420,6 +484,8 @@
           "matched_name": "Zach Werenski",
           "goals": 0,
           "assists": 2,
+          "wins": 0,
+          "shutouts": 0,
           "points": 2,
           "games_played": 1,
           "status": "ok"
@@ -432,6 +498,8 @@
           "matched_name": "Darren Raddysh",
           "goals": 0,
           "assists": 0,
+          "wins": 0,
+          "shutouts": 0,
           "points": 0,
           "games_played": 2,
           "status": "ok"
@@ -444,6 +512,8 @@
           "matched_name": "Adam Fox",
           "goals": 0,
           "assists": 2,
+          "wins": 0,
+          "shutouts": 0,
           "points": 2,
           "games_played": 2,
           "status": "ok"
@@ -456,6 +526,8 @@
           "matched_name": "Noah Dobson",
           "goals": 0,
           "assists": 0,
+          "wins": 0,
+          "shutouts": 0,
           "points": 0,
           "games_played": 1,
           "status": "ok"
@@ -468,6 +540,8 @@
           "matched_name": "Thomas Harley",
           "goals": 0,
           "assists": 0,
+          "wins": 0,
+          "shutouts": 0,
           "points": 0,
           "games_played": 0,
           "status": "no-stats"
@@ -480,6 +554,8 @@
           "matched_name": "Luke Hughes",
           "goals": 1,
           "assists": 0,
+          "wins": 0,
+          "shutouts": 0,
           "points": 1,
           "games_played": 1,
           "status": "ok"
@@ -492,6 +568,8 @@
           "matched_name": "Andrei Vasilevskiy",
           "goals": 0,
           "assists": 0,
+          "wins": 0,
+          "shutouts": 0,
           "points": 0,
           "games_played": 1,
           "status": "ok"
@@ -504,7 +582,9 @@
           "matched_name": "Karel Vejmelka",
           "goals": 0,
           "assists": 0,
-          "points": 0,
+          "wins": 1,
+          "shutouts": 1,
+          "points": 4,
           "games_played": 1,
           "status": "ok"
         }
@@ -514,7 +594,7 @@
     {
       "coach": "Riku",
       "name": "Söhlöt",
-      "points": 14,
+      "points": 16,
       "players": [
         {
           "draft_number": 1,
@@ -524,6 +604,8 @@
           "matched_name": "Nathan MacKinnon",
           "goals": 2,
           "assists": 0,
+          "wins": 0,
+          "shutouts": 0,
           "points": 2,
           "games_played": 1,
           "status": "ok"
@@ -536,6 +618,8 @@
           "matched_name": "Aleksander Barkov",
           "goals": 0,
           "assists": 0,
+          "wins": 0,
+          "shutouts": 0,
           "points": 0,
           "games_played": 2,
           "status": "ok"
@@ -548,6 +632,8 @@
           "matched_name": "Kirill Kaprizov",
           "goals": 1,
           "assists": 0,
+          "wins": 0,
+          "shutouts": 0,
           "points": 1,
           "games_played": 1,
           "status": "ok"
@@ -560,6 +646,8 @@
           "matched_name": "Tage Thompson",
           "goals": 0,
           "assists": 0,
+          "wins": 0,
+          "shutouts": 0,
           "points": 0,
           "games_played": 1,
           "status": "ok"
@@ -572,6 +660,8 @@
           "matched_name": "Mitch Marner",
           "goals": 0,
           "assists": 0,
+          "wins": 0,
+          "shutouts": 0,
           "points": 0,
           "games_played": 1,
           "status": "ok"
@@ -584,6 +674,8 @@
           "matched_name": "Will Smith",
           "goals": 2,
           "assists": 1,
+          "wins": 0,
+          "shutouts": 0,
           "points": 3,
           "games_played": 1,
           "status": "ok"
@@ -596,6 +688,8 @@
           "matched_name": "Filip Forsberg",
           "goals": 0,
           "assists": 1,
+          "wins": 0,
+          "shutouts": 0,
           "points": 1,
           "games_played": 1,
           "status": "ok"
@@ -608,6 +702,8 @@
           "matched_name": "Morgan Geekie",
           "goals": 0,
           "assists": 0,
+          "wins": 0,
+          "shutouts": 0,
           "points": 0,
           "games_played": 1,
           "status": "ok"
@@ -620,6 +716,8 @@
           "matched_name": "Alex DeBrincat",
           "goals": 0,
           "assists": 0,
+          "wins": 0,
+          "shutouts": 0,
           "points": 0,
           "games_played": 0,
           "status": "no-stats"
@@ -632,6 +730,8 @@
           "matched_name": "Pavel Dorofeyev",
           "goals": 1,
           "assists": 1,
+          "wins": 0,
+          "shutouts": 0,
           "points": 2,
           "games_played": 2,
           "status": "ok"
@@ -644,6 +744,8 @@
           "matched_name": "Gavin McKenna",
           "goals": 0,
           "assists": 0,
+          "wins": 0,
+          "shutouts": 0,
           "points": 0,
           "games_played": 2,
           "status": "ok"
@@ -656,6 +758,8 @@
           "matched_name": "Kirill Marchenko",
           "goals": 0,
           "assists": 1,
+          "wins": 0,
+          "shutouts": 0,
           "points": 1,
           "games_played": 2,
           "status": "ok"
@@ -668,6 +772,8 @@
           "matched_name": "Shayne Gostisbehere",
           "goals": 0,
           "assists": 0,
+          "wins": 0,
+          "shutouts": 0,
           "points": 0,
           "games_played": 1,
           "status": "ok"
@@ -680,6 +786,8 @@
           "matched_name": "Shea Theodore",
           "goals": 0,
           "assists": 2,
+          "wins": 0,
+          "shutouts": 0,
           "points": 2,
           "games_played": 1,
           "status": "ok"
@@ -692,6 +800,8 @@
           "matched_name": "Brandt Clarke",
           "goals": 0,
           "assists": 0,
+          "wins": 0,
+          "shutouts": 0,
           "points": 0,
           "games_played": 1,
           "status": "ok"
@@ -704,6 +814,8 @@
           "matched_name": "Dougie Hamilton",
           "goals": 1,
           "assists": 0,
+          "wins": 0,
+          "shutouts": 0,
           "points": 1,
           "games_played": 1,
           "status": "ok"
@@ -716,6 +828,8 @@
           "matched_name": "Zayne Parekh",
           "goals": 0,
           "assists": 0,
+          "wins": 0,
+          "shutouts": 0,
           "points": 0,
           "games_played": 1,
           "status": "ok"
@@ -728,6 +842,8 @@
           "matched_name": "Justin Faulk",
           "goals": 0,
           "assists": 0,
+          "wins": 0,
+          "shutouts": 0,
           "points": 0,
           "games_played": 0,
           "status": "no-stats"
@@ -740,6 +856,8 @@
           "matched_name": "Jaroslav Halak",
           "goals": 0,
           "assists": 0,
+          "wins": 0,
+          "shutouts": 0,
           "points": 0,
           "games_played": 0,
           "status": "no-stats"
@@ -752,7 +870,9 @@
           "matched_name": "Igor Shesterkin",
           "goals": 1,
           "assists": 0,
-          "points": 1,
+          "wins": 1,
+          "shutouts": 0,
+          "points": 3,
           "games_played": 2,
           "status": "ok"
         }
@@ -772,6 +892,8 @@
           "matched_name": "Macklin Celebrini",
           "goals": 0,
           "assists": 3,
+          "wins": 0,
+          "shutouts": 0,
           "points": 3,
           "games_played": 1,
           "status": "ok"
@@ -784,6 +906,8 @@
           "matched_name": "Mikko Rantanen",
           "goals": 0,
           "assists": 0,
+          "wins": 0,
+          "shutouts": 0,
           "points": 0,
           "games_played": 0,
           "status": "no-stats"
@@ -796,6 +920,8 @@
           "matched_name": "Wyatt Johnston",
           "goals": 0,
           "assists": 0,
+          "wins": 0,
+          "shutouts": 0,
           "points": 0,
           "games_played": 0,
           "status": "no-stats"
@@ -808,6 +934,8 @@
           "matched_name": "William Nylander",
           "goals": 2,
           "assists": 0,
+          "wins": 0,
+          "shutouts": 0,
           "points": 2,
           "games_played": 2,
           "status": "ok"
@@ -820,6 +948,8 @@
           "matched_name": "Jack Hughes",
           "goals": 0,
           "assists": 0,
+          "wins": 0,
+          "shutouts": 0,
           "points": 0,
           "games_played": 0,
           "status": "no-stats"
@@ -832,6 +962,8 @@
           "matched_name": "Robert Thomas",
           "goals": 0,
           "assists": 0,
+          "wins": 0,
+          "shutouts": 0,
           "points": 0,
           "games_played": 0,
           "status": "no-stats"
@@ -844,6 +976,8 @@
           "matched_name": "Ivan Demidov",
           "goals": 0,
           "assists": 0,
+          "wins": 0,
+          "shutouts": 0,
           "points": 0,
           "games_played": 1,
           "status": "ok"
@@ -856,6 +990,8 @@
           "matched_name": "Jesper Bratt",
           "goals": 0,
           "assists": 1,
+          "wins": 0,
+          "shutouts": 0,
           "points": 1,
           "games_played": 1,
           "status": "ok"
@@ -868,6 +1004,8 @@
           "matched_name": "Jimmy Snuggerud",
           "goals": 0,
           "assists": 0,
+          "wins": 0,
+          "shutouts": 0,
           "points": 0,
           "games_played": 0,
           "status": "no-stats"
@@ -880,6 +1018,8 @@
           "matched_name": "Matthew Knies",
           "goals": 2,
           "assists": 1,
+          "wins": 0,
+          "shutouts": 0,
           "points": 3,
           "games_played": 1,
           "status": "ok"
@@ -892,6 +1032,8 @@
           "matched_name": "Adam Fantilli",
           "goals": 1,
           "assists": 0,
+          "wins": 0,
+          "shutouts": 0,
           "points": 1,
           "games_played": 1,
           "status": "ok"
@@ -904,6 +1046,8 @@
           "matched_name": "John Tavares",
           "goals": 0,
           "assists": 1,
+          "wins": 0,
+          "shutouts": 0,
           "points": 1,
           "games_played": 2,
           "status": "ok"
@@ -916,6 +1060,8 @@
           "matched_name": "Quinn Hughes",
           "goals": 0,
           "assists": 1,
+          "wins": 0,
+          "shutouts": 0,
           "points": 1,
           "games_played": 1,
           "status": "ok"
@@ -928,6 +1074,8 @@
           "matched_name": "Matthew Schaefer",
           "goals": 0,
           "assists": 0,
+          "wins": 0,
+          "shutouts": 0,
           "points": 0,
           "games_played": 1,
           "status": "ok"
@@ -940,6 +1088,8 @@
           "matched_name": "Charlie McAvoy",
           "goals": 0,
           "assists": 0,
+          "wins": 0,
+          "shutouts": 0,
           "points": 0,
           "games_played": 0,
           "status": "no-stats"
@@ -952,6 +1102,8 @@
           "matched_name": "Josh Morrissey",
           "goals": 0,
           "assists": 0,
+          "wins": 0,
+          "shutouts": 0,
           "points": 0,
           "games_played": 0,
           "status": "no-stats"
@@ -964,6 +1116,8 @@
           "matched_name": "Erik Karlsson",
           "goals": 0,
           "assists": 1,
+          "wins": 0,
+          "shutouts": 0,
           "points": 1,
           "games_played": 1,
           "status": "ok"
@@ -976,6 +1130,8 @@
           "matched_name": "Thomas Chabot",
           "goals": 0,
           "assists": 0,
+          "wins": 0,
+          "shutouts": 0,
           "points": 0,
           "games_played": 0,
           "status": "no-stats"
@@ -988,6 +1144,8 @@
           "matched_name": "Ilya Sorokin",
           "goals": 0,
           "assists": 0,
+          "wins": 0,
+          "shutouts": 0,
           "points": 0,
           "games_played": 1,
           "status": "ok"
@@ -1000,6 +1158,8 @@
           "matched_name": "Filip Gustavsson",
           "goals": 0,
           "assists": 0,
+          "wins": 0,
+          "shutouts": 0,
           "points": 0,
           "games_played": 0,
           "status": "no-stats"
@@ -1020,6 +1180,8 @@
           "matched_name": "Leon Draisaitl",
           "goals": 2,
           "assists": 2,
+          "wins": 0,
+          "shutouts": 0,
           "points": 4,
           "games_played": 2,
           "status": "ok"
@@ -1032,6 +1194,8 @@
           "matched_name": "Matthew Tkachuk",
           "goals": 1,
           "assists": 0,
+          "wins": 0,
+          "shutouts": 0,
           "points": 1,
           "games_played": 2,
           "status": "ok"
@@ -1044,6 +1208,8 @@
           "matched_name": "Brady Tkachuk",
           "goals": 0,
           "assists": 0,
+          "wins": 0,
+          "shutouts": 0,
           "points": 0,
           "games_played": 2,
           "status": "ok"
@@ -1056,6 +1222,8 @@
           "matched_name": "Auston Matthews",
           "goals": 0,
           "assists": 0,
+          "wins": 0,
+          "shutouts": 0,
           "points": 0,
           "games_played": 2,
           "status": "ok"
@@ -1068,6 +1236,8 @@
           "matched_name": "Sam Reinhart",
           "goals": 0,
           "assists": 0,
+          "wins": 0,
+          "shutouts": 0,
           "points": 0,
           "games_played": 2,
           "status": "ok"
@@ -1080,6 +1250,8 @@
           "matched_name": "Cutter Gauthier",
           "goals": 0,
           "assists": 0,
+          "wins": 0,
+          "shutouts": 0,
           "points": 0,
           "games_played": 0,
           "status": "no-stats"
@@ -1092,6 +1264,8 @@
           "matched_name": "Mikael Granlund",
           "goals": 0,
           "assists": 0,
+          "wins": 0,
+          "shutouts": 0,
           "points": 0,
           "games_played": 0,
           "status": "no-stats"
@@ -1104,6 +1278,8 @@
           "matched_name": "Dylan Holloway",
           "goals": 0,
           "assists": 0,
+          "wins": 0,
+          "shutouts": 0,
           "points": 0,
           "games_played": 0,
           "status": "no-stats"
@@ -1116,6 +1292,8 @@
           "matched_name": "Patrick Kane",
           "goals": 1,
           "assists": 0,
+          "wins": 0,
+          "shutouts": 0,
           "points": 1,
           "games_played": 2,
           "status": "ok"
@@ -1128,6 +1306,8 @@
           "matched_name": "J.T. Miller",
           "goals": 0,
           "assists": 0,
+          "wins": 0,
+          "shutouts": 0,
           "points": 0,
           "games_played": 2,
           "status": "ok"
@@ -1140,6 +1320,8 @@
           "matched_name": "Timo Meier",
           "goals": 0,
           "assists": 0,
+          "wins": 0,
+          "shutouts": 0,
           "points": 0,
           "games_played": 1,
           "status": "ok"
@@ -1152,6 +1334,8 @@
           "matched_name": "Rickard Rakell",
           "goals": 0,
           "assists": 1,
+          "wins": 0,
+          "shutouts": 0,
           "points": 1,
           "games_played": 1,
           "status": "ok"
@@ -1164,6 +1348,8 @@
           "matched_name": "Cale Makar",
           "goals": 0,
           "assists": 2,
+          "wins": 0,
+          "shutouts": 0,
           "points": 2,
           "games_played": 1,
           "status": "ok"
@@ -1176,6 +1362,8 @@
           "matched_name": "Moritz Seider",
           "goals": 0,
           "assists": 0,
+          "wins": 0,
+          "shutouts": 0,
           "points": 0,
           "games_played": 0,
           "status": "no-stats"
@@ -1188,6 +1376,8 @@
           "matched_name": "Roman Josi",
           "goals": 1,
           "assists": 0,
+          "wins": 0,
+          "shutouts": 0,
           "points": 1,
           "games_played": 1,
           "status": "ok"
@@ -1200,6 +1390,8 @@
           "matched_name": "MacKenzie Weegar",
           "goals": 0,
           "assists": 0,
+          "wins": 0,
+          "shutouts": 0,
           "points": 0,
           "games_played": 1,
           "status": "ok"
@@ -1212,6 +1404,8 @@
           "matched_name": "Seth Jones",
           "goals": 0,
           "assists": 0,
+          "wins": 0,
+          "shutouts": 0,
           "points": 0,
           "games_played": 2,
           "status": "ok"
@@ -1224,6 +1418,8 @@
           "matched_name": null,
           "goals": 0,
           "assists": 0,
+          "wins": 0,
+          "shutouts": 0,
           "points": 0,
           "games_played": 0,
           "status": "unresolved"
@@ -1236,6 +1432,8 @@
           "matched_name": "Jake Oettinger",
           "goals": 0,
           "assists": 0,
+          "wins": 0,
+          "shutouts": 0,
           "points": 0,
           "games_played": 0,
           "status": "no-stats"
@@ -1248,6 +1446,8 @@
           "matched_name": "Scott Wedgewood",
           "goals": 0,
           "assists": 0,
+          "wins": 0,
+          "shutouts": 0,
           "points": 0,
           "games_played": 0,
           "status": "no-stats"
@@ -1268,6 +1468,8 @@
           "matched_name": "Nikita Kucherov",
           "goals": 1,
           "assists": 0,
+          "wins": 0,
+          "shutouts": 0,
           "points": 1,
           "games_played": 1,
           "status": "ok"
@@ -1280,6 +1482,8 @@
           "matched_name": "Jason Robertson",
           "goals": 0,
           "assists": 0,
+          "wins": 0,
+          "shutouts": 0,
           "points": 0,
           "games_played": 0,
           "status": "no-stats"
@@ -1292,6 +1496,8 @@
           "matched_name": "Kyle Connor",
           "goals": 0,
           "assists": 0,
+          "wins": 0,
+          "shutouts": 0,
           "points": 0,
           "games_played": 0,
           "status": "no-stats"
@@ -1304,6 +1510,8 @@
           "matched_name": "Jake Guentzel",
           "goals": 0,
           "assists": 0,
+          "wins": 0,
+          "shutouts": 0,
           "points": 0,
           "games_played": 1,
           "status": "ok"
@@ -1316,6 +1524,8 @@
           "matched_name": "Lucas Raymond",
           "goals": 0,
           "assists": 0,
+          "wins": 0,
+          "shutouts": 0,
           "points": 0,
           "games_played": 0,
           "status": "no-stats"
@@ -1328,6 +1538,8 @@
           "matched_name": "Adrian Kempe",
           "goals": 0,
           "assists": 0,
+          "wins": 0,
+          "shutouts": 0,
           "points": 0,
           "games_played": 1,
           "status": "ok"
@@ -1340,6 +1552,8 @@
           "matched_name": "Nick Schmaltz",
           "goals": 1,
           "assists": 0,
+          "wins": 0,
+          "shutouts": 0,
           "points": 1,
           "games_played": 1,
           "status": "ok"
@@ -1352,6 +1566,8 @@
           "matched_name": "Travis Konecny",
           "goals": 0,
           "assists": 1,
+          "wins": 0,
+          "shutouts": 0,
           "points": 1,
           "games_played": 2,
           "status": "ok"
@@ -1364,6 +1580,8 @@
           "matched_name": "Nico Hischier",
           "goals": 0,
           "assists": 0,
+          "wins": 0,
+          "shutouts": 0,
           "points": 0,
           "games_played": 1,
           "status": "ok"
@@ -1376,6 +1594,8 @@
           "matched_name": "Dylan Cozens",
           "goals": 0,
           "assists": 0,
+          "wins": 0,
+          "shutouts": 0,
           "points": 0,
           "games_played": 0,
           "status": "no-stats"
@@ -1388,6 +1608,8 @@
           "matched_name": "Bryan Rust",
           "goals": 0,
           "assists": 0,
+          "wins": 0,
+          "shutouts": 0,
           "points": 0,
           "games_played": 0,
           "status": "no-stats"
@@ -1400,6 +1622,8 @@
           "matched_name": "Brock Nelson",
           "goals": 1,
           "assists": 2,
+          "wins": 0,
+          "shutouts": 0,
           "points": 3,
           "games_played": 1,
           "status": "ok"
@@ -1412,6 +1636,8 @@
           "matched_name": "Lane Hutson",
           "goals": 0,
           "assists": 0,
+          "wins": 0,
+          "shutouts": 0,
           "points": 0,
           "games_played": 1,
           "status": "ok"
@@ -1424,6 +1650,8 @@
           "matched_name": "Jacob Herauf",
           "goals": 0,
           "assists": 0,
+          "wins": 0,
+          "shutouts": 0,
           "points": 0,
           "games_played": 0,
           "status": "no-stats"
@@ -1436,6 +1664,8 @@
           "matched_name": "John Carlson",
           "goals": 0,
           "assists": 0,
+          "wins": 0,
+          "shutouts": 0,
           "points": 0,
           "games_played": 1,
           "status": "ok"
@@ -1448,6 +1678,8 @@
           "matched_name": "Mikhail Sergachev",
           "goals": 0,
           "assists": 1,
+          "wins": 0,
+          "shutouts": 0,
           "points": 1,
           "games_played": 1,
           "status": "ok"
@@ -1460,6 +1692,8 @@
           "matched_name": "Jake Sanderson",
           "goals": 0,
           "assists": 0,
+          "wins": 0,
+          "shutouts": 0,
           "points": 0,
           "games_played": 0,
           "status": "no-stats"
@@ -1472,6 +1706,8 @@
           "matched_name": "Bowen Byram",
           "goals": 0,
           "assists": 0,
+          "wins": 0,
+          "shutouts": 0,
           "points": 0,
           "games_played": 2,
           "status": "ok"
@@ -1484,6 +1720,8 @@
           "matched_name": "Logan Thompson",
           "goals": 0,
           "assists": 0,
+          "wins": 0,
+          "shutouts": 0,
           "points": 0,
           "games_played": 0,
           "status": "no-stats"
@@ -1496,6 +1734,8 @@
           "matched_name": "Joel Hofer",
           "goals": 0,
           "assists": 0,
+          "wins": 0,
+          "shutouts": 0,
           "points": 0,
           "games_played": 0,
           "status": "no-stats"
@@ -1506,7 +1746,7 @@
     {
       "coach": "Valtteri",
       "name": "Pallivahan Pallo",
-      "points": 2,
+      "points": 6,
       "players": [
         {
           "draft_number": 5,
@@ -1516,6 +1756,8 @@
           "matched_name": "Nick Suzuki",
           "goals": 0,
           "assists": 0,
+          "wins": 0,
+          "shutouts": 0,
           "points": 0,
           "games_played": 1,
           "status": "ok"
@@ -1528,6 +1770,8 @@
           "matched_name": "David Pastrnak",
           "goals": 0,
           "assists": 0,
+          "wins": 0,
+          "shutouts": 0,
           "points": 0,
           "games_played": 1,
           "status": "ok"
@@ -1540,6 +1784,8 @@
           "matched_name": "Cole Caufield",
           "goals": 0,
           "assists": 0,
+          "wins": 0,
+          "shutouts": 0,
           "points": 0,
           "games_played": 1,
           "status": "ok"
@@ -1552,6 +1798,8 @@
           "matched_name": "Tim Stützle",
           "goals": 0,
           "assists": 0,
+          "wins": 0,
+          "shutouts": 0,
           "points": 0,
           "games_played": 0,
           "status": "no-stats"
@@ -1564,6 +1812,8 @@
           "matched_name": "Sebastian Aho",
           "goals": 0,
           "assists": 0,
+          "wins": 0,
+          "shutouts": 0,
           "points": 0,
           "games_played": 1,
           "status": "ok"
@@ -1576,6 +1826,8 @@
           "matched_name": "Sidney Crosby",
           "goals": 0,
           "assists": 1,
+          "wins": 0,
+          "shutouts": 0,
           "points": 1,
           "games_played": 1,
           "status": "ok"
@@ -1588,6 +1840,8 @@
           "matched_name": "Brandon Hagel",
           "goals": 0,
           "assists": 0,
+          "wins": 0,
+          "shutouts": 0,
           "points": 0,
           "games_played": 1,
           "status": "ok"
@@ -1600,6 +1854,8 @@
           "matched_name": "Trevor Zegras",
           "goals": 0,
           "assists": 0,
+          "wins": 0,
+          "shutouts": 0,
           "points": 0,
           "games_played": 2,
           "status": "ok"
@@ -1612,6 +1868,8 @@
           "matched_name": "Steven Stamkos",
           "goals": 0,
           "assists": 1,
+          "wins": 0,
+          "shutouts": 0,
           "points": 1,
           "games_played": 1,
           "status": "ok"
@@ -1624,6 +1882,8 @@
           "matched_name": "Anthony Mantha",
           "goals": 0,
           "assists": 0,
+          "wins": 0,
+          "shutouts": 0,
           "points": 0,
           "games_played": 1,
           "status": "ok"
@@ -1636,6 +1896,8 @@
           "matched_name": "Beckett Sennecke",
           "goals": 0,
           "assists": 0,
+          "wins": 0,
+          "shutouts": 0,
           "points": 0,
           "games_played": 0,
           "status": "no-stats"
@@ -1648,6 +1910,8 @@
           "matched_name": "Alex Friesen",
           "goals": 0,
           "assists": 0,
+          "wins": 0,
+          "shutouts": 0,
           "points": 0,
           "games_played": 0,
           "status": "no-stats"
@@ -1660,6 +1924,8 @@
           "matched_name": "Rasmus Dahlin",
           "goals": 0,
           "assists": 0,
+          "wins": 0,
+          "shutouts": 0,
           "points": 0,
           "games_played": 1,
           "status": "ok"
@@ -1672,6 +1938,8 @@
           "matched_name": "Miro Heiskanen",
           "goals": 0,
           "assists": 0,
+          "wins": 0,
+          "shutouts": 0,
           "points": 0,
           "games_played": 0,
           "status": "no-stats"
@@ -1684,6 +1952,8 @@
           "matched_name": "Jackson LaCombe",
           "goals": 0,
           "assists": 0,
+          "wins": 0,
+          "shutouts": 0,
           "points": 0,
           "games_played": 0,
           "status": "no-stats"
@@ -1696,6 +1966,8 @@
           "matched_name": "Brock Faber",
           "goals": 0,
           "assists": 0,
+          "wins": 0,
+          "shutouts": 0,
           "points": 0,
           "games_played": 0,
           "status": "no-stats"
@@ -1708,6 +1980,8 @@
           "matched_name": "Mattias Ekholm",
           "goals": 0,
           "assists": 0,
+          "wins": 0,
+          "shutouts": 0,
           "points": 0,
           "games_played": 2,
           "status": "ok"
@@ -1720,6 +1994,8 @@
           "matched_name": "K'Andre Miller",
           "goals": 0,
           "assists": 0,
+          "wins": 0,
+          "shutouts": 0,
           "points": 0,
           "games_played": 1,
           "status": "ok"
@@ -1732,6 +2008,8 @@
           "matched_name": "Lukas Dostal",
           "goals": 0,
           "assists": 0,
+          "wins": 0,
+          "shutouts": 0,
           "points": 0,
           "games_played": 0,
           "status": "no-stats"
@@ -1744,7 +2022,9 @@
           "matched_name": "Jeremy Swayman",
           "goals": 0,
           "assists": 0,
-          "points": 0,
+          "wins": 1,
+          "shutouts": 1,
+          "points": 4,
           "games_played": 1,
           "status": "ok"
         }
