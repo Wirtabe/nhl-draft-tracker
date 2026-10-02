@@ -11,8 +11,7 @@
   "players_without_stats": 44,
   "unresolved_players": 2,
   "warnings": [
-    "Jakob Markström: NHL player ID:tä ei löytynyt",
-    "Luka Ganyoni: NHL player ID:tä ei löytynyt"
+    ""
   ],
   "teams": [
     {
@@ -274,7 +273,7 @@
         },
         {
           "draft_number": 47,
-          "name": "Jakob Markström",
+          "name": "Jacob Markstrom",
           "position": "M",
           "nhl_id": null,
           "matched_name": null,
@@ -1412,7 +1411,7 @@
         },
         {
           "draft_number": 133,
-          "name": "Luka Ganyoni",
+          "name": "Luca Gagnoni",
           "position": "P",
           "nhl_id": null,
           "matched_name": null,
