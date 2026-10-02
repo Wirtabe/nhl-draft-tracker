@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-10-02T19:29:54.454741+00:00",
+  "generated_at": "2026-10-02T19:30:27.575903+00:00",
   "season": "2026-2027",
   "season_id": "20262027",
   "game_type": 2,
   "points_formula": "H/P: goals + assists; M: wins*2 + shutouts*2 + goals + assists",
   "api_status": "partial",
   "player_count": 140,
-  "resolved_players": 138,
-  "players_with_stats": 94,
+  "resolved_players": 139,
+  "players_with_stats": 95,
   "players_without_stats": 44,
-  "unresolved_players": 2,
+  "unresolved_players": 1,
   "warnings": [
-    ""
+    "Luca Gagnoni: NHL player ID:tä ei löytynyt"
   ],
   "teams": [
     {
       "coach": "Jarno",
       "name": "Old Stars",
-      "points": 27,
+      "points": 31,
       "players": [
         {
           "draft_number": 6,
@@ -275,15 +275,15 @@
           "draft_number": 47,
           "name": "Jacob Markstrom",
           "position": "M",
-          "nhl_id": null,
-          "matched_name": null,
+          "nhl_id": 8474593,
+          "matched_name": "Jacob Markstrom",
           "goals": 0,
           "assists": 0,
-          "wins": 0,
-          "shutouts": 0,
-          "points": 0,
-          "games_played": 0,
-          "status": "unresolved"
+          "wins": 1,
+          "shutouts": 1,
+          "points": 4,
+          "games_played": 1,
+          "status": "ok"
         },
         {
           "draft_number": 50,

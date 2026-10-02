@@ -826,5 +826,11 @@
     "matched_name": "Scott Wedgewood",
     "nhl_position": "G",
     "match_score": 1.0
+  },
+  "jacob markstrom": {
+    "nhl_id": 8474593,
+    "matched_name": "Jacob Markstrom",
+    "nhl_position": "G",
+    "match_score": 1.0
   }
 }
