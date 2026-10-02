@@ -2,7 +2,7 @@ name: Update NHL stats
 
 on:
   schedule:
-    - cron: "0 8 * * *" # every day at 8:00 UTC
+    - cron: "7,37 * * * *"
   workflow_dispatch:
   push:
     paths:
@@ -56,6 +56,21 @@ jobs:
           print("unresolved_players:", data.get("unresolved_players"))
           for team in data.get("teams", []):
               print(f'{team.get("rank")}. {team.get("name")}: {team.get("points", 0)} p')
+
+          print("\nSelected player diagnostics:")
+          for team in data.get("teams", []):
+              for player in team.get("players", []):
+                  if player.get("name") == "Jack Hughes":
+                      print(
+                          "Jack Hughes:",
+                          "nhl_id=", player.get("nhl_id"),
+                          "GP=", player.get("games_played"),
+                          "G=", player.get("goals"),
+                          "A=", player.get("assists"),
+                          "P=", player.get("points"),
+                          "status=", player.get("status"),
+                          "source=", player.get("stats_source"),
+                      )
           PY
 
       - name: Commit updated report
