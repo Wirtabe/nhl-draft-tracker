@@ -2,7 +2,6 @@ name: Update NHL stats
 
 on:
   schedule:
-    # Roughly every 30 minutes. GitHub may delay scheduled workflows.
     - cron: "7,37 * * * *"
   workflow_dispatch:
   push:
@@ -10,18 +9,26 @@ on:
       - "data/draft.json"
       - "data/player_overrides.json"
       - "scripts/update_stats.py"
+      - "requirements.txt"
       - ".github/workflows/update.yml"
 
 permissions:
   contents: write
 
+concurrency:
+  group: nhl-stats-update
+  cancel-in-progress: true
+
 jobs:
   update:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
 
     steps:
-      - name: Checkout
+      - name: Checkout latest main
         uses: actions/checkout@v6
+        with:
+          ref: main
 
       - name: Set up Python
         uses: actions/setup-python@v6
@@ -29,15 +36,36 @@ jobs:
           python-version: "3.13"
 
       - name: Install dependencies
-        run: pip install -r requirements.txt
+        run: python -m pip install -r requirements.txt
 
-      - name: Resolve NHL players and update points
+      - name: Update NHL points
         run: python scripts/update_stats.py
 
-      - name: Commit generated NHL data and player ID cache
+      - name: Show update summary
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          data = json.loads(Path("public/data.json").read_text(encoding="utf-8"))
+          print("generated_at:", data.get("generated_at"))
+          print("season_id:", data.get("season_id"))
+          print("api_status:", data.get("api_status"))
+          print("resolved_players:", data.get("resolved_players"))
+          print("players_with_stats:", data.get("players_with_stats"))
+          print("players_without_stats:", data.get("players_without_stats"))
+          print("unresolved_players:", data.get("unresolved_players"))
+          for team in data.get("teams", []):
+              print(f'{team.get("rank")}. {team.get("name")}: {team.get("points", 0)} p')
+          PY
+
+      - name: Commit updated report
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add public/data.json data/player_ids.json
-          git diff --cached --quiet || git commit -m "Update NHL stats"
-          git push
+          if git diff --cached --quiet; then
+            echo "No generated changes to commit."
+            exit 0
+          fi
+          git commit -m "Update NHL stats"
+          git push origin HEAD:main
