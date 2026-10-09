@@ -64,14 +64,26 @@ function renderTeams(teams) {
             <span>Pisteet</span>
           </div>
 
-          ${(team.players || []).map((player) => {
+          ${(() => {
+          let previousPosition = null;
+
+          return (team.players || []).map((player) => {
             const playerPoints = Number.isFinite(Number(player.points))
               ? Number(player.points)
               : 0;
 
+            const currentPosition = player.position || "?";
+            const spacer =
+              previousPosition !== null && previousPosition !== currentPosition
+                ? `<div class="position-spacer" aria-hidden="true"></div>`
+                : "";
+
+            previousPosition = currentPosition;
+
             return `
+              ${spacer}
               <div class="player-row">
-                <div class="player-position">${escapeHtml(player.position || "?")}</div>
+                <div class="player-position">${escapeHtml(currentPosition)}</div>
                 <div class="player-name-wrap">
                   <div class="player-name">${escapeHtml(player.name)}</div>
                   ${player.status === "unresolved"
@@ -85,7 +97,8 @@ function renderTeams(teams) {
                 <div class="player-points">${playerPoints}</div>
               </div>
             `;
-          }).join("")}
+          }).join("");
+        })()}
         </div>
       </details>
     `;
