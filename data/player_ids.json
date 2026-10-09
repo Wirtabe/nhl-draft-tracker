@@ -384,9 +384,9 @@
     "match_score": 1.0
   },
   "jack hughes": {
-    "nhl_id": 8448071,
+    "nhl_id": 8481559,
     "matched_name": "Jack Hughes",
-    "nhl_position": "D",
+    "nhl_position": null,
     "match_score": 1.0
   },
   "robert thomas": {
@@ -831,6 +831,42 @@
     "nhl_id": 8474593,
     "matched_name": "Jacob Markstrom",
     "nhl_position": "G",
+    "match_score": 1.0
+  },
+  "yaroslav askarov": {
+    "nhl_id": 8482137,
+    "matched_name": "Yaroslav Askarov",
+    "nhl_position": "G",
+    "match_score": 1.0
+  },
+  "mathew barzal": {
+    "nhl_id": 8478445,
+    "matched_name": "Mathew Barzal",
+    "nhl_position": "C",
+    "match_score": 1.0
+  },
+  "jakob chychrun": {
+    "nhl_id": 8479345,
+    "matched_name": "Jakob Chychrun",
+    "nhl_position": "D",
+    "match_score": 1.0
+  },
+  "alexis lafreniere": {
+    "nhl_id": 8482109,
+    "matched_name": "Alexis Lafrenière",
+    "nhl_position": "L",
+    "match_score": 1.0
+  },
+  "sam malinski": {
+    "nhl_id": 8484258,
+    "matched_name": "Sam Malinski",
+    "nhl_position": "D",
+    "match_score": 1.0
+  },
+  "luca cagnoni": {
+    "nhl_id": 8484152,
+    "matched_name": "Luca Cagnoni",
+    "nhl_position": "D",
     "match_score": 1.0
   }
 }
