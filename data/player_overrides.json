@@ -3,5 +3,10 @@
   "Jack Hughes": {
     "nhl_id": 8481559,
     "matched_name": "Jack Hughes"
+  },
+  "Jacob Markstrom": {
+    "nhl_id": 8474593,
+    "matched_name": "Jacob Markstrom",
+    "nhl_position": "G"
   }
 }
