@@ -1,6 +1,8 @@
 name: Deploy NHL report to GitHub Pages
 
 on:
+  schedule:
+    - cron: "3 8 * * *"
   push:
     branches:
       - main
