@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-10T18:47:31.254521+00:00",
+  "generated_at": "2026-10-10T22:23:15.535285+00:00",
   "season": "2026-2027",
   "season_id": "20262027",
   "game_type": 2,
@@ -16,7 +16,7 @@
     {
       "coach": "Valtteri",
       "name": "Pallivahan Pallo",
-      "points": 80,
+      "points": 83,
       "players": [
         {
           "draft_number": 5,
@@ -40,11 +40,11 @@
           "nhl_id": 8477956,
           "matched_name": "David Pastrnak",
           "goals": 2,
-          "assists": 4,
+          "assists": 5,
           "wins": 0,
           "shutouts": 0,
-          "points": 6,
-          "games_played": 5,
+          "points": 7,
+          "games_played": 6,
           "status": "ok",
           "stats_source": "game-log"
         },
@@ -134,7 +134,7 @@
           "wins": 0,
           "shutouts": 0,
           "points": 2,
-          "games_played": 5,
+          "games_played": 6,
           "status": "ok",
           "stats_source": "game-log"
         },
@@ -311,10 +311,10 @@
           "matched_name": "Jeremy Swayman",
           "goals": 0,
           "assists": 0,
-          "wins": 3,
+          "wins": 4,
           "shutouts": 1,
-          "points": 8,
-          "games_played": 4,
+          "points": 10,
+          "games_played": 5,
           "status": "ok",
           "stats_source": "game-log"
         }
@@ -750,7 +750,7 @@
           "wins": 0,
           "shutouts": 0,
           "points": 4,
-          "games_played": 5,
+          "games_played": 6,
           "status": "ok",
           "stats_source": "game-log"
         },
