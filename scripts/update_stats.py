@@ -17,6 +17,7 @@ DRAFT_FILE = ROOT / "data" / "draft.json"
 CACHE_FILE = ROOT / "data" / "player_ids.json"
 OVERRIDES_FILE = ROOT / "data" / "player_overrides.json"
 OUTPUT_FILE = ROOT / "public" / "data.json"
+HISTORY_FILE = ROOT / "public" / "history.json"
 
 SEARCH_URL = "https://search.d3.nhle.com/api/v1/search/player"
 STATS_BASE = "https://api.nhle.com/stats/rest/en"
@@ -159,53 +160,33 @@ def resolve_player(player: dict, cache: dict, overrides: dict) -> tuple[dict | N
 
 
 def _toi_seconds(value) -> int:
-    """Convert NHL TOI values such as '59:34' to seconds."""
     if value is None:
         return 0
-
     if isinstance(value, (int, float)):
         return int(value)
-
     text = str(value).strip()
     if ":" not in text:
         try:
             return int(float(text))
         except ValueError:
             return 0
-
     parts = text.split(":")
     try:
         if len(parts) == 2:
-            minutes, seconds = parts
-            return int(minutes) * 60 + int(seconds)
+            return int(parts[0]) * 60 + int(parts[1])
         if len(parts) == 3:
-            hours, minutes, seconds = parts
-            return int(hours) * 3600 + int(minutes) * 60 + int(seconds)
+            return int(parts[0]) * 3600 + int(parts[1]) * 60 + int(parts[2])
     except ValueError:
         return 0
-
     return 0
 
 
-def _goalie_offense_from_summary(
-    player_id: int,
-    season: str,
-    game_type: int,
-) -> tuple[int, int]:
-    """
-    Goalie game-log rows focus on goaltending stats and may omit goals/assists.
-    Use the Stats REST goalie summary only for the rare goalie scoring points.
-    Wins and shutouts are NOT taken from this slower-updating summary.
-    """
+def _goalie_offense_from_summary(player_id: int, season: str, game_type: int) -> tuple[int, int]:
     try:
         response = session.get(
             f"{STATS_BASE}/goalie/summary",
             params={
-                "cayenneExp": (
-                    f"playerId={player_id} and "
-                    f"seasonId={season} and "
-                    f"gameTypeId={game_type}"
-                ),
+                "cayenneExp": f"playerId={player_id} and seasonId={season} and gameTypeId={game_type}",
                 "isAggregate": "true",
                 "start": 0,
                 "limit": 10,
@@ -214,126 +195,80 @@ def _goalie_offense_from_summary(
         )
         response.raise_for_status()
         rows = response.json().get("data", [])
-
         if not rows:
             return 0, 0
-
-        row = max(
-            rows,
-            key=lambda r: int(r.get("gamesPlayed") or 0),
-        )
+        row = max(rows, key=lambda r: int(r.get("gamesPlayed") or 0))
         return int(row.get("goals") or 0), int(row.get("assists") or 0)
     except Exception:
-        # Goalie goals/assists are rare. A temporary failure here should not
-        # block the much more important game-log based win/shutout update.
         return 0, 0
 
 
-def fetch_player_stats(
-    player_id: int,
-    position: str,
-    season: str,
-    game_type: int,
-) -> dict:
-    """
-    Read the player's season game log from the NHL Web API and aggregate it.
-
-    H/P scoring:
-      goals + assists
-
-    M scoring:
-      wins * 2 + shutouts * 2 + goals + assists
-
-    The game-log endpoint is used because it tends to reflect completed games
-    sooner than season summary endpoints.
-    """
+def fetch_player_stats(player_id: int, position: str, season: str, game_type: int) -> dict:
     response = session.get(
         f"{WEB_API_BASE}/player/{player_id}/game-log/{season}/{game_type}",
         timeout=TIMEOUT,
     )
     response.raise_for_status()
-
-    payload = response.json()
-    games = payload.get("gameLog", [])
+    games = response.json().get("gameLog", [])
 
     if not games:
         return {
-            "goals": 0,
-            "assists": 0,
-            "wins": 0,
-            "shutouts": 0,
-            "points": 0,
-            "games_played": 0,
-            "status": "no-stats",
-            "stats_source": "game-log",
+            "goals": 0, "assists": 0, "wins": 0, "shutouts": 0,
+            "points": 0, "games_played": 0, "status": "no-stats",
+            "stats_source": "game-log", "daily_events": []
         }
+
+    daily_events = []
 
     if position != "M":
-        goals = sum(int(game.get("goals") or 0) for game in games)
-        assists = sum(int(game.get("assists") or 0) for game in games)
-
+        goals = assists = 0
+        for game in games:
+            g = int(game.get("goals") or 0)
+            a = int(game.get("assists") or 0)
+            goals += g
+            assists += a
+            daily_events.append({"date": game.get("gameDate"), "points": g + a})
         return {
-            "goals": goals,
-            "assists": assists,
-            "wins": 0,
-            "shutouts": 0,
-            "points": goals + assists,
-            "games_played": len(games),
-            "status": "ok",
-            "stats_source": "game-log",
+            "goals": goals, "assists": assists, "wins": 0, "shutouts": 0,
+            "points": goals + assists, "games_played": len(games),
+            "status": "ok", "stats_source": "game-log",
+            "daily_events": daily_events
         }
 
-    # Goalie game logs expose the per-game decision. Count W directly.
-    wins = sum(
-        1
-        for game in games
-        if str(game.get("decision") or "").upper() == "W"
-    )
-
-    # Some API versions may expose a per-game shutout flag. Prefer that.
-    # Otherwise derive it conservatively: zero goals against and essentially
-    # a full game's TOI. This avoids crediting a relief goalie with an
-    # individual shutout.
-    shutouts = 0
+    wins = shutouts = goalie_goals_log = goalie_assists_log = 0
     for game in games:
+        win = 1 if str(game.get("decision") or "").upper() == "W" else 0
         if game.get("shutouts") is not None:
-            shutouts += int(game.get("shutouts") or 0)
-            continue
+            so = int(game.get("shutouts") or 0)
+        elif game.get("shutout") is not None:
+            so = 1 if bool(game.get("shutout")) else 0
+        else:
+            so = 1 if int(game.get("goalsAgainst") or 0) == 0 and _toi_seconds(game.get("toi")) >= 58*60 else 0
 
-        if game.get("shutout") is not None:
-            shutouts += 1 if bool(game.get("shutout")) else 0
-            continue
+        gg = int(game.get("goals") or 0)
+        ga = int(game.get("assists") or 0)
+        wins += win
+        shutouts += so
+        goalie_goals_log += gg
+        goalie_assists_log += ga
+        daily_events.append({
+            "date": game.get("gameDate"),
+            "points": win*2 + so*2 + gg + ga
+        })
 
-        goals_against = int(game.get("goalsAgainst") or 0)
-        toi_seconds = _toi_seconds(game.get("toi"))
-
-        # 58 minutes allows brief empty-net situations while still excluding
-        # ordinary relief appearances. OT shutouts also satisfy this.
-        if goals_against == 0 and toi_seconds >= 58 * 60:
-            shutouts += 1
-
-    goalie_goals, goalie_assists = _goalie_offense_from_summary(
-        player_id=player_id,
-        season=season,
-        game_type=game_type,
-    )
-
-    fantasy_points = (
-        wins * 2
-        + shutouts * 2
-        + goalie_goals
-        + goalie_assists
-    )
+    sg, sa = _goalie_offense_from_summary(player_id, season, game_type)
+    goals = max(goalie_goals_log, sg)
+    assists = max(goalie_assists_log, sa)
+    missing = (goals - goalie_goals_log) + (assists - goalie_assists_log)
+    if missing > 0 and daily_events:
+        idx = max(range(len(daily_events)), key=lambda i: daily_events[i].get("date") or "")
+        daily_events[idx]["points"] += missing
 
     return {
-        "goals": goalie_goals,
-        "assists": goalie_assists,
-        "wins": wins,
-        "shutouts": shutouts,
-        "points": fantasy_points,
-        "games_played": len(games),
-        "status": "ok",
-        "stats_source": "game-log",
+        "goals": goals, "assists": assists, "wins": wins, "shutouts": shutouts,
+        "points": wins*2 + shutouts*2 + goals + assists,
+        "games_played": len(games), "status": "ok",
+        "stats_source": "game-log", "daily_events": daily_events
     }
 
 
@@ -373,6 +308,7 @@ def main() -> None:
 
     warnings = []
     output_teams = []
+    team_history_events = {}
     total_players = 0
     resolved_count = 0
     stats_ok_count = 0
@@ -380,6 +316,8 @@ def main() -> None:
 
     for team in draft.get("teams", []):
         output_players = []
+        team_name = team.get("name", "")
+        team_history_events.setdefault(team_name, {})
 
         for player in team.get("players", []):
             total_players += 1
@@ -420,7 +358,15 @@ def main() -> None:
                         season,
                         game_type,
                     )
+                    daily_events = stats.pop("daily_events", [])
                     out.update(stats)
+                    for event in daily_events:
+                        date = event.get("date")
+                        if date:
+                            team_history_events[team_name][date] = (
+                                team_history_events[team_name].get(date, 0)
+                                + int(event.get("points") or 0)
+                            )
                     if stats["status"] == "ok":
                         stats_ok_count += 1
                     else:
@@ -469,9 +415,45 @@ def main() -> None:
         "teams": output_teams,
     }
 
+    all_dates = sorted({
+        date
+        for events in team_history_events.values()
+        for date in events
+    })
+
+    running = {team.get("name", ""): 0 for team in draft.get("teams", [])}
+    daily = []
+    for date in all_dates:
+        row = {"date": date, "teams": {}}
+        for team in draft.get("teams", []):
+            name = team.get("name", "")
+            running[name] += int(team_history_events.get(name, {}).get(date, 0))
+            row["teams"][name] = running[name]
+        daily.append(row)
+
+    history = {
+        "generated_at": datetime.now(timezone.utc).isoformat(),
+        "season": season_label,
+        "season_id": season,
+        "game_type": game_type,
+        "points_formula": output["points_formula"],
+        "dates": all_dates,
+        "series": [
+            {
+                "team": team.get("name", ""),
+                "coach": team.get("coach", team.get("owner", "")),
+                "points": [row["teams"].get(team.get("name", ""), 0) for row in daily],
+            }
+            for team in draft.get("teams", [])
+        ],
+        "daily": daily,
+    }
+
     write_json(CACHE_FILE, cache)
     write_json(OUTPUT_FILE, output)
+    write_json(HISTORY_FILE, history)
 
+    print(f"Historian pelipäiviä: {len(all_dates)}")
     print("=== NHL update summary ===")
     print(f"Pelaajia yhteensä: {total_players}")
     print(f"NHL-ID löydetty:    {resolved_count}")

@@ -1,3 +1,67 @@
+
+function renderHistoryChart(history) {
+  const chart = document.querySelector("#history-chart");
+  const legend = document.querySelector("#history-legend");
+  if (!chart || !legend) return;
+
+  const dates = history?.dates || [];
+  const series = history?.series || [];
+  if (!dates.length || !series.length) {
+    chart.innerHTML = `<p class="muted history-empty">Historiaa ei ole vielä saatavilla.</p>`;
+    legend.innerHTML = "";
+    return;
+  }
+
+  const width = 960, height = 360;
+  const pad = {top: 20, right: 24, bottom: 42, left: 48};
+  const iw = width - pad.left - pad.right;
+  const ih = height - pad.top - pad.bottom;
+  const maxPoints = Math.max(1, ...series.flatMap(s => s.points || []).map(Number));
+  const x = i => dates.length === 1 ? pad.left + iw/2 : pad.left + i/(dates.length-1)*iw;
+  const y = v => pad.top + ih - Number(v || 0)/maxPoints*ih;
+  const colors = ["#1f77b4","#d62728","#2ca02c","#9467bd","#ff7f0e","#17becf","#8c564b","#7f7f7f"];
+
+  const ticks = Array.from({length:5}, (_,i)=>Math.round(maxPoints*i/4));
+  const grid = ticks.map(v => `
+    <line x1="${pad.left}" y1="${y(v)}" x2="${width-pad.right}" y2="${y(v)}" class="chart-grid"/>
+    <text x="${pad.left-10}" y="${y(v)+4}" text-anchor="end" class="chart-axis-label">${v}</text>
+  `).join("");
+
+  const idxs = [...new Set([0, Math.floor((dates.length-1)*.25), Math.floor((dates.length-1)*.5), Math.floor((dates.length-1)*.75), dates.length-1])];
+  const labels = idxs.map(i => {
+    const [yy,mm,dd] = dates[i].split("-");
+    return `<text x="${x(i)}" y="${height-14}" text-anchor="middle" class="chart-axis-label">${Number(dd)}.${Number(mm)}.</text>`;
+  }).join("");
+
+  const lines = series.map((s,si) => {
+    const pts = (s.points || []).map((v,i)=>`${x(i)},${y(v)}`).join(" ");
+    const li = Math.max(0,(s.points||[]).length-1);
+    return `<polyline points="${pts}" fill="none" stroke="${colors[si%colors.length]}" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke"/>
+    <circle cx="${x(li)}" cy="${y(s.points?.[li]||0)}" r="3.5" fill="${colors[si%colors.length]}"/>`;
+  }).join("");
+
+  chart.innerHTML = `<div class="chart-scroll"><svg class="history-svg" viewBox="0 0 ${width} ${height}" role="img" aria-label="Joukkueiden pistekehitys">${grid}${labels}${lines}</svg></div>`;
+
+  legend.innerHTML = series.map((s,i)=>`
+    <div class="legend-item">
+      <span class="legend-swatch" style="background:${colors[i%colors.length]}"></span>
+      <span>${escapeHtml(s.team)}</span>
+      <strong>${Number(s.points?.at(-1)||0)} p</strong>
+    </div>
+  `).join("");
+}
+
+async function loadHistory() {
+  try {
+    const response = await fetch(`./history.json?v=${Date.now()}`, {cache:"no-store"});
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+    renderHistoryChart(await response.json());
+  } catch (error) {
+    console.error(error);
+    renderHistoryChart(null);
+  }
+}
+
 const teamSelect = document.querySelector("#team-select");
 const teamList = document.querySelector("#team-list");
 const updated = document.querySelector("#updated");
@@ -155,3 +219,5 @@ async function loadData() {
 }
 
 loadData();
+
+loadHistory();
