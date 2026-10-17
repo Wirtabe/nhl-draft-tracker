@@ -518,8 +518,8 @@
           "draft_number": 27,
           "name": "Andrei Vasilevskiy",
           "position": "M",
-          "nhl_id": null,
-          "matched_name": null,
+          "nhl_id": 8474593,
+          "matched_name": "Jacob Markstrom",
           "goals": 0,
           "assists": 0,
           "points": 0,
@@ -1621,8 +1621,8 @@
       "points": 0,
       "players": [
         {
-          "draft_number": 7,
-          "name": "Leon Draisaitl",
+          "draft_number": 3,
+          "name": "Nikita Kucherov",
           "position": "H",
           "nhl_id": null,
           "matched_name": null,
@@ -1634,8 +1634,8 @@
           "shutouts": 0
         },
         {
-          "draft_number": 21,
-          "name": "Matthew Tkachuk",
+          "draft_number": 17,
+          "name": "Jason Robertson",
           "position": "H",
           "nhl_id": null,
           "matched_name": null,
@@ -1647,8 +1647,8 @@
           "shutouts": 0
         },
         {
-          "draft_number": 22,
-          "name": "Brady Tkachuck",
+          "draft_number": 26,
+          "name": "Kyle Connor",
           "position": "H",
           "nhl_id": null,
           "matched_name": null,
@@ -1660,8 +1660,8 @@
           "shutouts": 0
         },
         {
-          "draft_number": 35,
-          "name": "Auston Matthews",
+          "draft_number": 31,
+          "name": "Jake Guentzel",
           "position": "H",
           "nhl_id": null,
           "matched_name": null,
@@ -1673,8 +1673,8 @@
           "shutouts": 0
         },
         {
-          "draft_number": 48,
-          "name": "Sam Reinhart",
+          "draft_number": 58,
+          "name": "Lucas Raymond",
           "position": "H",
           "nhl_id": null,
           "matched_name": null,
@@ -1686,8 +1686,8 @@
           "shutouts": 0
         },
         {
-          "draft_number": 49,
-          "name": "Cutter Gauthier",
+          "draft_number": 72,
+          "name": "Adrian Kempe",
           "position": "H",
           "nhl_id": null,
           "matched_name": null,
@@ -1699,8 +1699,8 @@
           "shutouts": 0
         },
         {
-          "draft_number": 76,
-          "name": "Mikael Granlund",
+          "draft_number": 95,
+          "name": "Nick Schmaltz",
           "position": "H",
           "nhl_id": null,
           "matched_name": null,
@@ -1712,8 +1712,8 @@
           "shutouts": 0
         },
         {
-          "draft_number": 90,
-          "name": "Dylan Holloway",
+          "draft_number": 109,
+          "name": "Travis Konecny",
           "position": "H",
           "nhl_id": null,
           "matched_name": null,
@@ -1725,8 +1725,8 @@
           "shutouts": 0
         },
         {
-          "draft_number": 91,
-          "name": "Patrick Kane",
+          "draft_number": 114,
+          "name": "Nico Hischier",
           "position": "H",
           "nhl_id": null,
           "matched_name": null,
@@ -1738,8 +1738,8 @@
           "shutouts": 0
         },
         {
-          "draft_number": 104,
-          "name": "J.T. Miller",
+          "draft_number": 123,
+          "name": "Dylan Cozens",
           "position": "H",
           "nhl_id": null,
           "matched_name": null,
@@ -1751,8 +1751,8 @@
           "shutouts": 0
         },
         {
-          "draft_number": 105,
-          "name": "Timo Meier",
+          "draft_number": 128,
+          "name": "Bryan Rust",
           "position": "H",
           "nhl_id": null,
           "matched_name": null,
@@ -1764,8 +1764,8 @@
           "shutouts": 0
         },
         {
-          "draft_number": 118,
-          "name": "Rickard Rakell",
+          "draft_number": 137,
+          "name": "Brock Nelson",
           "position": "H",
           "nhl_id": null,
           "matched_name": null,
@@ -1777,8 +1777,8 @@
           "shutouts": 0
         },
         {
-          "draft_number": 8,
-          "name": "Cale Makar",
+          "draft_number": 12,
+          "name": "Lane Hutson",
           "position": "P",
           "nhl_id": null,
           "matched_name": null,
@@ -1790,8 +1790,8 @@
           "shutouts": 0
         },
         {
-          "draft_number": 62,
-          "name": "Moritz Seider",
+          "draft_number": 44,
+          "name": "Jakob Chychrun",
           "position": "P",
           "nhl_id": null,
           "matched_name": null,
@@ -1803,8 +1803,8 @@
           "shutouts": 0
         },
         {
-          "draft_number": 77,
-          "name": "Roman Josi",
+          "draft_number": 67,
+          "name": "John Carlson",
           "position": "P",
           "nhl_id": null,
           "matched_name": null,
@@ -1816,8 +1816,8 @@
           "shutouts": 0
         },
         {
-          "draft_number": 119,
-          "name": "McKenzie Weegar",
+          "draft_number": 81,
+          "name": "Mikhail Sergachev",
           "position": "P",
           "nhl_id": null,
           "matched_name": null,
@@ -1829,8 +1829,8 @@
           "shutouts": 0
         },
         {
-          "draft_number": 132,
-          "name": "Seth Jones",
+          "draft_number": 86,
+          "name": "Jake Sanderson",
           "position": "P",
           "nhl_id": null,
           "matched_name": null,
@@ -1855,8 +1855,8 @@
           "shutouts": 0
         },
         {
-          "draft_number": 36,
-          "name": "Jake Oettinger",
+          "draft_number": 53,
+          "name": "Logan Thompson",
           "position": "M",
           "nhl_id": null,
           "matched_name": null,
@@ -1868,8 +1868,8 @@
           "shutouts": 0
         },
         {
-          "draft_number": 63,
-          "name": "Scott Wedgewood",
+          "draft_number": 140,
+          "name": "Joel Hofer",
           "position": "M",
           "nhl_id": null,
           "matched_name": null,
