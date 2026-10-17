@@ -1,13 +1,69 @@
 
+let activeTeams = new Set();
+let latestData = null;
+let latestHistory = null;
+
+function initializeActiveTeams(teams) {
+  if (activeTeams.size > 0) return;
+  for (const team of teams || []) {
+    if (team?.name) activeTeams.add(team.name);
+  }
+}
+
+function visibleTeamNames() {
+  return activeTeams;
+}
+
+function renderTeamToggleBar(teams) {
+  const bar = document.querySelector("#team-toggle-bar");
+  if (!bar) return;
+
+  initializeActiveTeams(teams);
+
+  bar.innerHTML = (teams || []).map((team) => {
+    const name = team?.name || "";
+    const isActive = activeTeams.has(name);
+
+    return `
+      <button
+        type="button"
+        class="team-toggle ${isActive ? "is-active" : "is-inactive"}"
+        data-team="${escapeHtml(name)}"
+        aria-pressed="${isActive ? "true" : "false"}"
+      >
+        ${escapeHtml(name)}
+      </button>
+    `;
+  }).join("");
+
+  bar.querySelectorAll(".team-toggle").forEach((button) => {
+    button.addEventListener("click", () => {
+      const name = button.dataset.team;
+      if (!name) return;
+
+      if (activeTeams.has(name)) {
+        activeTeams.delete(name);
+      } else {
+        activeTeams.add(name);
+      }
+
+      renderTeamToggleBar(teams);
+      renderTeams(latestData);
+      renderHistoryChart(latestHistory);
+    });
+  });
+}
+
+
 function renderHistoryChart(history) {
   const chart = document.querySelector("#history-chart");
   const legend = document.querySelector("#history-legend");
   if (!chart || !legend) return;
 
   const dates = history?.dates || [];
-  const series = history?.series || [];
+  const series = (history?.series || []).filter((item) => activeTeams.has(item.team));
   if (!dates.length || !series.length) {
-    chart.innerHTML = `<p class="muted history-empty">Historiaa ei ole vielä saatavilla.</p>`;
+    chart.innerHTML = `<p class="muted history-empty">Valitse vähintään yksi joukkue nähdäksesi pistekehityksen.</p>`;
     legend.innerHTML = "";
     return;
   }
@@ -55,7 +111,8 @@ async function loadHistory() {
   try {
     const response = await fetch(`./history.json?v=${Date.now()}`, {cache:"no-store"});
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
-    renderHistoryChart(await response.json());
+    latestHistory = await response.json();
+    renderHistoryChart(latestHistory);
   } catch (error) {
     console.error(error);
     renderHistoryChart(null);
@@ -85,6 +142,9 @@ function escapeHtml(value) {
 }
 
 function renderTeams(teams) {
+  if (!data) return;
+  const visibleTeams = (data.teams || []).filter((team) => activeTeams.has(team.name));
+
   if (!teams.length) {
     teamList.innerHTML =
       `<p class="muted">Valitulla suodatuksella ei löytynyt joukkueita.</p>`;
@@ -180,6 +240,10 @@ async function loadData() {
     }
 
     const data = await response.json();
+    latestData = data;
+    initializeActiveTeams(data.teams || []);
+    renderTeamToggleBar(data.teams || []);
+    if (latestHistory) renderHistoryChart(latestHistory);
 
     const statsInfo =
       Number.isFinite(Number(data.players_with_stats))
@@ -191,7 +255,7 @@ async function loadData() {
 
     teamSelect.innerHTML = `
       <option value="all">Kaikki joukkueet</option>
-      ${(data.teams || []).map((team) => `
+      ${visibleTeams.map((team) => `
         <option value="${escapeHtml(team.name)}">${escapeHtml(team.name)}</option>
       `).join("")}
     `;

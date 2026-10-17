@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>NHL Draft – Pistetilanne</title>
-  <link rel="stylesheet" href="./style.css?v=11">
+  <link rel="stylesheet" href="./style.css?v=13">
 </head>
 <body>
   <main class="container">
@@ -21,17 +21,20 @@
       </select>
     </section>
 
+    <section class="team-toggle-section">
+      <div id="team-toggle-bar" class="team-toggle-bar" aria-label="Valitse näkyvät joukkueet"></div>
+    </section>
 
-    <section class="history-section">
+<section>
+      <h2>Joukkueet</h2>
+      <div id="team-list" class="team-list"></div>
+    </section>
+
+<section class="history-section">
       <h2>Pistekehitys</h2>
       <p class="muted">Joukkueiden kumulatiiviset pisteet pelipäivittäin.</p>
       <div id="history-chart" class="history-chart"></div>
       <div id="history-legend" class="history-legend"></div>
-    </section>
-
-    <section>
-      <h2>Joukkueet</h2>
-      <div id="team-list" class="team-list"></div>
     </section>
 
     <footer>
@@ -39,6 +42,6 @@
     </footer>
   </main>
 
-  <script src="./app.js?v=11"></script>
+  <script src="./app.js?v=13"></script>
 </body>
 </html>

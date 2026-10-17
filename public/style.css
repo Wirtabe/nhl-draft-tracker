@@ -285,3 +285,50 @@ footer {
 .legend-swatch { width: 10px; height: 10px; border-radius: 1px; flex: 0 0 auto; }
 .legend-item strong { margin-left: 2px; }
 .history-empty { margin: 0; padding: 16px; }
+
+
+.team-toggle-section {
+  margin: 12px 0 8px;
+}
+
+.team-toggle-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.team-toggle {
+  appearance: none;
+  border: 1px solid #cfd6df;
+  border-radius: 3px;
+  background: #fff;
+  color: #1d2733;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1;
+  padding: 9px 12px;
+  cursor: pointer;
+  transition: background-color 120ms ease, border-color 120ms ease, opacity 120ms ease;
+}
+
+.team-toggle.is-active {
+  background: #1d2733;
+  border-color: #1d2733;
+  color: #fff;
+}
+
+.team-toggle.is-inactive {
+  opacity: 0.48;
+}
+
+.team-toggle:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .team-toggle:hover {
+    opacity: 0.82;
+  }
+}
