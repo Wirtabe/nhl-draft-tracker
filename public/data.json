@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-17T18:21:13.304531+00:00",
+  "generated_at": "2026-10-17T20:51:58.193784+00:00",
   "season": "2026-2027",
   "season_id": "20262027",
   "game_type": 2,
@@ -164,7 +164,7 @@
           "wins": 0,
           "shutouts": 0,
           "points": 2,
-          "games_played": 7,
+          "games_played": 8,
           "status": "ok",
           "stats_source": "game-log"
         },
@@ -632,7 +632,7 @@
     {
       "coach": "Janne",
       "name": "Häpykarvan Lämäri",
-      "points": 126,
+      "points": 127,
       "players": [
         {
           "draft_number": 7,
@@ -790,12 +790,12 @@
           "position": "H",
           "nhl_id": 8478414,
           "matched_name": "Timo Meier",
-          "goals": 0,
+          "goals": 1,
           "assists": 3,
           "wins": 0,
           "shutouts": 0,
-          "points": 3,
-          "games_played": 7,
+          "points": 4,
+          "games_played": 8,
           "status": "ok",
           "stats_source": "game-log"
         },
@@ -1178,7 +1178,7 @@
           "wins": 0,
           "shutouts": 0,
           "points": 4,
-          "games_played": 7,
+          "games_played": 8,
           "status": "ok",
           "stats_source": "game-log"
         },
@@ -1248,7 +1248,7 @@
     {
       "coach": "Akseli",
       "name": "Kiven Kovat",
-      "points": 115,
+      "points": 117,
       "players": [
         {
           "draft_number": 2,
@@ -1377,11 +1377,11 @@
           "nhl_id": 8477949,
           "matched_name": "Alex Tuch",
           "goals": 5,
-          "assists": 1,
+          "assists": 2,
           "wins": 0,
           "shutouts": 0,
-          "points": 6,
-          "games_played": 7,
+          "points": 7,
+          "games_played": 8,
           "status": "ok",
           "stats_source": "game-log"
         },
@@ -1422,11 +1422,11 @@
           "nhl_id": 8471214,
           "matched_name": "Alex Ovechkin",
           "goals": 1,
-          "assists": 2,
+          "assists": 3,
           "wins": 0,
           "shutouts": 0,
-          "points": 3,
-          "games_played": 7,
+          "points": 4,
+          "games_played": 8,
           "status": "ok",
           "stats_source": "game-log"
         },
@@ -1516,7 +1516,7 @@
           "wins": 0,
           "shutouts": 0,
           "points": 4,
-          "games_played": 7,
+          "games_played": 8,
           "status": "ok",
           "stats_source": "game-log"
         },
@@ -1629,7 +1629,7 @@
           "wins": 0,
           "shutouts": 0,
           "points": 9,
-          "games_played": 7,
+          "games_played": 8,
           "status": "ok",
           "stats_source": "game-log"
         },
@@ -1674,7 +1674,7 @@
           "wins": 0,
           "shutouts": 0,
           "points": 7,
-          "games_played": 7,
+          "games_played": 8,
           "status": "ok",
           "stats_source": "game-log"
         },
@@ -1864,7 +1864,7 @@
     {
       "coach": "Aleksi",
       "name": "Titta på ylähylly",
-      "points": 107,
+      "points": 111,
       "players": [
         {
           "draft_number": 3,
@@ -1997,7 +1997,7 @@
           "wins": 0,
           "shutouts": 0,
           "points": 5,
-          "games_played": 7,
+          "games_played": 8,
           "status": "ok",
           "stats_source": "game-log"
         },
@@ -2068,11 +2068,11 @@
           "nhl_id": 8479345,
           "matched_name": "Jakob Chychrun",
           "goals": 1,
-          "assists": 2,
+          "assists": 3,
           "wins": 0,
           "shutouts": 0,
-          "points": 3,
-          "games_played": 7,
+          "points": 4,
+          "games_played": 8,
           "status": "ok",
           "stats_source": "game-log"
         },
@@ -2143,11 +2143,11 @@
           "nhl_id": 8480313,
           "matched_name": "Logan Thompson",
           "goals": 0,
-          "assists": 0,
-          "wins": 3,
+          "assists": 1,
+          "wins": 4,
           "shutouts": 0,
-          "points": 6,
-          "games_played": 5,
+          "points": 9,
+          "games_played": 6,
           "status": "ok",
           "stats_source": "game-log"
         },
