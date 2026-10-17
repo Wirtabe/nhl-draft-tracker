@@ -1,9 +1,415 @@
 {
-  "generated_at": null,
+  "generated_at": "2026-10-17T16:19:14.158216+00:00",
   "season": "2026-2027",
   "season_id": "20262027",
   "game_type": 2,
-  "dates": [],
-  "series": [],
-  "daily": []
+  "points_formula": "H/P: goals + assists; M: wins*2 + shutouts*2 + goals + assists",
+  "dates": [
+    "2026-09-29",
+    "2026-09-30",
+    "2026-10-01",
+    "2026-10-02",
+    "2026-10-03",
+    "2026-10-04",
+    "2026-10-05",
+    "2026-10-06",
+    "2026-10-07",
+    "2026-10-08",
+    "2026-10-09",
+    "2026-10-10",
+    "2026-10-11",
+    "2026-10-12",
+    "2026-10-13",
+    "2026-10-14",
+    "2026-10-15",
+    "2026-10-16"
+  ],
+  "series": [
+    {
+      "team": "Söhlöt",
+      "coach": "Riku",
+      "points": [
+        3,
+        5,
+        18,
+        21,
+        35,
+        40,
+        40,
+        56,
+        56,
+        69,
+        71,
+        83,
+        84,
+        88,
+        104,
+        104,
+        119,
+        124
+      ]
+    },
+    {
+      "team": "Kiven Kovat",
+      "coach": "Akseli",
+      "points": [
+        2,
+        2,
+        21,
+        25,
+        40,
+        42,
+        44,
+        52,
+        58,
+        60,
+        62,
+        71,
+        73,
+        73,
+        92,
+        98,
+        115,
+        115
+      ]
+    },
+    {
+      "team": "Titta på ylähylly",
+      "coach": "Aleksi",
+      "points": [
+        0,
+        3,
+        7,
+        18,
+        34,
+        38,
+        43,
+        53,
+        58,
+        66,
+        71,
+        84,
+        84,
+        85,
+        97,
+        100,
+        105,
+        107
+      ]
+    },
+    {
+      "team": "Hockey Pucks",
+      "coach": "Juho",
+      "points": [
+        3,
+        4,
+        14,
+        16,
+        37,
+        39,
+        42,
+        49,
+        49,
+        61,
+        62,
+        79,
+        79,
+        83,
+        103,
+        104,
+        111,
+        112
+      ]
+    },
+    {
+      "team": "Pallivahan Pallo",
+      "coach": "Valtteri",
+      "points": [
+        4,
+        5,
+        6,
+        16,
+        33,
+        38,
+        43,
+        57,
+        61,
+        74,
+        80,
+        96,
+        100,
+        103,
+        122,
+        124,
+        128,
+        133
+      ]
+    },
+    {
+      "team": "Old Stars",
+      "coach": "Jarno",
+      "points": [
+        17,
+        19,
+        31,
+        35,
+        44,
+        52,
+        54,
+        68,
+        73,
+        79,
+        80,
+        91,
+        94,
+        96,
+        113,
+        114,
+        129,
+        132
+      ]
+    },
+    {
+      "team": "Häpykarvan Lämäri",
+      "coach": "Janne",
+      "points": [
+        2,
+        5,
+        12,
+        14,
+        19,
+        26,
+        30,
+        40,
+        45,
+        58,
+        62,
+        74,
+        76,
+        82,
+        108,
+        108,
+        123,
+        126
+      ]
+    }
+  ],
+  "daily": [
+    {
+      "date": "2026-09-29",
+      "teams": {
+        "Söhlöt": 3,
+        "Kiven Kovat": 2,
+        "Titta på ylähylly": 0,
+        "Hockey Pucks": 3,
+        "Pallivahan Pallo": 4,
+        "Old Stars": 17,
+        "Häpykarvan Lämäri": 2
+      }
+    },
+    {
+      "date": "2026-09-30",
+      "teams": {
+        "Söhlöt": 5,
+        "Kiven Kovat": 2,
+        "Titta på ylähylly": 3,
+        "Hockey Pucks": 4,
+        "Pallivahan Pallo": 5,
+        "Old Stars": 19,
+        "Häpykarvan Lämäri": 5
+      }
+    },
+    {
+      "date": "2026-10-01",
+      "teams": {
+        "Söhlöt": 18,
+        "Kiven Kovat": 21,
+        "Titta på ylähylly": 7,
+        "Hockey Pucks": 14,
+        "Pallivahan Pallo": 6,
+        "Old Stars": 31,
+        "Häpykarvan Lämäri": 12
+      }
+    },
+    {
+      "date": "2026-10-02",
+      "teams": {
+        "Söhlöt": 21,
+        "Kiven Kovat": 25,
+        "Titta på ylähylly": 18,
+        "Hockey Pucks": 16,
+        "Pallivahan Pallo": 16,
+        "Old Stars": 35,
+        "Häpykarvan Lämäri": 14
+      }
+    },
+    {
+      "date": "2026-10-03",
+      "teams": {
+        "Söhlöt": 35,
+        "Kiven Kovat": 40,
+        "Titta på ylähylly": 34,
+        "Hockey Pucks": 37,
+        "Pallivahan Pallo": 33,
+        "Old Stars": 44,
+        "Häpykarvan Lämäri": 19
+      }
+    },
+    {
+      "date": "2026-10-04",
+      "teams": {
+        "Söhlöt": 40,
+        "Kiven Kovat": 42,
+        "Titta på ylähylly": 38,
+        "Hockey Pucks": 39,
+        "Pallivahan Pallo": 38,
+        "Old Stars": 52,
+        "Häpykarvan Lämäri": 26
+      }
+    },
+    {
+      "date": "2026-10-05",
+      "teams": {
+        "Söhlöt": 40,
+        "Kiven Kovat": 44,
+        "Titta på ylähylly": 43,
+        "Hockey Pucks": 42,
+        "Pallivahan Pallo": 43,
+        "Old Stars": 54,
+        "Häpykarvan Lämäri": 30
+      }
+    },
+    {
+      "date": "2026-10-06",
+      "teams": {
+        "Söhlöt": 56,
+        "Kiven Kovat": 52,
+        "Titta på ylähylly": 53,
+        "Hockey Pucks": 49,
+        "Pallivahan Pallo": 57,
+        "Old Stars": 68,
+        "Häpykarvan Lämäri": 40
+      }
+    },
+    {
+      "date": "2026-10-07",
+      "teams": {
+        "Söhlöt": 56,
+        "Kiven Kovat": 58,
+        "Titta på ylähylly": 58,
+        "Hockey Pucks": 49,
+        "Pallivahan Pallo": 61,
+        "Old Stars": 73,
+        "Häpykarvan Lämäri": 45
+      }
+    },
+    {
+      "date": "2026-10-08",
+      "teams": {
+        "Söhlöt": 69,
+        "Kiven Kovat": 60,
+        "Titta på ylähylly": 66,
+        "Hockey Pucks": 61,
+        "Pallivahan Pallo": 74,
+        "Old Stars": 79,
+        "Häpykarvan Lämäri": 58
+      }
+    },
+    {
+      "date": "2026-10-09",
+      "teams": {
+        "Söhlöt": 71,
+        "Kiven Kovat": 62,
+        "Titta på ylähylly": 71,
+        "Hockey Pucks": 62,
+        "Pallivahan Pallo": 80,
+        "Old Stars": 80,
+        "Häpykarvan Lämäri": 62
+      }
+    },
+    {
+      "date": "2026-10-10",
+      "teams": {
+        "Söhlöt": 83,
+        "Kiven Kovat": 71,
+        "Titta på ylähylly": 84,
+        "Hockey Pucks": 79,
+        "Pallivahan Pallo": 96,
+        "Old Stars": 91,
+        "Häpykarvan Lämäri": 74
+      }
+    },
+    {
+      "date": "2026-10-11",
+      "teams": {
+        "Söhlöt": 84,
+        "Kiven Kovat": 73,
+        "Titta på ylähylly": 84,
+        "Hockey Pucks": 79,
+        "Pallivahan Pallo": 100,
+        "Old Stars": 94,
+        "Häpykarvan Lämäri": 76
+      }
+    },
+    {
+      "date": "2026-10-12",
+      "teams": {
+        "Söhlöt": 88,
+        "Kiven Kovat": 73,
+        "Titta på ylähylly": 85,
+        "Hockey Pucks": 83,
+        "Pallivahan Pallo": 103,
+        "Old Stars": 96,
+        "Häpykarvan Lämäri": 82
+      }
+    },
+    {
+      "date": "2026-10-13",
+      "teams": {
+        "Söhlöt": 104,
+        "Kiven Kovat": 92,
+        "Titta på ylähylly": 97,
+        "Hockey Pucks": 103,
+        "Pallivahan Pallo": 122,
+        "Old Stars": 113,
+        "Häpykarvan Lämäri": 108
+      }
+    },
+    {
+      "date": "2026-10-14",
+      "teams": {
+        "Söhlöt": 104,
+        "Kiven Kovat": 98,
+        "Titta på ylähylly": 100,
+        "Hockey Pucks": 104,
+        "Pallivahan Pallo": 124,
+        "Old Stars": 114,
+        "Häpykarvan Lämäri": 108
+      }
+    },
+    {
+      "date": "2026-10-15",
+      "teams": {
+        "Söhlöt": 119,
+        "Kiven Kovat": 115,
+        "Titta på ylähylly": 105,
+        "Hockey Pucks": 111,
+        "Pallivahan Pallo": 128,
+        "Old Stars": 129,
+        "Häpykarvan Lämäri": 123
+      }
+    },
+    {
+      "date": "2026-10-16",
+      "teams": {
+        "Söhlöt": 124,
+        "Kiven Kovat": 115,
+        "Titta på ylähylly": 107,
+        "Hockey Pucks": 112,
+        "Pallivahan Pallo": 133,
+        "Old Stars": 132,
+        "Häpykarvan Lämäri": 126
+      }
+    }
+  ]
 }
