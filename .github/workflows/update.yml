@@ -1,4 +1,4 @@
-name: Update NHL stats
+name: Update NHL stats and deploy report
 
 on:
   schedule:
@@ -14,15 +14,21 @@ on:
 
 permissions:
   contents: write
+  pages: write
+  id-token: write
 
 concurrency:
   group: nhl-stats-update
   cancel-in-progress: true
 
 jobs:
-  update:
+  update-and-deploy:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
       - name: Checkout latest main
@@ -38,7 +44,7 @@ jobs:
       - name: Install dependencies
         run: python -m pip install -r requirements.txt
 
-      - name: Update NHL points
+      - name: Update NHL points and history
         run: python scripts/update_stats.py
 
       - name: Show update summary
@@ -46,7 +52,10 @@ jobs:
           python - <<'PY'
           import json
           from pathlib import Path
+
           data = json.loads(Path("public/data.json").read_text(encoding="utf-8"))
+          history = json.loads(Path("public/history.json").read_text(encoding="utf-8"))
+
           print("generated_at:", data.get("generated_at"))
           print("season_id:", data.get("season_id"))
           print("api_status:", data.get("api_status"))
@@ -54,33 +63,37 @@ jobs:
           print("players_with_stats:", data.get("players_with_stats"))
           print("players_without_stats:", data.get("players_without_stats"))
           print("unresolved_players:", data.get("unresolved_players"))
+          print("history_dates:", len(history.get("dates", [])))
+
           for team in data.get("teams", []):
               print(f'{team.get("rank")}. {team.get("name")}: {team.get("points", 0)} p')
-
-          print("\nSelected player diagnostics:")
-          for team in data.get("teams", []):
-              for player in team.get("players", []):
-                  if player.get("name") == "Jack Hughes":
-                      print(
-                          "Jack Hughes:",
-                          "nhl_id=", player.get("nhl_id"),
-                          "GP=", player.get("games_played"),
-                          "G=", player.get("goals"),
-                          "A=", player.get("assists"),
-                          "P=", player.get("points"),
-                          "status=", player.get("status"),
-                          "source=", player.get("stats_source"),
-                      )
           PY
 
-      - name: Commit updated report
+      - name: Commit generated data
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
           git add public/data.json public/history.json data/player_ids.json
+
           if git diff --cached --quiet; then
             echo "No generated changes to commit."
-            exit 0
+          else
+            git commit -m "Update NHL stats and history"
+            git push origin HEAD:main
           fi
-          git commit -m "Update NHL stats"
-          git push origin HEAD:main
+
+      # Important: a push made by GITHUB_TOKEN does not start another workflow.
+      # Therefore Pages must be deployed in THIS SAME workflow instead of
+      # relying on deploy.yml to react to the bot commit.
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: "./public"
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
