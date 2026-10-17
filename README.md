@@ -161,3 +161,42 @@ Maalivahtien fantasypisteet ovat edelleen:
 
 GitHub Actionsin `Show update summary` tulostaa lisäksi Jack Hughesin
 diagnostiikkarivin, jotta game-log-päivityksen toiminta on helppo varmistaa.
+
+
+## v8: pelaajanimien korjaukset
+
+Korjatut nimet `data/draft.json`-tiedostossa:
+
+- Sean Malinski → Sam Malinski
+- Alex Lafreniere → Alexis Lafrenière
+- Jaroslav Askarov → Yaroslav Askarov
+- Jacob Chychrun → Jakob Chychrun
+- Matthew Barzal → Mathew Barzal
+- Luka Ganyoni → Luca Cagnoni
+
+Lisäksi `Jack Hughes` on kiinnitetty `data/player_overrides.json`-tiedostossa
+NHL player ID:hen `8481559`, jotta nimihaku ei voi osua samannimiseen
+entiseen NHL-puolustajaan.
+
+Korjattuihin nimiin liittyvät vanhat `data/player_ids.json`-välimuistimerkinnät
+poistetaan tässä paketissa. Ensimmäinen Update NHL stats -ajo hakee ID:t uudelleen.
+
+
+## v9: taulukon luettavuus
+
+Joukkueen pelaajalistassa lisätään nyt tyhjä erotusrivi aina, kun pelipaikka vaihtuu:
+- H → P
+- P → M
+
+Näin hyökkääjät, puolustajat ja maalivahdit erottuvat toisistaan ilman erillisiä väliotsikoita.
+
+Koko sivuston ensisijainen fontti on nyt Calibri.
+
+
+## v10: Jacob Markstrom -korjaus
+
+Draftissa ollut `Jakob Markström` on korjattu NHL:n englanninkielisen API:n
+käyttämään nimeen `Jacob Markstrom`.
+
+Lisäksi pelaaja on kiinnitetty suoraan NHL player ID:hen `8474593`, jotta
+pistepäivitys ei riipu nimihakupalvelun tulkinnasta.

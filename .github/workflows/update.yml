@@ -77,7 +77,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add public/data.json data/player_ids.json
+          git add public/data.json public/history.json data/player_ids.json
           if git diff --cached --quiet; then
             echo "No generated changes to commit."
             exit 0

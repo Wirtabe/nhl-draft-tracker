@@ -270,3 +270,18 @@ footer {
     padding-right: 10px;
   }
 }
+
+
+.history-section { margin-top: 18px; }
+.history-section h2 { margin-bottom: 2px; }
+.history-section > .muted { margin: 0 0 8px; font-size: 12px; }
+.history-chart { background: #fff; border: 1px solid #dfe4ec; border-radius: 3px; min-height: 250px; }
+.chart-scroll { width: 100%; overflow-x: auto; }
+.history-svg { display: block; width: 100%; min-width: 720px; height: auto; font-family: Calibri, "Segoe UI", Arial, sans-serif; }
+.chart-grid { stroke: #e9edf2; stroke-width: 1; }
+.chart-axis-label { fill: #687386; font-size: 11px; }
+.history-legend { display: flex; flex-wrap: wrap; gap: 6px 14px; margin-top: 8px; font-size: 12px; }
+.legend-item { display: flex; align-items: center; gap: 6px; }
+.legend-swatch { width: 10px; height: 10px; border-radius: 1px; flex: 0 0 auto; }
+.legend-item strong { margin-left: 2px; }
+.history-empty { margin: 0; padding: 16px; }
