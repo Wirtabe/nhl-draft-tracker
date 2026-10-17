@@ -60,16 +60,6 @@ h2 {
   font-weight: 750;
 }
 
-#team-select {
-  min-width: 220px;
-  padding: 7px 9px;
-  border: 1px solid #d4dae4;
-  border-radius: 2px;
-  background: white;
-  color: #172033;
-  font: inherit;
-}
-
 .team-list {
   display: grid;
   gap: 6px;
@@ -243,11 +233,8 @@ footer {
     align-items: stretch;
   }
 
-  #team-select {
-    width: 100%;
-  }
-
-  .team-summary {
+  
+.team-summary {
     padding: 9px 10px;
   }
 
