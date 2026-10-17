@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-17T20:51:58.193784+00:00",
+  "generated_at": "2026-10-17T23:00:08.625519+00:00",
   "season": "2026-2027",
   "season_id": "20262027",
   "game_type": 2,
@@ -89,7 +89,7 @@
           "wins": 0,
           "shutouts": 0,
           "points": 13,
-          "games_played": 8,
+          "games_played": 9,
           "status": "ok",
           "stats_source": "game-log"
         },
@@ -284,7 +284,7 @@
           "wins": 0,
           "shutouts": 0,
           "points": 3,
-          "games_played": 8,
+          "games_played": 9,
           "status": "ok",
           "stats_source": "game-log"
         },
@@ -324,7 +324,7 @@
     {
       "coach": "Jarno",
       "name": "Old Stars",
-      "points": 132,
+      "points": 133,
       "players": [
         {
           "draft_number": 6,
@@ -482,12 +482,12 @@
           "position": "H",
           "nhl_id": 8477940,
           "matched_name": "Nikolaj Ehlers",
-          "goals": 0,
+          "goals": 1,
           "assists": 4,
           "wins": 0,
           "shutouts": 0,
-          "points": 4,
-          "games_played": 8,
+          "points": 5,
+          "games_played": 9,
           "status": "ok",
           "stats_source": "game-log"
         },
@@ -940,7 +940,7 @@
     {
       "coach": "Riku",
       "name": "Söhlöt",
-      "points": 124,
+      "points": 126,
       "players": [
         {
           "draft_number": 1,
@@ -1129,11 +1129,11 @@
           "nhl_id": 8476906,
           "matched_name": "Shayne Gostisbehere",
           "goals": 2,
-          "assists": 3,
+          "assists": 5,
           "wins": 0,
           "shutouts": 0,
-          "points": 5,
-          "games_played": 8,
+          "points": 7,
+          "games_played": 9,
           "status": "ok",
           "stats_source": "game-log"
         },
@@ -1248,7 +1248,7 @@
     {
       "coach": "Akseli",
       "name": "Kiven Kovat",
-      "points": 117,
+      "points": 118,
       "players": [
         {
           "draft_number": 2,
@@ -1271,12 +1271,12 @@
           "position": "H",
           "nhl_id": 8476460,
           "matched_name": "Mark Scheifele",
-          "goals": 1,
+          "goals": 2,
           "assists": 6,
           "wins": 0,
           "shutouts": 0,
-          "points": 7,
-          "games_played": 7,
+          "points": 8,
+          "games_played": 8,
           "status": "ok",
           "stats_source": "game-log"
         },
@@ -1907,7 +1907,7 @@
           "wins": 0,
           "shutouts": 0,
           "points": 11,
-          "games_played": 7,
+          "games_played": 8,
           "status": "ok",
           "stats_source": "game-log"
         },
