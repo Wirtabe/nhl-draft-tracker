@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-17T23:00:08.625624+00:00",
+  "generated_at": "2026-10-18T00:48:14.233533+00:00",
   "season": "2026-2027",
   "season_id": "20262027",
   "game_type": 2,
@@ -98,7 +98,7 @@
         100,
         105,
         107,
-        111
+        115
       ]
     },
     {
@@ -148,7 +148,7 @@
         124,
         128,
         133,
-        133
+        134
       ]
     },
     {
@@ -173,7 +173,7 @@
         114,
         129,
         132,
-        133
+        135
       ]
     },
     {
@@ -424,10 +424,10 @@
       "teams": {
         "Söhlöt": 126,
         "Kiven Kovat": 118,
-        "Titta på ylähylly": 111,
+        "Titta på ylähylly": 115,
         "Hockey Pucks": 112,
-        "Pallivahan Pallo": 133,
-        "Old Stars": 133,
+        "Pallivahan Pallo": 134,
+        "Old Stars": 135,
         "Häpykarvan Lämäri": 127
       }
     }
