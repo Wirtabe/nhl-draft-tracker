@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-24T18:00:59.594497+00:00",
+  "generated_at": "2026-10-24T20:33:41.769444+00:00",
   "season": "2026-2027",
   "season_id": "20262027",
   "game_type": 2,
@@ -16,7 +16,7 @@
     {
       "coach": "Jarno",
       "name": "Old Stars",
-      "points": 184,
+      "points": 186,
       "players": [
         {
           "draft_number": 6,
@@ -84,12 +84,12 @@
           "position": "H",
           "nhl_id": 8484153,
           "matched_name": "Leo Carlsson",
-          "goals": 2,
-          "assists": 9,
+          "goals": 3,
+          "assists": 10,
           "wins": 0,
           "shutouts": 0,
-          "points": 11,
-          "games_played": 10,
+          "points": 13,
+          "games_played": 11,
           "status": "ok",
           "stats_source": "game-log"
         },
@@ -324,7 +324,7 @@
     {
       "coach": "Valtteri",
       "name": "Pallivahan Pallo",
-      "points": 176,
+      "points": 182,
       "players": [
         {
           "draft_number": 5,
@@ -438,11 +438,11 @@
           "nhl_id": 8481533,
           "matched_name": "Trevor Zegras",
           "goals": 3,
-          "assists": 5,
+          "assists": 7,
           "wins": 0,
           "shutouts": 0,
-          "points": 8,
-          "games_played": 12,
+          "points": 10,
+          "games_played": 13,
           "status": "ok",
           "stats_source": "game-log"
         },
@@ -482,12 +482,12 @@
           "position": "H",
           "nhl_id": 8484762,
           "matched_name": "Beckett Sennecke",
-          "goals": 5,
+          "goals": 6,
           "assists": 3,
           "wins": 0,
           "shutouts": 0,
-          "points": 8,
-          "games_played": 10,
+          "points": 9,
+          "games_played": 11,
           "status": "ok",
           "stats_source": "game-log"
         },
@@ -543,11 +543,11 @@
           "nhl_id": 8481605,
           "matched_name": "Jackson LaCombe",
           "goals": 1,
-          "assists": 7,
+          "assists": 8,
           "wins": 0,
           "shutouts": 0,
-          "points": 8,
-          "games_played": 10,
+          "points": 9,
+          "games_played": 11,
           "status": "ok",
           "stats_source": "game-log"
         },
@@ -604,10 +604,10 @@
           "matched_name": "Lukas Dostal",
           "goals": 0,
           "assists": 0,
-          "wins": 3,
+          "wins": 4,
           "shutouts": 0,
-          "points": 6,
-          "games_played": 7,
+          "points": 8,
+          "games_played": 8,
           "status": "ok",
           "stats_source": "game-log"
         },
@@ -632,7 +632,7 @@
     {
       "coach": "Janne",
       "name": "Häpykarvan Lämäri",
-      "points": 176,
+      "points": 177,
       "players": [
         {
           "draft_number": 7,
@@ -716,11 +716,11 @@
           "nhl_id": 8483445,
           "matched_name": "Cutter Gauthier",
           "goals": 2,
-          "assists": 3,
+          "assists": 4,
           "wins": 0,
           "shutouts": 0,
-          "points": 5,
-          "games_played": 9,
+          "points": 6,
+          "games_played": 10,
           "status": "ok",
           "stats_source": "game-log"
         },
@@ -735,7 +735,7 @@
           "wins": 0,
           "shutouts": 0,
           "points": 8,
-          "games_played": 9,
+          "games_played": 10,
           "status": "ok",
           "stats_source": "game-log"
         },
