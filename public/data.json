@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-25T23:29:44.012996+00:00",
+  "generated_at": "2026-10-26T01:32:52.324915+00:00",
   "season": "2026-2027",
   "season_id": "20262027",
   "game_type": 2,
@@ -532,7 +532,7 @@
           "wins": 0,
           "shutouts": 0,
           "points": 8,
-          "games_played": 10,
+          "games_played": 11,
           "status": "ok",
           "stats_source": "game-log"
         },
@@ -632,7 +632,7 @@
     {
       "coach": "Janne",
       "name": "Häpykarvan Lämäri",
-      "points": 189,
+      "points": 191,
       "players": [
         {
           "draft_number": 7,
@@ -912,10 +912,10 @@
           "matched_name": "Jake Oettinger",
           "goals": 0,
           "assists": 0,
-          "wins": 5,
+          "wins": 6,
           "shutouts": 3,
-          "points": 16,
-          "games_played": 8,
+          "points": 18,
+          "games_played": 9,
           "status": "ok",
           "stats_source": "game-log"
         },
@@ -1248,7 +1248,7 @@
     {
       "coach": "Akseli",
       "name": "Kiven Kovat",
-      "points": 170,
+      "points": 171,
       "players": [
         {
           "draft_number": 2,
@@ -1497,11 +1497,11 @@
           "nhl_id": 8481581,
           "matched_name": "Thomas Harley",
           "goals": 0,
-          "assists": 4,
+          "assists": 5,
           "wins": 0,
           "shutouts": 0,
-          "points": 4,
-          "games_played": 10,
+          "points": 5,
+          "games_played": 11,
           "status": "ok",
           "stats_source": "game-log"
         },
@@ -1556,7 +1556,7 @@
     {
       "coach": "Aleksi",
       "name": "Titta på ylähylly",
-      "points": 168,
+      "points": 170,
       "players": [
         {
           "draft_number": 3,
@@ -1579,12 +1579,12 @@
           "position": "H",
           "nhl_id": 8480027,
           "matched_name": "Jason Robertson",
-          "goals": 3,
+          "goals": 5,
           "assists": 8,
           "wins": 0,
           "shutouts": 0,
-          "points": 11,
-          "games_played": 10,
+          "points": 13,
+          "games_played": 11,
           "status": "ok",
           "stats_source": "game-log"
         },
@@ -1864,7 +1864,7 @@
     {
       "coach": "Juho",
       "name": "Hockey Pucks",
-      "points": 165,
+      "points": 169,
       "players": [
         {
           "draft_number": 4,
@@ -1887,12 +1887,12 @@
           "position": "H",
           "nhl_id": 8478420,
           "matched_name": "Mikko Rantanen",
-          "goals": 5,
+          "goals": 6,
           "assists": 8,
           "wins": 0,
           "shutouts": 0,
-          "points": 13,
-          "games_played": 10,
+          "points": 14,
+          "games_played": 11,
           "status": "ok",
           "stats_source": "game-log"
         },
@@ -1902,12 +1902,12 @@
           "position": "H",
           "nhl_id": 8482740,
           "matched_name": "Wyatt Johnston",
-          "goals": 1,
-          "assists": 5,
+          "goals": 2,
+          "assists": 6,
           "wins": 0,
           "shutouts": 0,
-          "points": 6,
-          "games_played": 8,
+          "points": 8,
+          "games_played": 9,
           "status": "ok",
           "stats_source": "game-log"
         },
@@ -2067,12 +2067,12 @@
           "position": "P",
           "nhl_id": 8485366,
           "matched_name": "Matthew Schaefer",
-          "goals": 1,
+          "goals": 2,
           "assists": 8,
           "wins": 0,
           "shutouts": 0,
-          "points": 9,
-          "games_played": 10,
+          "points": 10,
+          "games_played": 11,
           "status": "ok",
           "stats_source": "game-log"
         },
@@ -2147,7 +2147,7 @@
           "wins": 5,
           "shutouts": 1,
           "points": 12,
-          "games_played": 7,
+          "games_played": 8,
           "status": "ok",
           "stats_source": "game-log"
         },
