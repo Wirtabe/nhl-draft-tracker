@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-31T02:12:46.237688+00:00",
+  "generated_at": "2026-10-31T08:44:59.705079+00:00",
   "season": "2026-2027",
   "season_id": "20262027",
   "game_type": 2,
@@ -254,7 +254,7 @@
           "wins": 0,
           "shutouts": 0,
           "points": 9,
-          "games_played": 13,
+          "games_played": 14,
           "status": "ok",
           "stats_source": "game-log"
         },
@@ -1193,7 +1193,7 @@
           "wins": 0,
           "shutouts": 0,
           "points": 4,
-          "games_played": 12,
+          "games_played": 13,
           "status": "ok",
           "stats_source": "game-log"
         },
