@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-08T18:27:23.720836+00:00",
+  "generated_at": "2026-11-08T22:23:05.417046+00:00",
   "season": "2026-2027",
   "season_id": "20262027",
   "game_type": 2,
@@ -16,7 +16,7 @@
     {
       "coach": "Janne",
       "name": "Häpykarvan Lämäri",
-      "points": 308,
+      "points": 310,
       "players": [
         {
           "draft_number": 7,
@@ -40,11 +40,11 @@
           "nhl_id": 8479314,
           "matched_name": "Matthew Tkachuk",
           "goals": 4,
-          "assists": 21,
+          "assists": 22,
           "wins": 0,
           "shutouts": 0,
-          "points": 25,
-          "games_played": 17,
+          "points": 26,
+          "games_played": 18,
           "status": "ok",
           "stats_source": "game-log"
         },
@@ -55,11 +55,11 @@
           "nhl_id": 8480801,
           "matched_name": "Brady Tkachuk",
           "goals": 10,
-          "assists": 9,
+          "assists": 10,
           "wins": 0,
           "shutouts": 0,
-          "points": 19,
-          "games_played": 17,
+          "points": 20,
+          "games_played": 18,
           "status": "ok",
           "stats_source": "game-log"
         },
@@ -89,7 +89,7 @@
           "wins": 0,
           "shutouts": 0,
           "points": 17,
-          "games_played": 17,
+          "games_played": 18,
           "status": "ok",
           "stats_source": "game-log"
         },
@@ -269,7 +269,7 @@
           "wins": 0,
           "shutouts": 0,
           "points": 20,
-          "games_played": 17,
+          "games_played": 18,
           "status": "ok",
           "stats_source": "game-log"
         },
@@ -607,7 +607,7 @@
           "wins": 4,
           "shutouts": 1,
           "points": 10,
-          "games_played": 8,
+          "games_played": 9,
           "status": "ok",
           "stats_source": "game-log"
         },
@@ -632,7 +632,7 @@
     {
       "coach": "Valtteri",
       "name": "Pallivahan Pallo",
-      "points": 293,
+      "points": 297,
       "players": [
         {
           "draft_number": 5,
@@ -656,11 +656,11 @@
           "nhl_id": 8477956,
           "matched_name": "David Pastrnak",
           "goals": 8,
-          "assists": 14,
+          "assists": 16,
           "wins": 0,
           "shutouts": 0,
-          "points": 22,
-          "games_played": 17,
+          "points": 24,
+          "games_played": 18,
           "status": "ok",
           "stats_source": "game-log"
         },
@@ -927,10 +927,10 @@
           "matched_name": "Jeremy Swayman",
           "goals": 0,
           "assists": 0,
-          "wins": 8,
+          "wins": 9,
           "shutouts": 1,
-          "points": 18,
-          "games_played": 12,
+          "points": 20,
+          "games_played": 13,
           "status": "ok",
           "stats_source": "game-log"
         }
@@ -1248,7 +1248,7 @@
     {
       "coach": "Riku",
       "name": "Söhlöt",
-      "points": 268,
+      "points": 269,
       "players": [
         {
           "draft_number": 1,
@@ -1361,12 +1361,12 @@
           "position": "H",
           "nhl_id": 8479987,
           "matched_name": "Morgan Geekie",
-          "goals": 4,
+          "goals": 5,
           "assists": 9,
           "wins": 0,
           "shutouts": 0,
-          "points": 13,
-          "games_played": 17,
+          "points": 14,
+          "games_played": 18,
           "status": "ok",
           "stats_source": "game-log"
         },
@@ -1864,7 +1864,7 @@
     {
       "coach": "Juho",
       "name": "Hockey Pucks",
-      "points": 257,
+      "points": 258,
       "players": [
         {
           "draft_number": 4,
@@ -2083,11 +2083,11 @@
           "nhl_id": 8479325,
           "matched_name": "Charlie McAvoy",
           "goals": 1,
-          "assists": 7,
+          "assists": 8,
           "wins": 0,
           "shutouts": 0,
-          "points": 8,
-          "games_played": 11,
+          "points": 9,
+          "games_played": 12,
           "status": "ok",
           "stats_source": "game-log"
         },
