@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-09T01:53:38.648750+00:00",
+  "generated_at": "2026-11-09T09:33:18.296764+00:00",
   "season": "2026-2027",
   "season_id": "20262027",
   "game_type": 2,
@@ -16,7 +16,7 @@
     {
       "coach": "Janne",
       "name": "Häpykarvan Lämäri",
-      "points": 310,
+      "points": 321,
       "players": [
         {
           "draft_number": 7,
@@ -74,7 +74,7 @@
           "wins": 0,
           "shutouts": 0,
           "points": 27,
-          "games_played": 18,
+          "games_played": 19,
           "status": "ok",
           "stats_source": "game-log"
         },
@@ -99,12 +99,12 @@
           "position": "H",
           "nhl_id": 8483445,
           "matched_name": "Cutter Gauthier",
-          "goals": 12,
-          "assists": 6,
+          "goals": 15,
+          "assists": 7,
           "wins": 0,
           "shutouts": 0,
-          "points": 18,
-          "games_played": 16,
+          "points": 22,
+          "games_played": 17,
           "status": "ok",
           "stats_source": "game-log"
         },
@@ -114,12 +114,12 @@
           "position": "H",
           "nhl_id": 8475798,
           "matched_name": "Mikael Granlund",
-          "goals": 4,
-          "assists": 12,
+          "goals": 5,
+          "assists": 15,
           "wins": 0,
           "shutouts": 0,
-          "points": 16,
-          "games_played": 16,
+          "points": 20,
+          "games_played": 17,
           "status": "ok",
           "stats_source": "game-log"
         },
@@ -174,12 +174,12 @@
           "position": "H",
           "nhl_id": 8478414,
           "matched_name": "Timo Meier",
-          "goals": 1,
+          "goals": 3,
           "assists": 4,
           "wins": 0,
           "shutouts": 0,
-          "points": 5,
-          "games_played": 17,
+          "points": 7,
+          "games_played": 18,
           "status": "ok",
           "stats_source": "game-log"
         },
@@ -189,12 +189,12 @@
           "position": "H",
           "nhl_id": 8476483,
           "matched_name": "Rickard Rakell",
-          "goals": 5,
+          "goals": 6,
           "assists": 4,
           "wins": 0,
           "shutouts": 0,
-          "points": 9,
-          "games_played": 17,
+          "points": 10,
+          "games_played": 18,
           "status": "ok",
           "stats_source": "game-log"
         },
@@ -397,7 +397,7 @@
           "wins": 0,
           "shutouts": 0,
           "points": 26,
-          "games_played": 17,
+          "games_played": 18,
           "status": "ok",
           "stats_source": "game-log"
         },
@@ -412,7 +412,7 @@
           "wins": 0,
           "shutouts": 0,
           "points": 16,
-          "games_played": 16,
+          "games_played": 17,
           "status": "ok",
           "stats_source": "game-log"
         },
@@ -632,7 +632,7 @@
     {
       "coach": "Valtteri",
       "name": "Pallivahan Pallo",
-      "points": 297,
+      "points": 303,
       "players": [
         {
           "draft_number": 5,
@@ -716,11 +716,11 @@
           "nhl_id": 8471675,
           "matched_name": "Sidney Crosby",
           "goals": 6,
-          "assists": 6,
+          "assists": 7,
           "wins": 0,
           "shutouts": 0,
-          "points": 12,
-          "games_played": 17,
+          "points": 13,
+          "games_played": 18,
           "status": "ok",
           "stats_source": "game-log"
         },
@@ -730,12 +730,12 @@
           "position": "H",
           "nhl_id": 8479542,
           "matched_name": "Brandon Hagel",
-          "goals": 8,
+          "goals": 9,
           "assists": 9,
           "wins": 0,
           "shutouts": 0,
-          "points": 17,
-          "games_played": 16,
+          "points": 18,
+          "games_played": 17,
           "status": "ok",
           "stats_source": "game-log"
         },
@@ -750,7 +750,7 @@
           "wins": 0,
           "shutouts": 0,
           "points": 14,
-          "games_played": 18,
+          "games_played": 19,
           "status": "ok",
           "stats_source": "game-log"
         },
@@ -791,11 +791,11 @@
           "nhl_id": 8484762,
           "matched_name": "Beckett Sennecke",
           "goals": 10,
-          "assists": 11,
+          "assists": 12,
           "wins": 0,
           "shutouts": 0,
-          "points": 21,
-          "games_played": 17,
+          "points": 22,
+          "games_played": 18,
           "status": "ok",
           "stats_source": "game-log"
         },
@@ -851,11 +851,11 @@
           "nhl_id": 8481605,
           "matched_name": "Jackson LaCombe",
           "goals": 1,
-          "assists": 18,
+          "assists": 21,
           "wins": 0,
           "shutouts": 0,
-          "points": 19,
-          "games_played": 17,
+          "points": 22,
+          "games_played": 18,
           "status": "ok",
           "stats_source": "game-log"
         },
@@ -940,7 +940,7 @@
     {
       "coach": "Akseli",
       "name": "Kiven Kovat",
-      "points": 284,
+      "points": 286,
       "players": [
         {
           "draft_number": 2,
@@ -963,12 +963,12 @@
           "position": "H",
           "nhl_id": 8476460,
           "matched_name": "Mark Scheifele",
-          "goals": 3,
-          "assists": 13,
+          "goals": 4,
+          "assists": 14,
           "wins": 0,
           "shutouts": 0,
-          "points": 16,
-          "games_played": 17,
+          "points": 18,
+          "games_played": 18,
           "status": "ok",
           "stats_source": "game-log"
         },
@@ -1148,7 +1148,7 @@
           "wins": 0,
           "shutouts": 0,
           "points": 10,
-          "games_played": 18,
+          "games_played": 19,
           "status": "ok",
           "stats_source": "game-log"
         },
@@ -1208,7 +1208,7 @@
           "wins": 0,
           "shutouts": 0,
           "points": 11,
-          "games_played": 17,
+          "games_played": 18,
           "status": "ok",
           "stats_source": "game-log"
         },
@@ -1223,7 +1223,7 @@
           "wins": 8,
           "shutouts": 0,
           "points": 16,
-          "games_played": 12,
+          "games_played": 13,
           "status": "ok",
           "stats_source": "game-log"
         },
@@ -1248,7 +1248,7 @@
     {
       "coach": "Riku",
       "name": "Söhlöt",
-      "points": 272,
+      "points": 273,
       "players": [
         {
           "draft_number": 1,
@@ -1411,7 +1411,7 @@
           "wins": 0,
           "shutouts": 0,
           "points": 12,
-          "games_played": 18,
+          "games_played": 19,
           "status": "ok",
           "stats_source": "game-log"
         },
@@ -1486,7 +1486,7 @@
           "wins": 0,
           "shutouts": 0,
           "points": 9,
-          "games_played": 17,
+          "games_played": 18,
           "status": "ok",
           "stats_source": "game-log"
         },
@@ -1496,12 +1496,12 @@
           "position": "P",
           "nhl_id": 8484768,
           "matched_name": "Zayne Parekh",
-          "goals": 1,
+          "goals": 2,
           "assists": 6,
           "wins": 0,
           "shutouts": 0,
-          "points": 7,
-          "games_played": 17,
+          "points": 8,
+          "games_played": 18,
           "status": "ok",
           "stats_source": "game-log"
         },
@@ -1556,7 +1556,7 @@
     {
       "coach": "Aleksi",
       "name": "Titta på ylähylly",
-      "points": 265,
+      "points": 267,
       "players": [
         {
           "draft_number": 3,
@@ -1569,7 +1569,7 @@
           "wins": 0,
           "shutouts": 0,
           "points": 22,
-          "games_played": 16,
+          "games_played": 17,
           "status": "ok",
           "stats_source": "game-log"
         },
@@ -1599,7 +1599,7 @@
           "wins": 0,
           "shutouts": 0,
           "points": 19,
-          "games_played": 17,
+          "games_played": 18,
           "status": "ok",
           "stats_source": "game-log"
         },
@@ -1614,7 +1614,7 @@
           "wins": 0,
           "shutouts": 0,
           "points": 18,
-          "games_played": 16,
+          "games_played": 17,
           "status": "ok",
           "stats_source": "game-log"
         },
@@ -1674,7 +1674,7 @@
           "wins": 0,
           "shutouts": 0,
           "points": 5,
-          "games_played": 8,
+          "games_played": 9,
           "status": "ok",
           "stats_source": "game-log"
         },
@@ -1684,12 +1684,12 @@
           "position": "H",
           "nhl_id": 8480002,
           "matched_name": "Nico Hischier",
-          "goals": 7,
-          "assists": 4,
+          "goals": 8,
+          "assists": 5,
           "wins": 0,
           "shutouts": 0,
-          "points": 11,
-          "games_played": 17,
+          "points": 13,
+          "games_played": 18,
           "status": "ok",
           "stats_source": "game-log"
         },
@@ -1779,7 +1779,7 @@
           "wins": 0,
           "shutouts": 0,
           "points": 10,
-          "games_played": 16,
+          "games_played": 17,
           "status": "ok",
           "stats_source": "game-log"
         },
@@ -1864,7 +1864,7 @@
     {
       "coach": "Juho",
       "name": "Hockey Pucks",
-      "points": 258,
+      "points": 263,
       "players": [
         {
           "draft_number": 4,
@@ -1922,7 +1922,7 @@
           "wins": 0,
           "shutouts": 0,
           "points": 22,
-          "games_played": 18,
+          "games_played": 19,
           "status": "ok",
           "stats_source": "game-log"
         },
@@ -1933,11 +1933,11 @@
           "nhl_id": 8481559,
           "matched_name": "Jack Hughes",
           "goals": 9,
-          "assists": 14,
+          "assists": 16,
           "wins": 0,
           "shutouts": 0,
-          "points": 23,
-          "games_played": 17,
+          "points": 25,
+          "games_played": 18,
           "status": "ok",
           "stats_source": "game-log"
         },
@@ -1978,11 +1978,11 @@
           "nhl_id": 8479407,
           "matched_name": "Jesper Bratt",
           "goals": 3,
-          "assists": 13,
+          "assists": 15,
           "wins": 0,
           "shutouts": 0,
-          "points": 16,
-          "games_played": 17,
+          "points": 18,
+          "games_played": 18,
           "status": "ok",
           "stats_source": "game-log"
         },
@@ -2042,7 +2042,7 @@
           "wins": 0,
           "shutouts": 0,
           "points": 7,
-          "games_played": 8,
+          "games_played": 9,
           "status": "ok",
           "stats_source": "game-log"
         },
@@ -2113,11 +2113,11 @@
           "nhl_id": 8474578,
           "matched_name": "Erik Karlsson",
           "goals": 3,
-          "assists": 14,
+          "assists": 15,
           "wins": 0,
           "shutouts": 0,
-          "points": 17,
-          "games_played": 17,
+          "points": 18,
+          "games_played": 18,
           "status": "ok",
           "stats_source": "game-log"
         },
