@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-22T14:49:46.070064+00:00",
+  "generated_at": "2026-11-22T20:58:55.895904+00:00",
   "season": "2026-2027",
   "season_id": "20262027",
   "game_type": 2,
@@ -16,7 +16,7 @@
     {
       "coach": "Janne",
       "name": "Häpykarvan Lämäri",
-      "points": 419,
+      "points": 421,
       "players": [
         {
           "draft_number": 7,
@@ -159,12 +159,12 @@
           "position": "H",
           "nhl_id": 8476468,
           "matched_name": "J.T. Miller",
-          "goals": 4,
-          "assists": 13,
+          "goals": 5,
+          "assists": 14,
           "wins": 0,
           "shutouts": 0,
-          "points": 17,
-          "games_played": 22,
+          "points": 19,
+          "games_played": 23,
           "status": "ok",
           "stats_source": "game-log"
         },
@@ -324,7 +324,7 @@
     {
       "coach": "Jarno",
       "name": "Old Stars",
-      "points": 386,
+      "points": 387,
       "players": [
         {
           "draft_number": 6,
@@ -422,12 +422,12 @@
           "position": "H",
           "nhl_id": 8476459,
           "matched_name": "Mika Zibanejad",
-          "goals": 5,
+          "goals": 6,
           "assists": 14,
           "wins": 0,
           "shutouts": 0,
-          "points": 19,
-          "games_played": 22,
+          "points": 20,
+          "games_played": 23,
           "status": "ok",
           "stats_source": "game-log"
         },
@@ -632,7 +632,7 @@
     {
       "coach": "Valtteri",
       "name": "Pallivahan Pallo",
-      "points": 376,
+      "points": 377,
       "players": [
         {
           "draft_number": 5,
@@ -701,11 +701,11 @@
           "nhl_id": 8478427,
           "matched_name": "Sebastian Aho",
           "goals": 13,
-          "assists": 19,
+          "assists": 20,
           "wins": 0,
           "shutouts": 0,
-          "points": 32,
-          "games_played": 23,
+          "points": 33,
+          "games_played": 24,
           "status": "ok",
           "stats_source": "game-log"
         },
@@ -810,7 +810,7 @@
           "wins": 0,
           "shutouts": 0,
           "points": 22,
-          "games_played": 22,
+          "games_played": 23,
           "status": "ok",
           "stats_source": "game-log"
         },
@@ -900,7 +900,7 @@
           "wins": 0,
           "shutouts": 0,
           "points": 8,
-          "games_played": 23,
+          "games_played": 24,
           "status": "ok",
           "stats_source": "game-log"
         },
@@ -940,7 +940,7 @@
     {
       "coach": "Akseli",
       "name": "Kiven Kovat",
-      "points": 367,
+      "points": 370,
       "players": [
         {
           "draft_number": 2,
@@ -1084,11 +1084,11 @@
           "nhl_id": 8482093,
           "matched_name": "Seth Jarvis",
           "goals": 2,
-          "assists": 7,
+          "assists": 8,
           "wins": 0,
           "shutouts": 0,
-          "points": 9,
-          "games_played": 12,
+          "points": 10,
+          "games_played": 13,
           "status": "ok",
           "stats_source": "game-log"
         },
@@ -1159,11 +1159,11 @@
           "nhl_id": 8479323,
           "matched_name": "Adam Fox",
           "goals": 2,
-          "assists": 22,
+          "assists": 24,
           "wins": 0,
           "shutouts": 0,
-          "points": 24,
-          "games_played": 22,
+          "points": 26,
+          "games_played": 23,
           "status": "ok",
           "stats_source": "game-log"
         },
@@ -1864,7 +1864,7 @@
     {
       "coach": "Riku",
       "name": "Söhlöt",
-      "points": 337,
+      "points": 338,
       "players": [
         {
           "draft_number": 1,
@@ -2053,11 +2053,11 @@
           "nhl_id": 8476906,
           "matched_name": "Shayne Gostisbehere",
           "goals": 3,
-          "assists": 15,
+          "assists": 16,
           "wins": 0,
           "shutouts": 0,
-          "points": 18,
-          "games_played": 23,
+          "points": 19,
+          "games_played": 24,
           "status": "ok",
           "stats_source": "game-log"
         },
