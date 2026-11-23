@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-22T20:58:55.895904+00:00",
+  "generated_at": "2026-11-23T01:30:03.798190+00:00",
   "season": "2026-2027",
   "season_id": "20262027",
   "game_type": 2,
@@ -412,7 +412,7 @@
           "wins": 0,
           "shutouts": 0,
           "points": 18,
-          "games_played": 19,
+          "games_played": 20,
           "status": "ok",
           "stats_source": "game-log"
         },
@@ -547,7 +547,7 @@
           "wins": 0,
           "shutouts": 0,
           "points": 13,
-          "games_played": 23,
+          "games_played": 24,
           "status": "ok",
           "stats_source": "game-log"
         },
@@ -632,7 +632,7 @@
     {
       "coach": "Valtteri",
       "name": "Pallivahan Pallo",
-      "points": 377,
+      "points": 378,
       "players": [
         {
           "draft_number": 5,
@@ -821,11 +821,11 @@
           "nhl_id": 8480839,
           "matched_name": "Rasmus Dahlin",
           "goals": 4,
-          "assists": 10,
+          "assists": 11,
           "wins": 0,
           "shutouts": 0,
-          "points": 14,
-          "games_played": 20,
+          "points": 15,
+          "games_played": 21,
           "status": "ok",
           "stats_source": "game-log"
         },
@@ -1248,7 +1248,7 @@
     {
       "coach": "Aleksi",
       "name": "Titta på ylähylly",
-      "points": 367,
+      "points": 370,
       "players": [
         {
           "draft_number": 3,
@@ -1256,12 +1256,12 @@
           "position": "H",
           "nhl_id": 8476453,
           "matched_name": "Nikita Kucherov",
-          "goals": 9,
+          "goals": 10,
           "assists": 22,
           "wins": 0,
           "shutouts": 0,
-          "points": 31,
-          "games_played": 22,
+          "points": 32,
+          "games_played": 23,
           "status": "ok",
           "stats_source": "game-log"
         },
@@ -1302,11 +1302,11 @@
           "nhl_id": 8477404,
           "matched_name": "Jake Guentzel",
           "goals": 13,
-          "assists": 14,
+          "assists": 15,
           "wins": 0,
           "shutouts": 0,
-          "points": 27,
-          "games_played": 22,
+          "points": 28,
+          "games_played": 23,
           "status": "ok",
           "stats_source": "game-log"
         },
@@ -1467,11 +1467,11 @@
           "nhl_id": 8474590,
           "matched_name": "John Carlson",
           "goals": 7,
-          "assists": 13,
+          "assists": 14,
           "wins": 0,
           "shutouts": 0,
-          "points": 20,
-          "games_played": 22,
+          "points": 21,
+          "games_played": 23,
           "status": "ok",
           "stats_source": "game-log"
         },
@@ -1864,7 +1864,7 @@
     {
       "coach": "Riku",
       "name": "Söhlöt",
-      "points": 338,
+      "points": 340,
       "players": [
         {
           "draft_number": 1,
@@ -1917,12 +1917,12 @@
           "position": "H",
           "nhl_id": 8479420,
           "matched_name": "Tage Thompson",
-          "goals": 15,
+          "goals": 17,
           "assists": 11,
           "wins": 0,
           "shutouts": 0,
-          "points": 26,
-          "games_played": 23,
+          "points": 28,
+          "games_played": 24,
           "status": "ok",
           "stats_source": "game-log"
         },
