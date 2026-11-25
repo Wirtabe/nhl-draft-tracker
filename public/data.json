@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-25T01:32:20.488120+00:00",
+  "generated_at": "2026-11-25T10:19:56.266780+00:00",
   "season": "2026-2027",
   "season_id": "20262027",
   "game_type": 2,
@@ -29,7 +29,7 @@
           "wins": 0,
           "shutouts": 0,
           "points": 47,
-          "games_played": 26,
+          "games_played": 27,
           "status": "ok",
           "stats_source": "game-log"
         },
@@ -324,7 +324,7 @@
     {
       "coach": "Jarno",
       "name": "Old Stars",
-      "points": 395,
+      "points": 399,
       "players": [
         {
           "draft_number": 6,
@@ -347,12 +347,12 @@
           "position": "H",
           "nhl_id": 8478403,
           "matched_name": "Jack Eichel",
-          "goals": 9,
+          "goals": 11,
           "assists": 22,
           "wins": 0,
           "shutouts": 0,
-          "points": 31,
-          "games_played": 25,
+          "points": 33,
+          "games_played": 26,
           "status": "ok",
           "stats_source": "game-log"
         },
@@ -502,7 +502,7 @@
           "wins": 0,
           "shutouts": 0,
           "points": 23,
-          "games_played": 25,
+          "games_played": 26,
           "status": "ok",
           "stats_source": "game-log"
         },
@@ -513,11 +513,11 @@
           "nhl_id": 8480803,
           "matched_name": "Evan Bouchard",
           "goals": 12,
-          "assists": 27,
+          "assists": 29,
           "wins": 0,
           "shutouts": 0,
-          "points": 39,
-          "games_played": 26,
+          "points": 41,
+          "games_played": 27,
           "status": "ok",
           "stats_source": "game-log"
         },
@@ -577,7 +577,7 @@
           "wins": 0,
           "shutouts": 0,
           "points": 7,
-          "games_played": 25,
+          "games_played": 26,
           "status": "ok",
           "stats_source": "game-log"
         },
@@ -885,7 +885,7 @@
           "wins": 0,
           "shutouts": 0,
           "points": 11,
-          "games_played": 24,
+          "games_played": 25,
           "status": "ok",
           "stats_source": "game-log"
         },
@@ -940,7 +940,7 @@
     {
       "coach": "Akseli",
       "name": "Kiven Kovat",
-      "points": 378,
+      "points": 379,
       "players": [
         {
           "draft_number": 2,
@@ -948,12 +948,12 @@
           "position": "H",
           "nhl_id": 8478402,
           "matched_name": "Connor McDavid",
-          "goals": 13,
+          "goals": 14,
           "assists": 45,
           "wins": 0,
           "shutouts": 0,
-          "points": 58,
-          "games_played": 26,
+          "points": 59,
+          "games_played": 27,
           "status": "ok",
           "stats_source": "game-log"
         },
@@ -1864,7 +1864,7 @@
     {
       "coach": "Riku",
       "name": "Söhlöt",
-      "points": 346,
+      "points": 349,
       "players": [
         {
           "draft_number": 1,
@@ -1933,11 +1933,11 @@
           "nhl_id": 8478483,
           "matched_name": "Mitch Marner",
           "goals": 4,
-          "assists": 23,
+          "assists": 25,
           "wins": 0,
           "shutouts": 0,
-          "points": 27,
-          "games_played": 23,
+          "points": 29,
+          "games_played": 24,
           "status": "ok",
           "stats_source": "game-log"
         },
@@ -2068,11 +2068,11 @@
           "nhl_id": 8477447,
           "matched_name": "Shea Theodore",
           "goals": 2,
-          "assists": 5,
+          "assists": 6,
           "wins": 0,
           "shutouts": 0,
-          "points": 7,
-          "games_played": 25,
+          "points": 8,
+          "games_played": 26,
           "status": "ok",
           "stats_source": "game-log"
         },
